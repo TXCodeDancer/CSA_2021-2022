@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
 public class Main {
-    static private Scanner scan;
+    static private Scanner scanner;
 
     public static void main(String[] args) {
-        scan = new Scanner(System.in);
+        scanner = new Scanner(System.in);
 
         System.out.println();
         System.out.println("Unit 1.5: Compound Assignment Operators");
@@ -18,7 +18,7 @@ public class Main {
         int x = 5;
         System.out.println();
         System.out.printf("Start Traditional: x = %d\n", x);
-        scan.nextLine();
+//        scanner.nextLine();
         x = x + 1;
         System.out.printf("x = x + 1; x = %d\n", x);
         x = x - 1;
@@ -33,7 +33,7 @@ public class Main {
         x = 5;
         System.out.println();
         System.out.printf("Start Compound: x = %d\n", x);
-        scan.nextLine();
+        scanner.nextLine();
         x++;
         System.out.printf("x++;       x = %d\n", x);
         x--;
@@ -42,7 +42,7 @@ public class Main {
         System.out.printf("x *= 2;    x = %d\n", x);
         x /= 2;
         System.out.printf("x /= 2;    x = %d\n", x);
-        x = x % 2;
+        x %= 2;
         System.out.printf("x %%= 2;    x = %d\n", x);
 
 
@@ -61,7 +61,7 @@ public class Main {
         x %= 2;
         System.out.printf("x %%= 2;    x = %d\n", x);
 
-        scan.close();
+        scanner.close();
     }
 
     private static int GetUserInt() {
@@ -70,7 +70,7 @@ public class Main {
         System.out.print("Please enter a number: ");
         while(true)
         {
-            String input = scan.nextLine();
+            String input = scanner.nextLine();
             try {
                 x = Integer.parseInt(input);
                 break;
