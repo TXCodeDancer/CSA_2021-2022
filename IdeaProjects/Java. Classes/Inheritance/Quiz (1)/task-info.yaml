@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: to invoke methods of the base class
+- text: to invoke constructors of the base class
+- text: to access fields of the base class
+- text: to prohibit a class from subclassing
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz

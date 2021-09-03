@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: A class can extends only one abstract class.
+- text: It's impossible to create an instance of abstract class.
+- text: By default, all methods in abstract class have access modifier "public".
+- text: An abstract class can't have default methods.
+- text: Non-abstract classes can't contain abstract methods.
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+status: Unchecked
+record: -1

@@ -1,0 +1,12 @@
+type: code
+custom_name: Programming
+files:
+- name: src/Main.java
+  visible: true
+  text: |-
+    class Pair {
+
+    }
+  learner_created: false
+status: Unchecked
+record: -1

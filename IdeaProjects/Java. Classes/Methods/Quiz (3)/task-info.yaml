@@ -1,0 +1,25 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: It's impossible to create an instance of a class that has no an explicit constructor.
+- text: Constructor name must be the same as its class name.
+- text: A constructor must have some parameters.
+- text: Constructor must have no explicit return type.
+- text: Constructors can be considered as special types of methods.
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz

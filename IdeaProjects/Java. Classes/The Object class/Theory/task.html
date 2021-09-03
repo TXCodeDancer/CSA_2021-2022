@@ -1,0 +1,41 @@
+<html>
+ <head></head>
+ <body>
+  <h2 style="text-align: center;">The root class in Java</h2>
+  <p>The Java Standard Library has a class named <code>Object</code> that is the parent of all standard and your classes by default. Any class extends this class implicitly, therefore it's a root of inheritance in Java programs.</p>
+  <p>The class belongs to the <code>java.lang</code> package that is imported by default.</p>
+  <p>Let's create an instance of the <code>Object</code>.<br></p>
+  <pre><code class="language-java">Object anObject = new Object();</code></pre>
+  <p>The <code>Object</code> class can refer an instance of any class because the instance is a kind of <code>Object</code> as well (upcasting).</p>
+  <pre><code class="language-java">Long number = 1_000_000L;
+Object obj1 = number; // an instance of Long can be cast to Object
+
+String str = "str";
+Object obj2 = str; // as well as an instance of String</code></pre>
+  <p>When we declare a class, we can extend the <code>Object</code> class in the explicit form.</p>
+  <p>Here is an example, do not repeat it:</p>
+  <pre><code class="language-java">class A extends Object { }</code></pre>
+  <h2 style="text-align: center;">Methods provided by the Object class</h2>The 
+  <code>Object</code> class provides some common methods to all subclasses. It has nine instance methods (excluding overloaded methods) which can be divided into four groups:
+  <ul>
+   <li>threads synchronization: <i>wait</i>, <i>notify</i>, <i>notifyAl</i><i>l</i>;</li>
+   <li>object identity: <i>hashCode</i>, <i>equals</i>;</li>
+   <li>object management: <i>finalize, clone, getClass;</i><i></i></li>
+   <li>human-readable representation: <i>toString</i>;</li>
+  </ul>
+  <p>Of course, this way to group methods does not pretend to be ideal, but it can help you to remember them.</p>
+  <ul>
+   <li>The first group of methods (<i>wait</i>, <i>notify</i>, <i>notifyAl</i><i>l)</i> are for working in multithreaded applications.<br></li>
+   <li>The method <i>hashCode</i> returns a hash code value for the object.<br></li>
+   <li>The method <i>equals </i>indicates whether some other object is <b>"equal to"</b> this one.</li>
+   <li>The method <i>finalize</i> is called by the garbage collector (GC) on an object when GC want to clean up it.</li>
+   <li>The method <i>clone</i> creates and returns a copy of the object.</li>
+   <li>The method <i>getClass</i> returns an instance of Class, which has information about the runtime class.</li>
+   <li>The method <i>toString</i> returns a string representation of the object.</li>
+  </ul>
+  <p>Some of the listed methods are native that means they are implemented in <b>"native</b>" code. It's typically written in C or C++. Native methods are usually used to interface with system calls or libraries written in other programming languages.</p>
+  <div>
+   In the following topics, we will consider methods of the class in details.
+  </div>
+ </body>
+</html>

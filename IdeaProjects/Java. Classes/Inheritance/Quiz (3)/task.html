@@ -1,0 +1,27 @@
+<html>
+ <head></head>
+ <body>
+  <p>Which of the following methods will be overridden in SubClass?</p>
+  <pre><code>class SuperClass {
+
+&nbsp; &nbsp; public static void staticMethod(int i) { }
+
+&nbsp; &nbsp; public void method1(int i) { }
+
+&nbsp; &nbsp; public void method2(int i, String s) { }
+&nbsp; &nbsp; 
+&nbsp; &nbsp; private void method3(int i) { }
+}
+
+class SubClass extends SuperClass {
+
+&nbsp; &nbsp; public static void staticMethod(int i) { }
+&nbsp; &nbsp; 
+&nbsp; &nbsp; public void method1(int i) { }
+
+&nbsp; &nbsp; public void method2(String s) { }
+&nbsp; &nbsp; 
+&nbsp; &nbsp; public void method3(int i) { }
+}</code></pre>
+ </body>
+</html>

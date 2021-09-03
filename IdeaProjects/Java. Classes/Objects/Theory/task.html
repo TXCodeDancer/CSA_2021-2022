@@ -1,0 +1,195 @@
+<html>
+ <head></head>
+ <body>
+  <p><b>Fundamentals of object-oriented programming</b></p>
+  <p><b>Object-oriented programming (OOP)</b> is a programming paradigm based on the concepts of "objects", which may be characterized by a state and a behavior. Objects contain a state (data) in the fields (also known as attributes) and a behavior in the methods. In object-oriented programs, a set of objects interacts with each other to perform the program functions.</p>
+  <p>In an object-oriented program real-world (or not absolutely real) objects are modeled. For these objects, only essential characteristics should be selected. It's known as <b>data abstraction </b>— a fundamental principle of OOP.<b></b></p>
+  <p>Hiding internal state of objects and requiring all interaction to be performed through methods is known as <i></i><i></i><b>data encapsulation</b><i></i><i></i> — another fundamental principle of OOP.</p>
+  <p>The object-oriented paradigm is a common way to write Java applications.</p>
+  <p><b>Objects</b></p>
+  <p>Here are a lot of real-world objects around you: pets, buildings, cars, computers, planes and so on. Even a computer program may be considered as an object.</p>
+  <p>It's possible to identify some important characteristics for real-world objects. For instance, we can consider a number of floors, year of constructing and an occupied area of a building. Also, we can consider a plane that can accommodate a certain number of passengers and transfers you from one city to another.</p>
+  <p>In OOP, an object's state (data) and behavior (methods) are placed together, but it's not always so. Sometimes, we will meet objects without state or methods.</p>
+  <p><b>Classes</b></p>
+  <p>In the real world, you will often find many individual objects that have similar characteristics. These objects may belong to the same type (or class). A class describes a structure of similar objects: fields and methods.</p>
+  <p>We can even say, that a class is a blueprint from which individual objects (instances) are created.</p>
+  <p>Let's look at some examples with pictures.<br></p>
+  <p><b>Example 1. The building class</b></p>
+  <p style="text-align: center;"></p>
+  <p style="text-align: center;"><img alt="" class="image-fullsize" height="151" src="https://ucarecdn.com/78d6be8a-c176-402f-8350-580a19fbccbe/" width="201"></p>
+  <b>An abstract building for describing buildings as a class (type)</b>
+  <p></p>
+  <p style="text-align: left;">It may have some attributes:</p>
+  <ul>
+   <li>a number of floors (an integer number);</li>
+   <li>an occupied area (a floating-point number, square meters);</li>
+   <li>a year of construction (an integer number);</li>
+  </ul>
+  <p style="text-align: left;">Each object (instance) of the building type has the same attributes but different values.</p>
+  <p style="text-align: left;">For instance, we have two buildings (objects):</p>
+  <ol>
+   <li>Building 1: the number of floors = 4, the occupied area = 2400.16, the year of construction = 1966;</li>
+   <li>Building 2: the number of floors = 6, the occupied area = 3200.54, the year of construction = 2001;</li>
+  </ol>
+  <p style="text-align: left;">It's quite difficult to find a behavior of a building. But this example shows attributes well.</p>
+  <p style="text-align: left;"><b>Example 2. The plane class</b></p>
+  <p style="text-align: left;">Unlike the building, it is easy to define a behavior of the plane. It can fly and transfer you between two points on the planet.<br></p>
+  <p style="text-align: center;"></p>
+  <p style="text-align: center;"><img alt="" class="image-fullsize" height="143" src="https://ucarecdn.com/c0ef1059-5301-4e38-9030-62ec50f01b03/" width="143"></p>
+  <b>An abstract plane for describing all planes as a class (type)</b>
+  <br>
+  <p></p>It may have some attributes:
+  <div>
+   <br>
+   <div>
+    <ul>
+     <li>family name (a string, for example, "Airbus A320" or "Boeing 777");</li>
+     <li>passengers capacity (an integer number);</li>
+     <li>standard speed (an integer number);</li>
+     <li>current coordinates (it's needed to fly);</li>
+     <li>and so on.</li>
+    </ul>Also, it has a behavior (a method): transfer from one geographical point to another.
+   </div>
+  </div>
+  <div>
+   <br>
+  </div>
+  <div>
+   Objects of the plane class have the same attributes and a method transfer. But, the values of attributes and behavior, depending on the object state, may be different.
+  </div>
+  <p><b>Declaring classes</b><br></p>
+  <p>In Java, when writing an object-oriented program, first, we declare classes (or find the suitable classes in libraries) and then we create instances (objects) of these classes. You have already known at least one class from the Java Class Library. It's a widely used class String. Now it's time to declare own classes.</p>
+  <p>In terms of Java, classes are a mechanism used to group data (fields) and methods together into coherent modules. It makes your programs more structured and maintainable.<br></p>
+  <p>The source code of classes is located in <b>.java</b> files. Often the file contains a single class and has the name <b>yourClassName</b><b>.java</b>. But it's not always so. After the compilation processes classes are located in <b>.class</b> files that contain bytecode.</p>
+  <p>To declare a class Java provides a keyword <b>class</b>.</p>
+  <p>Let's declare the class Nothing<b></b> consisting of nothing:</p>
+  <pre><code>class Nothing {
+&nbsp; &nbsp; // there is nothing
+}</code></pre>
+  <p>The class doesn't contain any attributes (fields), but we can create an instance of the class.</p>
+  <p><b>Instantiating objects</b></p>
+  <p>To create an instance the keyword <b>new</b> is used:<br></p>
+  <pre><code>Nothing nothing = new Nothing();</code></pre>
+  <p>Perhaps, creating an instance of the class Nothing sounds like a kind of magic. But soon everything will be clear.</p>
+  <p>Pay attention a class's name starts with a capital letter, according to the naming convention. If a class has a name with multiple words, each word starts with a capital letter. For example:</p>
+  <pre><code class="language-java">MyCustomClass
+FastHttpConnector
+DemoApplication</code></pre>
+  <p>Also, we can create an instance of any standard class using the keyword <b>new</b>.</p>
+  <pre><code>Date now = new Date(); // it contains "now" date</code></pre>
+  <p>There is no difference between instantiating your and standard classes in Java.</p>
+  <p><b>Class members</b></p>
+  <p>A Java class can contain fields, methods, and constructors.</p>
+  <ul>
+   <li>Fields are variables that store data.</li>
+   <li>Methods are operations that the class or instances can perform.</li>
+   <li>Constructors are special kind of methods that initialize instances of the class. They must match the class name.<br></li>
+  </ul>
+  <p>Fields and methods are often considered as a class's members, constructors are not always, but they are a part of a class.</p>
+  <p>Not all Java classes have fields, constructors, and methods. Sometimes you have classes that only contain fields (data), and sometimes you have classes that only contain methods (operations). It depends on what the Java class is supposed to do.<br></p>
+  <p><b>Example.</b> Let's consider a more complex example.</p>
+  <p>There is a class for representing cats. A cat has a name and a state (sleeping or not). A cat can say one of two phrases "meow" or "zzz" depends on the state. When a cat says "meow" it can sometimes fall asleep. The cat can be awakened.</p>
+  <pre><code class="language-java">/**
+ * The class is "blueprint" for cats
+ */
+class Cat {
+
+&nbsp; &nbsp; String name; // the cat's name
+&nbsp; &nbsp; boolean sleeping; // the current state of the cat
+
+&nbsp; &nbsp; /**
+&nbsp; &nbsp; &nbsp;* It constructs instances of the class by a given name
+&nbsp; &nbsp;  */
+&nbsp; &nbsp; public Cat(String name) {
+&nbsp; &nbsp; &nbsp; &nbsp; this.name = name;
+&nbsp; &nbsp; &nbsp; &nbsp; this.sleeping = true; // cats appear sleeping :)
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; /**
+&nbsp; &nbsp;  * Cats say "meow" if they are not sleeping, otherwise - "zzz".
+&nbsp; &nbsp;  * When cats say "meow" it can sometimes fall asleep.
+&nbsp; &nbsp;  */
+&nbsp; &nbsp; public void say() {
+&nbsp; &nbsp; &nbsp; &nbsp; if (sleeping) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("zzz");
+&nbsp; &nbsp; &nbsp; &nbsp; } else {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println("meow");
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (Math.random() &gt; 0.5) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sleeping = true;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; /**
+&nbsp; &nbsp;  * The method wakes cats
+&nbsp; &nbsp;  */
+&nbsp; &nbsp; public void wakeUp() {
+&nbsp; &nbsp; &nbsp; &nbsp; this.sleeping = false;
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; /**
+&nbsp; &nbsp;  * Here, it's for convenient output cats.
+&nbsp; &nbsp;  * The method will be studied later.
+&nbsp; &nbsp;  */
+&nbsp; &nbsp; @Override
+&nbsp; &nbsp; public String toString() {
+&nbsp; &nbsp; &nbsp; &nbsp; return "Cat{" +
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "name='" + name + '\'' +
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ", sleeping=" + sleeping +
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; '}';
+&nbsp; &nbsp; }
+}</code></pre>
+  <p>To better understand the members of the class Cat read the provided comments.</p>
+  <p>Pay attention to the class constructor, it accepts a string parameter - name. To initialize fields the keyword <b>this</b> is used. This keyword is a reference to a current instance of the class. It allows initializing the particular object. The keyword is often used to assign values to fields. But it's not always needed. Only in the cases, when the parameter's name is the same as the fields.</p>
+  <p>Also, look at the method toString(). It converts a cat to string. We will use it to output cats in the standard output. In more detail, this method will be studied later.</p>
+  <p><b>Invoking instance methods</b><br></p>
+  <p>We can create an instance of a class and invoke its methods.</p>
+  <p>See the following example where two instances of the class Cat are created. Do not forget, when a cat is created it is sleeping.</p>
+  <pre><code class="language-java">public class CatsDemo {
+
+&nbsp; &nbsp; public static void main(String[] args) {
+
+&nbsp; &nbsp; &nbsp; &nbsp; Cat pharaoh = new Cat("Pharaoh"); // an instance named "pharaon"
+&nbsp; &nbsp; &nbsp; &nbsp; System.out.println(pharaoh);      // Cat{name='Pharaoh', sleeping=true}
+
+&nbsp; &nbsp; &nbsp; &nbsp; pharaoh.wakeUp(); // invoking the instance method
+
+&nbsp; &nbsp; &nbsp; &nbsp; System.out.println(pharaoh); // Cat{name='Pharaoh', sleeping=false}
+
+&nbsp; &nbsp; &nbsp; &nbsp; for (int i = 0; i &lt; 5; i++) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pharaoh.say(); // it says "meow" or "zzz"
+&nbsp; &nbsp; &nbsp; &nbsp; }
+
+&nbsp; &nbsp; &nbsp; &nbsp; System.out.println(pharaoh); // The output will be different
+
+&nbsp; &nbsp; &nbsp; &nbsp; Cat anonymous = new Cat("anonymous"); // another instance named "anonymous"
+&nbsp; &nbsp; &nbsp; &nbsp; System.out.println(anonymous);        // Cat{name='anonymous', sleeping=true}
+&nbsp; &nbsp; }
+}</code></pre>
+  <p>It's important to understand that "pharaoh" and "anonymous" are different and independent instances of the same class. Each of them has own values of fields.</p>
+  <p>The program's output can be different because of using Math.random() inside the "say"<b></b> method. Here is an output example:</p>
+  <pre><code class="language-java">Cat{name='Pharaoh', sleeping=true}
+Cat{name='Pharaoh', sleeping=false}
+meow
+meow
+zzz
+zzz
+zzz
+Cat{name='Pharaoh', sleeping=true}
+Cat{name='anonymous', sleeping=true}</code></pre> 
+  <div>
+   <br>
+  </div>
+  <div>
+   <b>Conclusion</b>
+   <br>
+  </div>
+  <div>
+   <b><br></b>
+  </div>
+  <div>
+   Now you already know what is a class and an object in general and how to declare and create them in Java. The following topics based on the understanding this and object-oriented programming in general because it's one of the most important concepts in Java.
+  </div>
+ </body>
+</html>

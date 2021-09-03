@@ -1,0 +1,24 @@
+<html>
+ <head></head>
+ <body>
+  <p>You have an inheritance hierarchy consisting of two classes.<br></p>
+  <p>The base class.</p>
+  <pre><code>public class BaseClass {
+
+&nbsp; &nbsp; public void print() {
+&nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Base class");
+&nbsp; &nbsp; }
+}</code></pre>
+  <p>The derived class.</p>
+  <pre><code>public class DerivedClass extends BaseClass {
+
+&nbsp; &nbsp; public void print() {
+&nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Derived class");
+&nbsp; &nbsp; &nbsp; &nbsp; super.print();
+&nbsp; &nbsp; }
+}</code></pre>
+  <p>What is the output of the code below?</p>
+  <pre><code>BaseClass clazz = new DerivedClass();
+clazz.print();</code></pre>
+ </body>
+</html>

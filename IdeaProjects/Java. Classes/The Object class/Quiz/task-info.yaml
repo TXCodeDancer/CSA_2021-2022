@@ -1,0 +1,23 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: All objects including arrays have methods of this class.
+- text: It's impossible to create an instance of the <b>Object</b> class.
+- text: Your custom classes does not inherit <b>Object</b>.
+- text: The class is the root of the class hierarchy in Java.
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+status: Unchecked
+record: -1

@@ -1,0 +1,170 @@
+<html>
+ <head></head>
+ <body>
+  <h2 style="text-align: center;"><b></b>Defining new enumeration types<b></b></h2>
+  <p>An enum type (enumeration) is a special kind of Java class that enables for a variable to be a set of the predefined constant. The variable of an enum type is equal to one of the predefined constants.</p>
+  <p>According to the Java Code Convention, constants in an enum are written in uppercase letters.</p>
+  <p>Here is an example:</p>
+  <pre><code>public enum Season {
+&nbsp; &nbsp; SPRING, SUMMER, AUTUMN, WINTER
+}</code></pre>
+  <p>The keyword <code>enum</code> is needed to declare a new enum type. Inside the body, all season constants are enumerated.</p>
+  <p>Here are a few other samples of enums:<br></p>
+  <ul>
+   <li>Compass directions (NORTH, SOUTH, EAST, WEST);</li>
+   <li>Days of the week (SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY);</li>
+  </ul>
+  <h2 style="text-align: center;">Processing enumerations<b></b></h2>
+  <ul>
+   <li>Let's initialize several variables of the <code>Season</code> type:<br></li>
+  </ul>
+  <pre><code class="language-java">Season summer = Season.SUMMER; // SUMMER
+Season autumn = Season.AUTUMN; // AUTUMN</code></pre>
+  <div>
+   <br>
+  </div>
+  <ul>
+   <li>Although an enum is a reference type, two variables can be correctly compared using both ways the method <code>equals</code> and the operator <code>==</code>.</li>
+  </ul>
+  <div>
+   <pre><code class="language-java">System.out.println(summer.equals(Season.SUMMER)); // true
+System.out.println(summer == Season.SUMMER); // true
+
+System.out.println(autumn.equals(Season.AUTUMN)); // true
+System.out.println(autumn == Season.AUTUMN); // true
+
+System.out.println(summer.equals(autumn)); // false
+System.out.println(summer == autumn);  &nbsp; &nbsp; // false</code></pre>
+   <ul>
+    <li>It's possible to get all enum constants as an array:<br></li>
+   </ul>
+   <pre><code class="language-java">Season[] seasons = Season.values(); // [SPRING, SUMMER, AUTUMN, WINTER]</code></pre>
+   <ul>
+    <li>Another useful feature is the creation of a variable from a string (<em></em>case-sensitivity<em></em>) :<br></li>
+   </ul>
+   <pre><code class="language-java">Season season = Season.valueOf("AUTUMN"); // AUTUMN</code></pre>
+   <ul>
+    <li>If the given string doesn't match any constant the <b>IllegalArgumentException</b> happens.<br></li>
+   </ul>
+   <pre><code class="language-java">Season winter = Season.valueOf("winter"); // IllegalArgumentException, valueOf is case-sensitive</code></pre>
+   <ul>
+    <li>Also, it's possible to get the string name of a constant using methods <code>toString</code> or <code>name</code>:</li>
+   </ul>
+   <pre><code>String winter = Season.WINTER.name(); // WINTER
+String autumn = Season.AUTUMN.toString(); // AUTUMN</code></pre>
+  </div>
+  <h2 style="text-align: center;"><b></b>Enumerations in the switch statement</h2>
+  <p>An enum type can be used in the switch statement.<br></p>
+  <p>For example, here is an enum with three possible user statuses:</p>
+  <pre><code class="language-java">public enum UserStatus {
+&nbsp; &nbsp; PENDING, ACTIVE, BLOCKED
+}</code></pre>
+  <p>Depending on the status, it is possible to perform different logic using the switch statement.<br></p>
+  <p>See the example below.</p>
+  <pre><code class="language-java">UserStatus status = ... // some status
+
+switch (status) {
+    case PENDING:
+        System.out.println("You need to wait a little.");
+&nbsp; &nbsp; &nbsp; &nbsp; break;
+&nbsp; &nbsp; case ACTIVE:
+&nbsp; &nbsp; &nbsp; &nbsp; System.out.println("No problems, you may pass here.");
+&nbsp; &nbsp; &nbsp; &nbsp; break;
+&nbsp; &nbsp; case BLOCKED:
+&nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Stop! You can't pass here.");
+&nbsp; &nbsp; &nbsp; &nbsp; break;
+&nbsp; &nbsp; default:
+&nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Unsupported enum constant.");
+}</code></pre>
+  <p>Depending on a value of the variable status this code outputs different message.</p>
+  <div></div>
+  <h2 style="text-align: center;"><b></b>Defining fields and methods in enums<b></b></h2>
+  <p>Enumerated types can include fields and methods.</p>
+  <p>Let's see an example. In a payment service, there are transactions exist. Each transaction has a status:</p>
+  <ul>
+   <li><code>WAITING</code> - a transaction is created and waits for processing;</li>
+   <li><code>PROCESSING</code> - a transaction is still in processing;</li>
+   <li><code>COMPLETED</code> - a transaction is completed;</li>
+   <li><code>ERROR</code> - an error happens during processing.</li>
+  </ul>
+  <p>Two statuses <code>COMPLETED</code> and <code>ERROR</code> are final for a transaction. It's done and won't be processed anymore.</p>
+  <pre><code class="language-java">public enum TransactionStatus {
+&nbsp; &nbsp; WAITING(false), 
+    PROCESSING(false), 
+    COMPLETED(true), 
+    ERROR(true);
+&nbsp; &nbsp; 
+&nbsp; &nbsp; private boolean done;
+
+&nbsp; &nbsp; TransactionStatus(boolean done) {
+&nbsp; &nbsp; &nbsp; &nbsp; this.done = done;
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; public boolean isDone() {
+&nbsp; &nbsp; &nbsp; &nbsp; return done;
+&nbsp; &nbsp; }
+}</code></pre>
+  <br>The enum above has the boolean field 
+  <code>done</code>, a single constructor that takes a boolean variable and the method 
+  <code>isDone</code>. Each enum constant is declared with a boolean value (done or not). The value is passed to the constructor when the constant is created.
+  <div>
+   <div>
+    <p>Java requires that the constants be defined first, prior to any fields or methods. Also, when there are fields and methods, the list of enum constants must end with a semicolon.</p>
+    <div>
+     Let's see the program printing full statuses of all transactions:
+    </div>
+    <div>
+     <br>
+    </div>
+    <div>
+     <pre><code class="language-java">public class TransactionStatusDemo {
+
+&nbsp; &nbsp; public static void main(String[] args) {
+
+&nbsp; &nbsp; &nbsp; &nbsp; printFullStatus(TransactionStatus.WAITING);
+&nbsp; &nbsp; &nbsp; &nbsp; printFullStatus(TransactionStatus.PROCESSING);
+&nbsp; &nbsp; &nbsp; &nbsp; printFullStatus(TransactionStatus.COMPLETED);
+&nbsp; &nbsp; &nbsp; &nbsp; printFullStatus(TransactionStatus.ERROR);
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; private static void printFullStatus(TransactionStatus status) {
+&nbsp; &nbsp; &nbsp; &nbsp; System.out.println("Status: " + status + ", is finished: " + status.isDone());
+&nbsp; &nbsp; }
+}</code></pre>
+     <br>
+    </div>
+    <div>
+     The output is:
+    </div>
+    <div>
+     <br>
+    </div>
+    <div>
+     <pre><code class="language-java">Status: WAITING, is finished: false
+Status: PROCESSING, is finished: false
+Status: COMPLETED, is finished: true
+Status: ERROR, is finished: true</code></pre>
+    </div>
+    <div>
+     <br>
+    </div>Of course, an enum can contain more than one field. In this case, defining constants looks like:
+    <div>
+     <br>
+    </div>
+    <div>
+     <pre><code class="language-java">AN_ENUM_CONSTANT(value1, value2, ... valueN)</code></pre>
+    </div>
+    <div>
+     <br>
+    </div>
+    <div>
+     And do not forget to write a constructor to initialize them.
+    </div>
+    <div>
+     <br>You can read about enums in more detail here: 
+     <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html" rel="nofollow noopener noreferrer">https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html</a>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

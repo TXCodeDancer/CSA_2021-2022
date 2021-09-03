@@ -1,0 +1,24 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: Generics provide type safety by shifting more type checking responsibilities
+    to the compiler.
+- text: 'Generics make a possible code that can work with objects of different classes
+    without casting. '
+- text: Generics make code more fast.
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+status: Unchecked
+record: -1

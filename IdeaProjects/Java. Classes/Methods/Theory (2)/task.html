@@ -1,0 +1,39 @@
+<html>
+ <head></head>
+ <body>
+  <h2 style="text-align: center;"><b></b>Defining and using constructors<b></b></h2>
+  <h2 style="text-align: center;"></h2>
+  <p><b></b>Constructors<b></b> are special kind of methods that initialize a new object of the class. A constructor of a class is invoked when an instance of the class is created using the keyword <code>new</code>.</p>
+  <p>Constructors have some differences from other methods:</p>
+  <ul>
+   <li>they have the same name as classes containing them;</li>
+   <li>they have no return type (even <code>void</code>).</li>
+  </ul>
+  <p>Constructors initialize instances (objects) of the class. They set values to the fields when the object is creating. Also, constructors can take parameters for initializing fields by the given values.</p>
+  <p>Here is a class named <code>Patient</code>. An object of the class has a name, an age, and a height. The class has a three-argument constructor to initialize objects with values.</p>
+  <pre><code class="language-java">class Patient {&nbsp; &nbsp; String name;&nbsp; &nbsp; int age;&nbsp; &nbsp; float height;&nbsp; &nbsp; public Patient(String name, int age, int height) {&nbsp; &nbsp; &nbsp; &nbsp; this.name = name;&nbsp; &nbsp; &nbsp; &nbsp; this.age = age;&nbsp; &nbsp; &nbsp; &nbsp; this.height = height;&nbsp; &nbsp; }}</code></pre>
+  <p>The <code>Patient</code> constructor takes three parameters. To initialize the fields, the keyword <code>this</code> is used. It's a reference to the current instance (which is created) of the class. Use the keyword is required only if parameters have the same name as the fields (to separate them).</p>
+  <p>Let's create some instances of the class using the written constructor.</p>
+  <pre><code class="language-java">Patient patient1 = new Patient("Heinrich", 40, 182.0f);
+Patient patient2 = new Patient("Mary", 33, 171.5f);</code></pre>
+  <p>Now we have two patients with different the fields values.</p>
+  <h2 style="text-align: center;">Default and no-argument constructor<b></b></h2>
+  <p>The compiler automatically provides a default no-argument constructor for any class without constructors.</p>
+  <p>Let's see an example.</p>
+  <pre><code class="language-java">class Nothing {
+&nbsp; &nbsp; // the class has default no-argument constructor}</code></pre>
+  <p>We can create an instance of the class <code>Nothing</code> using the no-argument default constructor:</p>
+  <pre><code class="language-java">Nothing nothing = new Nothing();</code></pre>
+  <p>If you will define a constructor, the default constructor will not be created.</p>
+  <p>Sometimes explicit no-arguments constructor initializes fields of a class by "default" values (for example "Unknown" for a name).</p>
+  <p>Here is an example:</p>
+  <pre><code class="language-java">class Patient {&nbsp; &nbsp; String name;&nbsp; &nbsp; int age;&nbsp; &nbsp; float height;&nbsp; &nbsp; public Patient() {&nbsp; &nbsp; &nbsp; &nbsp; this.name = "Unknown"; // sometimes, it may be better than null as the default value&nbsp; &nbsp; }}</code></pre>
+  <h2 style="text-align: center;"><b></b>Conclusion about constructors</h2>
+  <ul>
+   <li>Any Java class has a constructor to initialize objects;<br></li>
+   <li>A constructor has the same name as the class containing it;</li>
+   <li>A constructor has no the return type, even <code>void</code>;</li>
+   <li>If a class has no explicit constructors, the java compilator automatically provides a default no-argument constructor.</li>
+  </ul>
+ </body>
+</html>
