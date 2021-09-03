@@ -1,0 +1,19 @@
+<html>
+ <head></head>
+ <body>
+  <p>Develop a class hierarchy of employees. The hierarchy should include three classes:<br></p>
+  <ul>
+   <li><b>Employee</b> is the base class. It includes three fields (name, email and experience), one constructor with three arguments and three getters: getName(), getEmail(), getExperience().</li>
+   <li><b>Developer</b> is a subclass. It includes fields from the base class and two additional fields (mainLanguage, skills), one constructor with five arguments and two getters: getMainLanguage(), getSkills().</li>
+   <li><b>DataAnalyst</b> is another subclass. It includes fields from the base class and two additional fields (phd, methods), one constructor with five arguments and two getters: isPhD(), getMethods().</li>
+  </ul>
+  <p>You need to define types of the fields and write suitable constructors. To understand it see the code below.</p>
+  <pre><code>String[] skills = { "git", "Scala", "JBoss", "UML" };
+Developer developer = new Developer("Mary", "mary@mail.com", 3, "Java", skills);
+
+String[] mlMethods = { "neural networks", "decision tree", "bayesian algorithms" };
+DataAnalyst analyst = new DataAnalyst("John", "john@gmail.com", 2, true, mlMethods);</code></pre>
+  <p>It should work correctly with your class hierarchy. Do not forget write getters with the specified name (otherwise the test system won't be able to check your solution).</p>
+  <p>Do not make your classes <code>public</code>!</p>
+ </body>
+</html><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 8 seconds</font><br><br>

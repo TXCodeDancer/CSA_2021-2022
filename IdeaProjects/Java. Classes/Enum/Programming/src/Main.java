@@ -1,0 +1,1 @@
+// declare your enum here

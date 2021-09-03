@@ -1,0 +1,29 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: val = 50, str = "default"
+- text: val = 50, str = "another-value"
+- text: val = 100, str = "some-value"
+- text: val = 100, str = "another-value"
+- text: val = 50, str = "some-value"
+- text: val = 300, str = "default"
+- text: val = 300, str = "some-value"
+- text: val = 100, str = "default"
+- text: val = 300, str = "another-value"
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz

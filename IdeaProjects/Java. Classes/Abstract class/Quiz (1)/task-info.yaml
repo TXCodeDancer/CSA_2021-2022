@@ -1,0 +1,26 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: Interface can have methods with access modifier "protected".
+- text: An interface can contain abstract, default and static methods.
+- text: A class can implement multiple interfaces.
+- text: It's impossible to create an instance of an interface.
+- text: A class that implements an interface must implement all the methods declared
+    in the interface.
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+- name: src/Task.java
+  visible: true
+  text: |
+    // You can experiment here, it won’t be checked
+
+    public class Task {
+      public static void main(String[] args) {
+        // put your code here
+      }
+    }
+  learner_created: false
+status: Unchecked
+record: -1
+custom_name: Quiz

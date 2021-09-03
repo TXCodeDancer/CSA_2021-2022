@@ -1,0 +1,178 @@
+<html>
+ <head></head>
+ <body>
+  <h2 style="text-align: center;"><b></b>Types of access modifiers</h2>
+  <p>In Java, there are several types of modifiers for controlling access to classes and members:</p>
+  <ul>
+   <li>private;</li>
+   <li>package-private (also known as default, implicit);<br></li>
+   <li>protected;</li>
+   <li>public.</li>
+  </ul>
+  <p>Only private, protected and public modifiers have the corresponding keywords. The package-private access modifier has not a keyword, but it's used when no any keyword specified.</p>
+  <h2 style="text-align: center;"><b></b>Access modifiers for classes</h2>
+  <p>A top-level class (not inner, not nested) can have one of two modifiers:</p>
+  <ul>
+   <li>package-private (default, no explicit modifier): a class is visible only for classes from the same package;</li>
+   <li>public: a class is visible to all classes everywhere.</li>
+  </ul>
+  <div>
+   Here is a class inside the package 
+   <b>org.stepik.alt.java.packages.theory.p1. </b>It has 
+   <b></b>package-private access.
+  </div>
+  <div>
+   <br>
+  </div>
+  <div>
+   <pre><code class="language-java">package org.stepik.alt.java.packages.theory.p1;
+
+class A {
+
+}</code></pre> 
+   <br>The class is visible only for classes from the same package. It's not visible for classes from any other packages including:
+  </div>
+  <div>
+   <br>
+  </div>
+  <div></div>
+  <pre><code class="language-java">org.stepik
+
+
+org.stepik.alt.java.packages.theory
+default package</code></pre>
+  <div>
+   <br>
+  </div>
+  <div>
+   Here is a public class inside the 
+   <b>package org.stepik.alt.java.packages.theory.p2</b>.
+  </div>
+  <div>
+   <br>
+  </div>
+  <div>
+   <pre><code class="language-java">package org.stepik.alt.java.packages.theory.p2;
+
+public class B {
+
+}</code></pre> 
+   <br>
+  </div>
+  <div>
+   The class is visible to all classes everywhere including the following packages:
+  </div>
+  <div>
+   <br>
+  </div>
+  <div>
+   <div></div>
+   <pre><code class="language-java">org.stepik
+
+
+org.stepik.alt.java.packages.theory
+
+org.stepik.alt.java.packages.theory.p1
+
+default package</code></pre>
+  </div>
+  <div></div>
+  <h2 style="text-align: center;"><b></b>Access modifiers for members</h2>
+  <p>A class member (a field or a method) can have one of four modifiers:</p>
+  <ul>
+   <li>private: a member is visible only inside the class;</li>
+   <li>package-private: a member is visible only for classes from the same package;<br></li>
+   <li>protected: a member is visible for classes from the same package and for subclasses even from other packages;</li>
+   <li>public: a member is visible for all classes everywhere.<br></li>
+  </ul>
+  <p>A class constructor can also have any of listed access modifiers.</p>
+  <p>The following table shows access to members grouped by modifiers.</p>
+  <p style="text-align: center;"></p>
+  <p style="text-align: center;"><img alt="" class="image-fullsize" height="140" src="https://ucarecdn.com/0c1aee24-39dd-48c7-ab72-cd7e9872db99/" width="379"></p>
+  <b>Levels of accessing members grouped by modifiers</b>
+  <p></p>
+  <p>Note, in this table, by a subclass we mean only a subclass from another package.</p>
+  <p>Let's consider member modifiers in more detail.</p>
+  <h2 style="text-align: center;"><b></b>Private members</h2>
+  <p>Fields are often declared private to control the access to them from the outside. In some cases, the fields are fully private and they are only used internally in the class. In other cases, the fields can be accessed via accessor methods (e.g. getters and setters).</p>
+  <p>Private methods are used to hidden internal low-level logic implementation from the other code and make public methods more concise and readable.</p>
+  <p>Here is the class Counter. It has a private field "current". The field is hidden from outside world. The field can be changed only through the method "inc()" and read by the "getCurrent()" method.</p>
+  <pre><code class="language-java">public class Counter {
+&nbsp; &nbsp; private long current = 0;
+
+&nbsp; &nbsp; public long getCurrent() {
+&nbsp; &nbsp; &nbsp; &nbsp; return current;
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; public long inc() {
+&nbsp; &nbsp; &nbsp; &nbsp; inc(1L);
+&nbsp; &nbsp; &nbsp; &nbsp; return current;
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; private void inc(long val) {
+&nbsp; &nbsp; &nbsp; &nbsp; current += val;
+&nbsp; &nbsp; }
+}</code></pre> 
+  <br>A class constructor can be private too. In this case, it cannot be invoked outside the class. But it can be invoked from other public constructors or from the class methods.
+  <div>
+   <br>
+  </div>
+  <h2 style="text-align: center;"><b></b>Package-private members</h2>
+  <div>
+   Package-private access modifier has not required any keyword. If a field, a method or a constructor has this modifier then it can be read or changed from any class inside the same package.
+   <br>
+  </div>
+  <div>
+   <div>
+    Let's see an example. Here are two classes in the same package: SomeClass and AnotherClass.
+   </div>
+  </div>
+  <div>
+   <br>
+  </div>
+  <div>
+   The class SomeClass has a package-private field and a constructor. The instance of the class can be created and modified inside a method of AnotherClass.
+  </div>
+  <div>
+   <br>
+  </div>
+  <div>
+   <pre><code class="language-java">public class SomeClass {
+&nbsp; &nbsp; int field;
+
+&nbsp; &nbsp; SomeClass(int field) {
+&nbsp; &nbsp; &nbsp; &nbsp; this.field = field;
+&nbsp; &nbsp; }
+}
+
+public class AnotherClass {
+&nbsp; &nbsp; AnotherClass() {
+&nbsp; &nbsp; &nbsp; &nbsp; SomeClass clazz = new SomeClass(100);
+&nbsp; &nbsp; &nbsp; &nbsp; clazz.field = 540;
+&nbsp; &nbsp; }
+}</code></pre> 
+  </div>
+  <div>
+   <br>
+  </div>
+  <h2 style="text-align: center;">Protected members<br></h2>
+  <div>
+   If a class member has the protected access modifier, it can be accessed from classes inside the same package and all subclasses of this class (including other packages). Inheritance and subclasses will be studied in the other topics.
+   <br>
+  </div>
+  <div>
+   <br>
+  </div>
+  <h2 style="text-align: center;"><b></b>Public members</h2>
+  <div>
+   Public access modifier means that a field, a method or a constructor can be accessed from everywhere. It's often used for constructors, methods representing the class API and constant fields (public static final).
+   <br>
+  </div>
+  <div>
+   <br>
+  </div>
+  <div>
+   As a conclusion, there is an advice - use the most restrictive access level that makes sense for a particular member. Doesn't make all member public.
+  </div>
+ </body>
+</html>

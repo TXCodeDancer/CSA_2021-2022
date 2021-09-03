@@ -1,0 +1,18 @@
+<html>
+ <head></head>
+ <body>
+  <p><b>Generic pairs</b></p>
+  <p>Implement the generic class <i>Pair</i> which contains a pair of objects (of any types). The objects can be null.</p>
+  <p>You should implement the methods <i>getFirst()</i>, <i>getSecond()</i>, <i>equals()</i> and <i>hashCode() </i>and the static method <i>of()</i> for creating instances as well. The constructor must be private.</p>
+  <p>Be careful with nulls when implementing <i>equals()</i> and <i>hashCode().</i><br></p>
+  <p>If your class has been implemented correctly, the following code should be compiled and work successfully.</p>
+  <pre><code>Pair&lt;Integer, String&gt; pair = Pair.of(1, "hello");
+Integer i = pair.getFirst(); // 1
+String s = pair.getSecond(); // "hello"
+
+Pair&lt;Integer, String&gt; pair2 = Pair.of(1, "hello");
+boolean mustBeTrue = pair.equals(pair2); // true!
+boolean mustAlsoBeTrue = pair.hashCode() == pair2.hashCode(); // true!</code></pre>
+  <p>Do not change the access modifier of the class Pair.</p>
+ </body>
+</html><br><br><font color="gray">Memory limit: 256 MB</font><br><font color="gray">Time limit: 8 seconds</font><br><br>
