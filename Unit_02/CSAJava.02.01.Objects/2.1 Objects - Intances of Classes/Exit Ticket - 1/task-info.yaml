@@ -13,4 +13,4 @@ message_correct: Congratulations!
 message_incorrect: Incorrect solution
 files:
 - name: src/Main.java
-  visible: true
+  visible: false
