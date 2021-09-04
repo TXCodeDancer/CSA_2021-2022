@@ -2,12 +2,24 @@ type: edu
 files:
 - name: src/Cat.java
   visible: true
+  placeholders:
+  - offset: 55
+    length: 115
+    placeholder_text: '/* TODO Implement instance variables here: name, age, color
+      and isSleeping */'
+  - offset: 242
+    length: 63
+    placeholder_text: /* TODO Implement missing initializations */
+  - offset: 508
+    length: 49
+    placeholder_text: /* TODO Implement missing initializations */
+  - offset: 629
+    length: 33
+    placeholder_text: /* TODO Implement missing initializations */
+  - offset: 791
+    length: 27
+    placeholder_text: /* TODO Implent setting isSleeping */
 - name: test/CatTests.java
   visible: false
 - name: src/Main.java
   visible: true
-  placeholders:
-  - offset: 686
-    length: 35
-    placeholder_text: '/* TODO: Add the code to print each of my cats'' objects on
-      a separate line */'

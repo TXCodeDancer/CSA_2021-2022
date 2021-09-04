@@ -1,17 +1,17 @@
 // Don't change this class
 public class Cat {
-    // Implement instance variables here
-    private String name;
+    // Implement instance variables
+    private final String name;
     private int age;
-    private String color;
-    private boolean isPlaying;
+    private final String color;
+    private boolean isSleeping;
 
     public Cat() // Default constructor
     {
         this.name = "";
         this.age = Integer.MIN_VALUE;
         this.color = "";
-        this.isPlaying = false;
+        this.isSleeping = false;
     }
 
     public Cat(String name, int age, String color) // Initializing constructor
@@ -22,52 +22,28 @@ public class Cat {
         this.color = color;
 
         // Set default instance variables
-        this.isPlaying = false;
-    };
-
-    // Instance Variable Getters
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public boolean getPlaying() {
-        return isPlaying;
-    }
-
-    // Instance Variable Setters
-    public void setName(String name)
-    {
-        this.name = name;
+        this.isSleeping = false;
     }
 
     public void setAge(int age) {
         this.age = age;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    // Implement class methods
+    public void sleeps(){ isSleeping = true; }
+    public void wokeUp() { isSleeping = false;}
+    private String sleeping()
+    {
+        if (isSleeping) {
+            return "is sleeping.";
+        }
+        else {
+            return "is not sleeping.";
+        }
     }
 
-    public void setPlaying(boolean playing) {
-        isPlaying = playing;
-    }
-
-    // Additional methods
     @Override
     public String toString() {
-        return "Cat{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", color='" + color + '\'' +
-                ", isPlaying=" + isPlaying +
-                '}';
+        return name + ", the " + age + "-year-old " + color + " cat, " + sleeping();
     }
 }

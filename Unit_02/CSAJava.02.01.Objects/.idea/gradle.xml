@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -7,13 +8,12 @@
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="#JAVA_INTERNAL" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/2.1 Objects - Intances of Classes/Cat Class" />
             <option value="$PROJECT_DIR$/2.1 Objects - Intances of Classes/Implement Cat Class" />
-            <option value="$PROJECT_DIR$/2.1 Objects - Intances of Classes/task1" />
+            <option value="$PROJECT_DIR$/2.1 Objects - Intances of Classes/Unit 2.1 Exit Ticket - 1" />
             <option value="$PROJECT_DIR$/util" />
           </set>
         </option>
