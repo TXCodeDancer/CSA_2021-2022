@@ -1,0 +1,6 @@
+type: edu
+files:
+- name: src/Cat.java
+  visible: true
+- name: test/CatTests.java
+  visible: false
