@@ -1,0 +1,15 @@
+
+The default Cat is:
+, the -2147483648-year-old  cat, is not sleeping.
+
+My cats are:
+Panda, the 16-year-old black and white cat, is not sleeping.
+Rusty, the 15-year-old orange tabby cat, is not sleeping.
+Ben, the 18-year-old black and white cat, is not sleeping.
+Bowie, the 13-year-old white cat, is not sleeping.
+
+My cats are:
+Panda, the 16-year-old black and white cat, is sleeping.
+Rusty, the 15-year-old orange tabby cat, is not sleeping.
+Ben, the 18-year-old black and white cat, is sleeping.
+Bowie, the 13-year-old white cat, is not sleeping.
