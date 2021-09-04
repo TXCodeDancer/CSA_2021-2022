@@ -14,6 +14,7 @@
 # Gradle files
 *.bin
 *.lock
+*.idx
 
 # BlueJ files
 *.ctxt
