@@ -5,11 +5,15 @@ public class Main {
     World world = new World(400,400);
     Turtle yertle = new Turtle(world);
     // Add your own code in here 
-    yertle.setColor(Color.blue);
+    yertle.setColor(Color.RED);
     yertle.forward();
     yertle.turnRight();
     yertle.forward();
-    
+    yertle.turnRight();
+    yertle.forward();
+    yertle.turnRight();
+    yertle.forward();
+
     world.setVisible(true);
   }
 }
