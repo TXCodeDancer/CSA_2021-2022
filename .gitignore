@@ -11,6 +11,10 @@
 .idea/vcs.xml
 .idea/jsLibraryMappings.xml
 
+# Gradle files
+*.bin
+*.lock
+
 # BlueJ files
 *.ctxt
 

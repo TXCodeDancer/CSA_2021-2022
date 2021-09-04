@@ -4,3 +4,10 @@ files:
   visible: true
 - name: test/CatTests.java
   visible: false
+- name: src/Main.java
+  visible: true
+  placeholders:
+  - offset: 686
+    length: 35
+    placeholder_text: '/* TODO: Add the code to print each of my cats'' objects on
+      a separate line */'

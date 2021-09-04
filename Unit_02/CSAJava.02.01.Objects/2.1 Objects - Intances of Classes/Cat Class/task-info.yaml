@@ -1,0 +1,8 @@
+type: output
+files:
+- name: test/output.txt
+  visible: false
+- name: src/Main.java
+  visible: true
+- name: src/Cat.java
+  visible: true

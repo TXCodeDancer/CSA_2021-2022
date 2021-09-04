@@ -1,6 +1,6 @@
 // Don't change this class
 public class Cat {
-  // Implement instance variables here
+    // Implement instance variables here
     private String name;
     private int age;
     private String color;
