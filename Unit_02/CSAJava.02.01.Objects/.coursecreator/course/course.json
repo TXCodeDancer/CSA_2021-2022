@@ -2,7 +2,7 @@
   "summary" : "#AP CSA Java course: Using Objects\n- The course covers creation and use of Java objects.\n- The course is based on CSAwesome Unit 2.",
   "title" : "CSAJava.02.Objects",
   "authors" : [
-    "Rick V Brunson, Team Brunson Software, LLC"
+    "Rick Brunson, Team Brunson Software, LLC"
   ],
   "programming_language" : "JAVA",
   "language" : "en",
@@ -25,19 +25,19 @@
               "placeholders" : [
                 {
                   "offset" : 918,
-                  "length" : 65,
+                  "length" : 64,
                   "possible_answer" : "  bowie.sleeps();",
-                  "placeholder_text" : "/* TODO Change Bowies's status to record that he is sleeping.  */"
+                  "placeholder_text" : "/* TODO Change Bowie's status to record that he is sleeping.  */"
                 },
                 {
-                  "offset" : 1259,
+                  "offset" : 1258,
                   "length" : 74,
                   "possible_answer" : "   System.out.println(cat);",
                   "placeholder_text" : "/* TODO Print each cat's information to the console on a separate line. */"
                 }
               ],
               "is_visible" : true,
-              "text" : "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main\n{\n    public static void main(String[] args)\n    {\n        // Create instance of class with no-argument constructor\n        Cat myCat = new Cat();\n        System.out.println();\n        System.out.println(\"The default Cat is:\");\n        System.out.println(myCat);\n\n        // Create instance of class with argument constructor\n        Cat panda = new Cat(\"Panda\", 16, \"black and white\");\n        Cat rusty = new Cat(\"Rusty\", 15, \"orange tabby\");\n        Cat ben = new Cat(\"Ben\", 18, \"black and white\");\n        Cat bowie = new Cat(\"Bowie\", 13, \"white\");\n\n        // Create a list of my cats\n        List<Cat> myCats = new ArrayList<>();\n        myCats.add(panda);\n        myCats.add(rusty);\n        myCats.add(ben);\n        myCats.add(bowie);\n\n        outputMyCats(myCats);\n\n        // Panda and Bowie are now sleeping\n        panda.sleeps();\n      /* TODO Change Bowies's status to record that he is sleeping.  */\n\n        outputMyCats(myCats);\n\n    }\n\n    // Output information about each of my cats\n    private static void outputMyCats(List<Cat> myCats)\n    {\n        System.out.println();\n        System.out.println(\"My cats are:\");\n        for (Object cat : myCats)\n        {\n         /* TODO Print each cat's information to the console on a separate line. */\n        }\n    }\n}"
+              "text" : "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main\n{\n    public static void main(String[] args)\n    {\n        // Create instance of class with no-argument constructor\n        Cat myCat = new Cat();\n        System.out.println();\n        System.out.println(\"The default Cat is:\");\n        System.out.println(myCat);\n\n        // Create instance of class with argument constructor\n        Cat panda = new Cat(\"Panda\", 16, \"black and white\");\n        Cat rusty = new Cat(\"Rusty\", 15, \"orange tabby\");\n        Cat ben = new Cat(\"Ben\", 18, \"black and white\");\n        Cat bowie = new Cat(\"Bowie\", 13, \"white\");\n\n        // Create a list of my cats\n        List<Cat> myCats = new ArrayList<>();\n        myCats.add(panda);\n        myCats.add(rusty);\n        myCats.add(ben);\n        myCats.add(bowie);\n\n        outputMyCats(myCats);\n\n        // Panda and Bowie are now sleeping\n        panda.sleeps();\n      /* TODO Change Bowie's status to record that he is sleeping.  */\n\n        outputMyCats(myCats);\n\n    }\n\n    // Output information about each of my cats\n    private static void outputMyCats(List<Cat> myCats)\n    {\n        System.out.println();\n        System.out.println(\"My cats are:\");\n        for (Object cat : myCats)\n        {\n         /* TODO Print each cat's information to the console on a separate line. */\n        }\n    }\n}"
             },
             "src/Cat.java" : {
               "name" : "src/Cat.java",
@@ -97,7 +97,7 @@
               "name" : "test/CatTests.java",
               "placeholders" : [ ],
               "is_visible" : false,
-              "text" : "import org.junit.Assert;\nimport org.junit.Test;\n\nimport static org.junit.Assert.assertEquals;\n\npublic class CatTests {\n  @Test\n  public void testDefault() {\n    // put your test here\n    Cat cat = new Cat();\n    String actual = cat.toString();\n    String expected = \", the -2147483648-year-old  cat, is not sleeping.\";\n    assertEquals(expected, actual);\n  }\n\n  @Test\n  public void testParameterConstructor() {\n    // put your test here\n    Cat cat = new Cat(\"Ben\", 18, \"black and white\");\n    String actual = cat.toString();\n    String expected = \"Ben, the 18-year-old black and white cat, is not sleeping.\";\n    assertEquals(expected, actual);\n  }\n\n  @Test\n  public void testIsSleeping() {\n    // put your test here\n    Cat cat = new Cat(\"Ben\", 18, \"black and white\");\n    cat.sleeps();\n    String actual = cat.toString();\n    String expected = \"Ben, the 18-year-old black and white cat, is sleeping.\";\n    assertEquals(expected, actual);\n  }\n}"
+              "text" : "import org.junit.Assert;\nimport org.junit.Test;\n\nimport static org.junit.Assert.assertEquals;\n\npublic class CatTests {\n  @Test\n  public void testDefault() {\n    // put your test here\n    Cat cat = new Cat();\n    String actual = cat.toString();\n    String expected = \", the -2147483648-year-old  cat, is not sleeping.\";\n    assertEquals(expected, actual);\n  }\n\n  @Test\n  public void testParameterConstructor() {\n    // put your test here\n    Cat cat = new Cat(\"Bowie\", 13, \"white\");\n    String actual = cat.toString();\n    String expected = \"Bowie, the 13-year-old white cat, is not sleeping.\";\n    assertEquals(expected, actual);\n  }\n\n  @Test\n  public void testIsSleeping() {\n    // put your test here\n    Cat cat = new Cat(\"Bowie\", 13, \"white\");\n    cat.sleeps();\n    String actual = cat.toString();\n    String expected = \"Bowie, the 13-year-old white cat, is sleeping.\";\n    assertEquals(expected, actual);\n  }\n}"
             },
             "src/Main.java" : {
               "name" : "src/Main.java",
