@@ -2,7 +2,7 @@
   "summary" : "#AP CSA Java course: Using Objects\n- The course covers creation and use of Java objects.\n- The course is based on CSAwesome Unit 2.",
   "title" : "CSAJava.02.Objects",
   "authors" : [
-    "Rick V Brunson, Team Brunson Software, LLC"
+    "Rick Brunson, Team Brunson Software, LLC"
   ],
   "programming_language" : "JAVA",
   "language" : "en",
@@ -97,7 +97,7 @@
               "name" : "test/CatTests.java",
               "placeholders" : [ ],
               "is_visible" : false,
-              "text" : "import org.junit.Assert;\nimport org.junit.Test;\n\nimport static org.junit.Assert.assertEquals;\n\npublic class CatTests {\n  @Test\n  public void testDefault() {\n    // put your test here\n    Cat cat = new Cat();\n    String actual = cat.toString();\n    String expected = \", the -2147483648-year-old  cat, is not sleeping.\";\n    assertEquals(expected, actual);\n  }\n\n  @Test\n  public void testParameterConstructor() {\n    // put your test here\n    Cat cat = new Cat(\"Ben\", 18, \"black and white\");\n    String actual = cat.toString();\n    String expected = \"Ben, the 18-year-old black and white cat, is not sleeping.\";\n    assertEquals(expected, actual);\n  }\n\n  @Test\n  public void testIsSleeping() {\n    // put your test here\n    Cat cat = new Cat(\"Ben\", 18, \"black and white\");\n    cat.sleeps();\n    String actual = cat.toString();\n    String expected = \"Ben, the 18-year-old black and white cat, is sleeping.\";\n    assertEquals(expected, actual);\n  }\n}"
+              "text" : "import org.junit.Assert;\nimport org.junit.Test;\n\nimport static org.junit.Assert.assertEquals;\n\npublic class CatTests {\n  @Test\n  public void testDefault() {\n    // put your test here\n    Cat cat = new Cat();\n    String actual = cat.toString();\n    String expected = \", the -2147483648-year-old  cat, is not sleeping.\";\n    assertEquals(expected, actual);\n  }\n\n  @Test\n  public void testParameterConstructor() {\n    // put your test here\n    Cat cat = new Cat(\"Bowie\", 13, \"white\");\n    String actual = cat.toString();\n    String expected = \"Bowie, the 13-year-old white cat, is not sleeping.\";\n    assertEquals(expected, actual);\n  }\n\n  @Test\n  public void testIsSleeping() {\n    // put your test here\n    Cat cat = new Cat(\"Bowie\", 13, \"white\");\n    cat.sleeps();\n    String actual = cat.toString();\n    String expected = \"Bowie, the 13-year-old white cat, is sleeping.\";\n    assertEquals(expected, actual);\n  }\n}"
             },
             "src/Main.java" : {
               "name" : "src/Main.java",
