@@ -16,19 +16,19 @@ public class CatTests {
   @Test
   public void testParameterConstructor() {
     // put your test here
-    Cat cat = new Cat("Ben", 18, "black and white");
+    Cat cat = new Cat("Bowie", 13, "white");
     String actual = cat.toString();
-    String expected = "Ben, the 18-year-old black and white cat, is not sleeping.";
+    String expected = "Bowie, the 13-year-old white cat, is not sleeping.";
     assertEquals(expected, actual);
   }
 
   @Test
   public void testIsSleeping() {
     // put your test here
-    Cat cat = new Cat("Ben", 18, "black and white");
+    Cat cat = new Cat("Bowie", 13, "white");
     cat.sleeps();
     String actual = cat.toString();
-    String expected = "Ben, the 18-year-old black and white cat, is sleeping.";
+    String expected = "Bowie, the 13-year-old white cat, is sleeping.";
     assertEquals(expected, actual);
   }
 }
