@@ -1,0 +1,16 @@
+type: output
+files:
+- name: test/output.txt
+  visible: false
+- name: src/Main.java
+  visible: true
+  placeholders:
+  - offset: 918
+    length: 17
+    placeholder_text: /* TODO Change Bowies's status to record that he is sleeping.  */
+  - offset: 1211
+    length: 27
+    placeholder_text: /* TODO Print each cat's information to the console on a separate
+      line. */
+- name: src/Cat.java
+  visible: true

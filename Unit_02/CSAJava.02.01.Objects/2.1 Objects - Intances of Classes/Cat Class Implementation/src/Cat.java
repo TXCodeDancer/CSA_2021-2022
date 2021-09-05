@@ -1,4 +1,5 @@
-public class Cat {
+public class Cat
+{
     // Implement instance variables
     private final String name;
     private int age;
@@ -24,30 +25,36 @@ public class Cat {
         this.isSleeping = false;
     }
 
-    public void setAge(int age) {
+    public void setAge(int age)
+    {
         this.age = age;
     }
 
     // Implement class methods
-    public void sleeps(){
+    public void sleeps()
+    {
         isSleeping = true;
     }
-    public void wokeUp() {
+
+    public void wokeUp()
+    {
         isSleeping = false;
     }
 
     private String sleeping()
     {
-        if (isSleeping) {
+        if (isSleeping)
+        {
             return "is sleeping.";
-        }
-        else {
+        } else
+        {
             return "is not sleeping.";
         }
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return name + ", the " + age + "-year-old " + color + " cat, " + sleeping();
     }
 }

@@ -8,17 +8,18 @@ files:
     placeholder_text: '/* TODO Implement instance variables here: name, age, color
       and isSleeping */'
   - offset: 242
-    length: 63
+    length: 62
     placeholder_text: /* TODO Implement missing initializations */
   - offset: 508
     length: 49
     placeholder_text: /* TODO Implement missing initializations */
   - offset: 629
-    length: 33
+    length: 32
     placeholder_text: /* TODO Implement missing initializations */
-  - offset: 791
-    length: 27
-    placeholder_text: /* TODO Implent setting isSleeping */
+  - offset: 800
+    length: 26
+    placeholder_text: /* TODO Implement modify instance variable to indicated that
+      the cat is sleeping */
 - name: test/CatTests.java
   visible: false
 - name: src/Main.java

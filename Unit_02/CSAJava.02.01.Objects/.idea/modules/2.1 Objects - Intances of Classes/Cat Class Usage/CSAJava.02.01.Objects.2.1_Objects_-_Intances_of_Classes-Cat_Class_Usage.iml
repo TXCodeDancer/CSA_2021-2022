@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":2.1_Objects_-_Intances_of_Classes-Cat_Class_Usage" external.linked.project.path="$MODULE_DIR$/../../../../2.1 Objects - Intances of Classes/Cat Class Usage" external.root.project.path="$MODULE_DIR$/../../../.." external.system.id="GRADLE" external.system.module.group="CSAJava.02.01.Objects" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../2.1 Objects - Intances of Classes/Cat Class Usage">
+      <excludeFolder url="file://$MODULE_DIR$/../../../../2.1 Objects - Intances of Classes/Cat Class Usage/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../2.1 Objects - Intances of Classes/Cat Class Usage/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../2.1 Objects - Intances of Classes/Cat Class Usage/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

@@ -5,7 +5,6 @@ public class Main
 {
     public static void main(String[] args)
     {
-
         // Create instance of class with no-argument constructor
         Cat myCat = new Cat();
         System.out.println();
@@ -27,9 +26,9 @@ public class Main
 
         outputMyCats(myCats);
 
-        // Panda and Ben are now sleeping
+        // Panda and Bowie are now sleeping
         panda.sleeps();
-        ben.sleeps();
+        bowie.sleeps();
 
         outputMyCats(myCats);
 
