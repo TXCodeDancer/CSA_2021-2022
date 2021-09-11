@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Unit_02</name>
-	<comment>Project Unit_02 created by Buildship.</comment>
+	<name>CSAJava.Unit02.UsingObjects</name>
+	<comment>Project CSAJava.Unit02.UsingObjects created by Buildship.</comment>
 	<projects>
 	</projects>
 	<buildSpec>
@@ -16,7 +16,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1631360992560</id>
+			<id>1631362298989</id>
 			<name></name>
 			<type>30</type>
 			<matcher>

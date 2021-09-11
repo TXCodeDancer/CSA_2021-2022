@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -10,7 +9,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/2.1 Objects - Instances of Classes/Cat Class Usage" />
+            <option value="$PROJECT_DIR$/lesson1/task1" />
             <option value="$PROJECT_DIR$/util" />
           </set>
         </option>
