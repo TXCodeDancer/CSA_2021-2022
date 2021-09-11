@@ -4,11 +4,13 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/2.1 Objects - Instances of Classes/Cat Class Implementation" />
             <option value="$PROJECT_DIR$/2.1 Objects - Instances of Classes/Cat Class Usage" />
             <option value="$PROJECT_DIR$/util" />
           </set>
