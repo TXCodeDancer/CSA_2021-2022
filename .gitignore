@@ -16,6 +16,7 @@
 *.lock
 *.idx
 **/bin/*
+**/build/*
 
 # BlueJ files
 *.ctxt
