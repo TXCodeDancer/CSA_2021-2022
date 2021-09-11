@@ -16,10 +16,11 @@ files:
   - offset: 629
     length: 32
     placeholder_text: /* TODO Implement missing initializations */
-  - offset: 799
-    length: 26
-    placeholder_text: /* TODO Implement modify instance variable to indicated that
-      the cat is sleeping */
+  - offset: 807
+    length: 18
+    placeholder_text: |-
+      /* TODO Modify instance variable to indicated that
+            the cat is sleeping */
 - name: test/Tests.java
   visible: false
 - name: src/Main.java
