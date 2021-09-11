@@ -7,3 +7,4 @@ summary: |-
 programming_language: Java
 content:
 - 2.1 Objects - Instances of Classes
+- 2.4 Calling Methods with Parameters
