@@ -4,6 +4,23 @@ files:
   visible: false
 - name: src/Main.java
   visible: true
+  placeholders:
+  - offset: 157
+    length: 6
+    placeholder_text: /* Declare required type */
+  - offset: 184
+    length: 5
+    placeholder_text: /* Pass in required parameter */
+  - offset: 384
+    length: 13
+    placeholder_text: '/* Create a turtle with a starting position: x = 50; y = 75.
+      */'
+  - offset: 406
+    length: 29
+    placeholder_text: /* Print its information */
+  - offset: 519
+    length: 41
+    placeholder_text: '/* Change its colors: Body = blue; Shell = red. */'
 - name: src/Turtle.java
   visible: false
 - name: src/World.java

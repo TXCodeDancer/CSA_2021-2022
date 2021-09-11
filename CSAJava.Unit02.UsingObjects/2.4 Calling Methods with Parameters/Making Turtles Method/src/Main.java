@@ -18,12 +18,14 @@ public class Main {
         body = Color.green;
         shell = Color.yellow;
         Turtle turtleNew =  makingTurtles(world, x, y, body, shell);
+        // Print turtle information to console.
         System.out.println(turtleNew);
 
     }
 
     public static Turtle makingTurtles(World world, int x, int y, Color body, Color shell)
     {
+        // Implement method body to create a new turtle at position x, y with body/shell colors
         Turtle turtle = new Turtle(x, y, world);
         turtle.setColor(body, shell);
         return turtle;

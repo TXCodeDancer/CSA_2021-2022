@@ -6,7 +6,7 @@ public class Main {
 
       // Create a default turtle
       Turtle turtle = new Turtle(world);
-      // Print turtle parameters
+      // Print turtle attributes
       System.out.println(turtle);
 
       // Create a turtle with a starting position: x = 50; y = 75. Print its information
