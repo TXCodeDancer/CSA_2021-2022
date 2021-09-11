@@ -18,10 +18,16 @@ public class Turtle
         ypos = y;
     }
 
-    void setColor(Color body, Color shell)
+    public void setColor(Color body, Color shell)
     {
         bodyColor = body;
         shellColor = shell;
+    }
+
+    public void moveTo(int x, int y)
+    {
+        xpos = x;
+        ypos = y;
     }
 
     @Override
