@@ -1,0 +1,25 @@
+type: edu
+files:
+  - name: src/Fraction.java
+    visible: true
+    placeholders:
+      - offset: 24
+        length: 61
+        placeholder_text: /* TODO Implement instance variables */
+      - offset: 108
+        length: 6
+        placeholder_text: /* TODO Declare type */
+      - offset: 126
+        length: 6
+        placeholder_text: /* TODO Declare type */
+      - offset: 152
+        length: 75
+        placeholder_text: /* TODO Initialize instance variables */
+      - offset: 246
+        length: 6
+        placeholder_text: /* TODO Declare type */
+      - offset: 268
+        length: 38
+        placeholder_text: /* TODO Implement method to return decimal value of fraction */
+  - name: test/Tests.java
+    visible: false
