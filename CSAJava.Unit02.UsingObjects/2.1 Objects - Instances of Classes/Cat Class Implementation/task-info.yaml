@@ -5,8 +5,8 @@ files:
   placeholders:
   - offset: 55
     length: 115
-    placeholder_text: '/* Implement instance variables here: name, age, color
-      and isSleeping */'
+    placeholder_text: '/* Implement instance variables here: name, age, color and
+      isSleeping */'
   - offset: 242
     length: 62
     placeholder_text: /* Implement missing initializations */
@@ -16,7 +16,7 @@ files:
   - offset: 629
     length: 32
     placeholder_text: /* Implement missing initializations */
-  - offset: 807
+  - offset: 811
     length: 18
     placeholder_text: |-
       /* Modify instance variable to indicated that

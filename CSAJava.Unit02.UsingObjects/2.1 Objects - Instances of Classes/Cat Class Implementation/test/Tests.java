@@ -25,7 +25,7 @@ public class Tests {
   public void testIsSleeping() {
     // put your test here
     Cat cat = new Cat("Bowie", 13, "white");
-    cat.Sleep();
+    cat.goToSleep();
     String actual = cat.toString();
     String expected = "Bowie, the 13-year-old white cat, is sleeping.";
     assertEquals(expected, actual);
