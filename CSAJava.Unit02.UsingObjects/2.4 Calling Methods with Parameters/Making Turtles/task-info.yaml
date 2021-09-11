@@ -5,6 +5,6 @@ files:
 - name: src/Main.java
   visible: true
 - name: src/Turtle.java
-  visible: true
+  visible: false
 - name: src/World.java
-  visible: true
+  visible: false

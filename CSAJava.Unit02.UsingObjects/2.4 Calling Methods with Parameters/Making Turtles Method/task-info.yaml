@@ -3,8 +3,8 @@ files:
 - name: test/Tests.java
   visible: false
 - name: src/Turtle.java
-  visible: true
+  visible: false
 - name: src/World.java
-  visible: true
+  visible: false
 - name: src/Main.java
   visible: true
