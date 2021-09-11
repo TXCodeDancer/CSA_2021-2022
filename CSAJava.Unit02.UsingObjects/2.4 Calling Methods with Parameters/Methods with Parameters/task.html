@@ -1,64 +1,68 @@
 <html>
 <body style="font-size:1em;">
-
-<h2>Cat Class: Instance Variables & Methods</h2>
-<p>Implement the Cat class by adding <strong>instance variables</strong> (attributes) and <strong>methods</strong>
-    (behaviors).</p>
+<h2>Methods with Parameters</h2>
+<p>
+    Method Declaration: <code>public int sum(int a, int b) { return a + b; }</code><br>
+    <br>
+    Method Components
+<ul>
+    <li><em>Method Header: </em><code>public int sum(int a, int b)</code></li>
+    <li><em>Method Signature: </em><code>sum(int a, int b)</code></li>
+    <li><em>Access Specifier: </em><code>public</code></li>
+    <li><em>Return Type: </em><code>int</code></li>
+    <li><em>Method Name: </em><code>sum</code></li>
+    <li><em>Parameter List: </em><code>(int a, int b)</code></li>
+    <li><em>Method Body: </em><code>{ return a + b; }</code></li>
+</ul>
+</p>
+<p>Turtle Class Diagram</p>
 
 <div style="
             padding: .5em;
             border: .05em solid lightgray;
             margin: 1em auto 0em;">
-    This is some dummy text.
+    Turtle : SimpleTurtle
+</div>
+
+<div style="
+            padding: .5em;
+            border: .05em solid lightgray;
+            margin: 0em auto 0em;">
+    <em>Attributes:</em><br>
+    <code>name : String</code><br>
+    <code>bodyColor : Color</code><br>
+    <code>width : int = 15</code><br>
+    <code>height : int = 18</code><br>
+    <code>xpos : int = 0</code><br>
+    <code>ypos : int = 0</code><br>
 </div>
 <div style="
             padding: .5em;
             border: .05em solid lightgray;
             margin: 0em auto 1em;">
-    This is some dummy text.<br>
-    This is some dummy text.<br>
-    This is some dummy text.<br>
-    This is some dummy text.<br>
+    <em>Methods:</em><br>
+    <code>forward()</code><br>
+    <code>backward()</code><br>
+    <code>turnLeft()</code><br>
+    <code>turnRight()</code><br>
+    <code>penUp()</code><br>
+    <code>forward(pixels : int)</code><br>
+    <code>backward(pixels : int)</code><br>
+    <code>turn(degrees : double)</code><br>
+    <code>moveTo(x: int, y: int)</code><br>
+    <code>setColor(theColor : Color)</code><br>
+    <code>setWidth(theWidth : int)</code><br>
+    <code>setHeight(theHeight : int)</code><br>
 </div>
 
 
-<p>Implement the following instance variables (attributes):</p>
-<ul>
-    <li><strong>name</strong> as a string.</li>
-    <li><strong>age</strong> as an int.</li>
-    <li><strong>color</strong> as a string.</li>
-    <li><strong>isSleeping</strong> as a boolean</li>
+<ul style="font-size:0.9em;">
+    References:
+    <ul><li><a href="https://www.javatpoint.com/method-in-java">Javatpoint: Method in Java</a></li></ul>
+    <ul><li><a href="https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html">Class SimpleTurtle Javadoc</a></li></ul>
+    <ul><li><a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-java-quick-reference.pdf?course=ap-computer-science-a">AP CSA Java Quick Reference</a></li></ul>
+    <ul><li><a href="https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-4-methods-with-params.html">2.4. Calling Methods With Parameters</a></li></ul>
 </ul>
-
-<p>Implement the following methods (behaviors):</p>
-<ul>
-    <li>Public <strong>Cat</strong> constructor without parameters:</li>
-    <ul><li>Set name = "" </li></ul>
-    <ul><li>Set age = Integer.MIN_VALUE </li></ul>
-    <ul><li>Set color = "" </li></ul>
-    <ul><li>Set isSleeping = false </li></ul>
-    <li>Public <strong>Cat</strong> constructor with parameters: public Cat(String name, int age, String color)</li>
-    <ul><li>Set name = name </li></ul>
-    <ul><li>Set age = age </li></ul>
-    <ul><li>Set color = color </li></ul>
-    <ul><li>Set isSleeping = false </li></ul>
-    <li>Public <strong>sleeps()</strong> method:</li>
-    <ul><li>Set isSleeping = true </li></ul>
-</ul>
-
-<div class="hint">
-    When a class method parameter has the same as the class instance variable,
-    use this.varName = varName to set the class instance variable.
-    For example:
-    <ul><code>this.name = name;</code></ul>
-</div>
-
-<p>References:</p>
-<ul>
-    <li><a href="https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-1-objects-intro-turtles.html">2.1. Objects - Instances of Classes</a></li>
-    <li><a href="https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-2-constructors.html">2.2. Creating and Initializing Objects: Constructors</a></li>
-</ul>
-
-<p>Check your modified Main class by clicking the <strong>'Check'</strong> button at the bottom of this page.</p>
+<p>Click <strong>'Run'</strong> to continue.</p>
 </body>
 </html>
