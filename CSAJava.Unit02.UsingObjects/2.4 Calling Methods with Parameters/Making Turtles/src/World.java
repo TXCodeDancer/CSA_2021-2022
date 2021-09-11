@@ -4,7 +4,6 @@ public class World
     private int height = 480;
 
     public World() {}
-
     public World(int width, int height)
     {
         this.width = width;
