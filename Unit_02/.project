@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>2.1_Objects_-_Intances_of_Classes-Exit_Ticket_-_1</name>
-	<comment>Project 2.1_Objects_-_Intances_of_Classes-Exit_Ticket_-_1 created by Buildship.</comment>
+	<name>Unit_02</name>
+	<comment>Project Unit_02 created by Buildship.</comment>
 	<projects>
 	</projects>
 	<buildSpec>
-		<buildCommand>
-			<name>org.eclipse.jdt.core.javabuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
 		<buildCommand>
 			<name>org.eclipse.buildship.core.gradleprojectbuilder</name>
 			<arguments>
@@ -17,12 +12,11 @@
 		</buildCommand>
 	</buildSpec>
 	<natures>
-		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.buildship.core.gradleprojectnature</nature>
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1630853297107</id>
+			<id>1631360992560</id>
 			<name></name>
 			<type>30</type>
 			<matcher>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>2.1_Objects_-_Intances_of_Classes-Cat_Class</name>
-	<comment>Project 2.1_Objects_-_Intances_of_Classes-Cat_Class created by Buildship.</comment>
+	<name>lesson1-task1</name>
+	<comment>Project lesson1-task1 created by Buildship.</comment>
 	<projects>
 	</projects>
 	<buildSpec>
@@ -22,7 +22,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1630853297101</id>
+			<id>1631360992567</id>
 			<name></name>
 			<type>30</type>
 			<matcher>
