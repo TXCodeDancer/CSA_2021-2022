@@ -8,14 +8,16 @@
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#JAVA_INTERNAL" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/2.1 Objects - Intances of Classes/Cat Class Implementation" />
-            <option value="$PROJECT_DIR$/2.1 Objects - Intances of Classes/Cat Class Usage" />
-            <option value="$PROJECT_DIR$/2.1 Objects - Intances of Classes/Exit Ticket - 1" />
-            <option value="$PROJECT_DIR$/2.1 Objects - Intances of Classes/Exit Ticket - 2" />
-            <option value="$PROJECT_DIR$/2.1 Objects - Intances of Classes/Exit Ticket - 3" />
+            <option value="$PROJECT_DIR$/2.1 Objects - Instances of Classes/Cat Class Implementation" />
+            <option value="$PROJECT_DIR$/2.1 Objects - Instances of Classes/Cat Class Usage" />
+            <option value="$PROJECT_DIR$/2.1 Objects - Instances of Classes/Exit Ticket - 1" />
+            <option value="$PROJECT_DIR$/2.1 Objects - Instances of Classes/Exit Ticket - 1/bin" />
+            <option value="$PROJECT_DIR$/2.1 Objects - Instances of Classes/Exit Ticket - 2" />
+            <option value="$PROJECT_DIR$/2.1 Objects - Instances of Classes/Exit Ticket - 3" />
             <option value="$PROJECT_DIR$/util" />
           </set>
         </option>
