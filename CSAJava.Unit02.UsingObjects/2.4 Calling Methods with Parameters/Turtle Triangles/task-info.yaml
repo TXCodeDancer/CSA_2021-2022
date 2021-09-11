@@ -1,0 +1,10 @@
+type: output
+files:
+- name: test/output.txt
+  visible: false
+- name: src/Main.java
+  visible: true
+- name: src/Turtle.java
+  visible: true
+- name: src/World.java
+  visible: true
