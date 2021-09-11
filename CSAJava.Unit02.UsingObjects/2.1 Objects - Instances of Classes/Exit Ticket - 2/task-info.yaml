@@ -1,0 +1,26 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: forward()
+    is_correct: true
+  - text: Backward()
+    is_correct: false
+  - text: pendown()
+    is_correct: false
+  - text: 'turn(degrees: double)'
+    is_correct: true
+  - text: 'MoveTo(x: int, y: int)'
+    is_correct: false
+  - text: flip()
+    is_correct: false
+  - text: 'moveTo(x: int, y: int)'
+    is_correct: true
+  - text: turnRight()
+    is_correct: true
+  - text: turnleft()
+    is_correct: false
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+  - name: src/Main.java
+    visible: true
