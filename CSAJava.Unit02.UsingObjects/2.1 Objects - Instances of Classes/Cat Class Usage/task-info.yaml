@@ -5,12 +5,11 @@ files:
 - name: src/Main.java
   visible: true
   placeholders:
-  - offset: 916
-    length: 17
-    placeholder_text: /* TODO Change Bowie's status to record that he is sleeping.  */
-  - offset: 1209
-    length: 27
-    placeholder_text: /* TODO Print each cat's information to the console on a separate
-      line. */
+  - offset: 877
+    length: 14
+    placeholder_text: /* Change Bowie's status to record that he is sleeping. */
+  - offset: 1153
+    length: 24
+    placeholder_text: /* Print each cat's information to the console on a separate line. */
 - name: src/Cat.java
   visible: true
