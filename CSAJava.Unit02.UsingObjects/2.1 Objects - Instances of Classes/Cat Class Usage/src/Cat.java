@@ -30,9 +30,9 @@ public class Cat {
     }
 
     // Implement class methods
-    public void sleeps(){ isSleeping = true; }
-    public void wokeUp() { isSleeping = false;}
-    private String sleeping()
+    public void Sleep(){ isSleeping = true; }
+    public void Wake() { isSleeping = false;}
+    private String SleepingState()
     {
         if (isSleeping) {
             return "is sleeping.";
@@ -44,6 +44,6 @@ public class Cat {
 
     @Override
     public String toString() {
-        return name + ", the " + age + "-year-old " + color + " cat, " + sleeping();
+        return name + ", the " + age + "-year-old " + color + " cat, " + SleepingState();
     }
 }

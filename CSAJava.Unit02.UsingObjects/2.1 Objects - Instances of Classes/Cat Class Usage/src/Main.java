@@ -27,8 +27,8 @@ public class Main
       outputMyCats(myCats);
 
       // Panda and Bowie are now sleeping
-      panda.sleeps();
-      bowie.sleeps();
+      panda.Sleep();
+      bowie.Sleep();
 
       outputMyCats(myCats);
 
