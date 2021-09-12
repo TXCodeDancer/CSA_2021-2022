@@ -1,0 +1,458 @@
+{
+  "summary" : "AP CSA Java course: Using Objects\n- The course covers creation and use of Java objects.\n- The course is based on CSAwesome Unit 2.",
+  "title" : "CSAJava.Unit02.UsingObjects",
+  "authors" : [
+    "Rick Brunson, Team Brunson Software, LLC"
+  ],
+  "programming_language" : "JAVA",
+  "language" : "en",
+  "course_type" : "PyCharm",
+  "items" : [
+    {
+      "title" : "2.1 Objects - Instances of Classes",
+      "task_list" : [
+        {
+          "name" : "Cat Class Usage",
+          "files" : {
+            "test/output.txt" : {
+              "name" : "test/output.txt",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : "\nThe default Cat is:\n, the -2147483648-year-old  cat, is not sleeping.\n\nMy cats are:\nPanda, the 16-year-old black and white cat, is not sleeping.\nRusty, the 15-year-old orange tabby cat, is not sleeping.\nBen, the 18-year-old black and white cat, is not sleeping.\nBowie, the 13-year-old white cat, is not sleeping.\n\nMy cats are:\nPanda, the 16-year-old black and white cat, is sleeping.\nRusty, the 15-year-old orange tabby cat, is not sleeping.\nBen, the 18-year-old black and white cat, is not sleeping.\nBowie, the 13-year-old white cat, is sleeping.\n"
+            },
+            "src/Main.java" : {
+              "name" : "src/Main.java",
+              "placeholders" : [
+                {
+                  "offset" : 881,
+                  "length" : 58,
+                  "possible_answer" : "bowie.goToSleep();",
+                  "placeholder_text" : "/* Change Bowie's status to record that he is sleeping. */"
+                },
+                {
+                  "offset" : 1201,
+                  "length" : 69,
+                  "possible_answer" : "System.out.println(cat);",
+                  "placeholder_text" : "/* Print each cat's information to the console on a separate line. */"
+                }
+              ],
+              "is_visible" : true,
+              "text" : "import java.util.ArrayList;\nimport java.util.List;\n\npublic class Main\n{\n   public static void main(String[] args)\n   {\n      // Create instance of class with no-argument constructor\n      Cat myCat = new Cat();\n      System.out.println();\n      System.out.println(\"The default Cat is:\");\n      System.out.println(myCat);\n\n      // Create instance of class with argument constructor\n      Cat panda = new Cat(\"Panda\", 16, \"black and white\");\n      Cat rusty = new Cat(\"Rusty\", 15, \"orange tabby\");\n      Cat ben = new Cat(\"Ben\", 18, \"black and white\");\n      Cat bowie = new Cat(\"Bowie\", 13, \"white\");\n\n      // Create a list of my cats\n      List<Cat> myCats = new ArrayList<>();\n      myCats.add(panda);\n      myCats.add(rusty);\n      myCats.add(ben);\n      myCats.add(bowie);\n\n      outputMyCats(myCats);\n\n      // Panda and Bowie are now sleeping\n      panda.goToSleep();\n      /* Change Bowie's status to record that he is sleeping. */\n\n      outputMyCats(myCats);\n\n   }\n\n   // Output information about each of my cats\n   private static void outputMyCats(List<Cat> myCats)\n   {\n      System.out.println();\n      System.out.println(\"My cats are:\");\n      for (Object cat : myCats)\n      {\n         /* Print each cat's information to the console on a separate line. */\n      }\n   }\n}"
+            },
+            "src/Cat.java" : {
+              "name" : "src/Cat.java",
+              "placeholders" : [ ],
+              "is_visible" : true,
+              "text" : "// Don't change this class\npublic class Cat {\n    // Implement instance variables\n    private final String name;\n    private int age;\n    private final String color;\n    private boolean isSleeping;\n\n    public Cat() // Default constructor\n    {\n        this.name = \"\";\n        this.age = Integer.MIN_VALUE;\n        this.color = \"\";\n        this.isSleeping = false;\n    }\n\n    public Cat(String name, int age, String color) // Initializing constructor\n    {\n        // Assign input parameters values to corresponding instance variables\n        this.name = name;\n        this.age = age;\n        this.color = color;\n\n        // Set default instance variables\n        this.isSleeping = false;\n    }\n\n    public void setAge(int age) {\n        this.age = age;\n    }\n\n    // Implement class methods\n    public void goToSleep(){ isSleeping = true; }\n    public void wakeUp() { isSleeping = false;}\n    private String getSleepingState()\n    {\n        if (isSleeping) {\n            return \"is sleeping.\";\n        }\n        else {\n            return \"is not sleeping.\";\n        }\n    }\n\n    @Override\n    public String toString() {\n        return name + \", the \" + age + \"-year-old \" + color + \" cat, \" + getSleepingState();\n    }\n}"
+            }
+          },
+          "description_text" : "<html>\n<body style=\"font-size:1em;\">\n\n<h2>Cat Class: What are Objects and Classes?</h2>\n\n<p>The goal of this task is to help you become familiar with Java <strong>classes</strong>\n    and using instances of Java classes called <strong>objects</strong>.\n    this task includes two classes, Main and Cat. Your objective is to write the missing\n    code in the Main class to:\n</p>\n<ul>\n    <li>Output information for each cat instance to the console.</li>\n    <li>Modify the status of the cat named <strong>Bowie</strong> to record that he is sleeping. </li>\n</ul>\n<div class=\"hint\">\n    Review how the default cat's information was output using <code>System.out.println()</code>.\n</div>\n<div class=\"hint\">\n    Review how the panda cat status was set to sleeping.\n</div>\n\n<p>References:</p>\n<ul>\n    <li><a href=\"https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-1-objects-intro-turtles.html\">2.1. Objects - Instances of Classes</a></li>\n    <li><a href=\"https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-2-constructors.html\">2.2. Creating and Initializing Objects: Constructors</a></li>\n</ul>\n\n<p>Check your modified Main class by clicking the <strong>'Check'</strong> button at the bottom of this page.</p>\n\n</body>\n</html>",
+          "description_format" : "HTML",
+          "feedback_link" : {
+            "link_type" : "STEPIK"
+          },
+          "task_type" : "output"
+        },
+        {
+          "name" : "Cat Class Implementation",
+          "files" : {
+            "src/Cat.java" : {
+              "name" : "src/Cat.java",
+              "placeholders" : [
+                {
+                  "offset" : 55,
+                  "length" : 72,
+                  "possible_answer" : "    private final String name;\n    private int age;\n    private final String color;\n    private boolean isSleeping;",
+                  "placeholder_text" : "/* Implement instance variables here: name, age, color and isSleeping */"
+                },
+                {
+                  "offset" : 199,
+                  "length" : 39,
+                  "possible_answer" : "        this.age = Integer.MIN_VALUE;\n        this.color = \"\";",
+                  "placeholder_text" : "/* Implement missing initializations */"
+                },
+                {
+                  "offset" : 442,
+                  "length" : 39,
+                  "possible_answer" : "        this.name = name;\n        this.age = age;",
+                  "placeholder_text" : "/* Implement missing initializations */"
+                },
+                {
+                  "offset" : 553,
+                  "length" : 39,
+                  "possible_answer" : "        this.isSleeping = false;",
+                  "placeholder_text" : "/* Implement missing initializations */"
+                },
+                {
+                  "offset" : 742,
+                  "length" : 74,
+                  "possible_answer" : "isSleeping = true;",
+                  "placeholder_text" : "/* Modify instance variable to indicated that\n      the cat is sleeping */"
+                }
+              ],
+              "is_visible" : true,
+              "text" : "public class Cat\n{\n    // Implement instance variables\n/* Implement instance variables here: name, age, color and isSleeping */\n\n    public Cat() // Default constructor\n    {\n        this.name = \"\";\n/* Implement missing initializations */\n        this.isSleeping = false;\n    }\n\n    public Cat(String name, int age, String color) // Initializing constructor\n    {\n        // Assign input parameters values to corresponding instance variables\n/* Implement missing initializations */\n        this.color = color;\n\n        // Set default instance variables\n/* Implement missing initializations */\n    }\n\n    public void setAge(int age)\n    {\n        this.age = age;\n    }\n\n    // Implement class methods\n    public void goToSleep()\n    {\n        /* Modify instance variable to indicated that\n      the cat is sleeping */\n    }\n\n    public void wakeUp()\n    {\n        isSleeping = false;\n    }\n\n    private String getSleepingState()\n    {\n        if (isSleeping)\n        {\n            return \"is sleeping.\";\n        } else\n        {\n            return \"is not sleeping.\";\n        }\n    }\n\n    @Override\n    public String toString()\n    {\n        return name + \", the \" + age + \"-year-old \" + color + \" cat, \" + getSleepingState();\n    }\n}"
+            },
+            "test/Tests.java" : {
+              "name" : "test/Tests.java",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : "import org.junit.Test;\n\nimport static org.junit.Assert.assertEquals;\n\npublic class Tests {\n  @Test\n  public void testDefault() {\n    // put your test here\n    Cat cat = new Cat();\n    String actual = cat.toString();\n    String expected = \", the -2147483648-year-old  cat, is not sleeping.\";\n    assertEquals(expected, actual);\n  }\n\n  @Test\n  public void testParameterConstructor() {\n    // put your test here\n    Cat cat = new Cat(\"Bowie\", 13, \"white\");\n    String actual = cat.toString();\n    String expected = \"Bowie, the 13-year-old white cat, is not sleeping.\";\n    assertEquals(expected, actual);\n  }\n\n  @Test\n  public void testIsSleeping() {\n    // put your test here\n    Cat cat = new Cat(\"Bowie\", 13, \"white\");\n    cat.goToSleep();\n    String actual = cat.toString();\n    String expected = \"Bowie, the 13-year-old white cat, is sleeping.\";\n    assertEquals(expected, actual);\n  }\n}"
+            },
+            "src/Main.java" : {
+              "name" : "src/Main.java",
+              "placeholders" : [ ],
+              "is_visible" : true,
+              "text" : "import java.util.ArrayList;\nimport java.util.List;\n\n// This class will not be graded. Feel free to experiment creating and modifying Cat objects.\npublic class Main {\n    public static void main(String[] args)\n    {\n        Cat myCat = new Cat();\n        System.out.println();\n        System.out.println(\"A default Cat is:\");\n        System.out.println(myCat);\n\n        List<Cat> cats = new ArrayList<Cat>();\n        cats.add(new Cat(\"Some Name\", 1, \"some color\"));\n\n        System.out.println();\n        System.out.println(\"My cats are:\");\n        for(Object cat : cats)\n        {\n            System.out.println(cat);\n        }\n    }\n}\n"
+            }
+          },
+          "description_text" : "<html>\n<body style=\"font-size:1em;\">\n\n<h2>Cat Class: Instance Variables & Methods</h2>\n<p>Implement the Cat class by adding <strong>instance variables</strong> (attributes) and <strong>methods</strong>\n    (behaviors).</p>\n\n<p>Implement the following instance variables (attributes):</p>\n<ul>\n    <li><strong>name</strong> as a string.</li>\n    <li><strong>age</strong> as an int.</li>\n    <li><strong>color</strong> as a string.</li>\n    <li><strong>isSleeping</strong> as a boolean</li>\n</ul>\n\n<p>Implement the following methods (behaviors):</p>\n<ul>\n    <li>Public <strong>Cat</strong> constructor without parameters:</li>\n    <ul><li>Set name = \"\" </li></ul>\n    <ul><li>Set age = Integer.MIN_VALUE </li></ul>\n    <ul><li>Set color = \"\" </li></ul>\n    <ul><li>Set isSleeping = false </li></ul>\n    <li>Public <strong>Cat</strong> constructor with parameters: public Cat(String name, int age, String color)</li>\n    <ul><li>Set name = name </li></ul>\n    <ul><li>Set age = age </li></ul>\n    <ul><li>Set color = color </li></ul>\n    <ul><li>Set isSleeping = false </li></ul>\n    <li>Public <strong>sleeps()</strong> method:</li>\n    <ul><li>Set isSleeping = true </li></ul>\n</ul>\n\n<div class=\"hint\">\n    When a class method parameter has the same as the class instance variable,\n    use this.varName = varName to set the class instance variable.\n    For example:\n    <ul><code>this.name = name;</code></ul>\n</div>\n\n<p>References:</p>\n<ul>\n    <li><a href=\"https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-1-objects-intro-turtles.html\">2.1. Objects - Instances of Classes</a></li>\n    <li><a href=\"https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-2-constructors.html\">2.2. Creating and Initializing Objects: Constructors</a></li>\n</ul>\n\n<p>Check your modified Main class by clicking the <strong>'Check'</strong> button at the bottom of this page.</p>\n</body>\n</html>",
+          "description_format" : "HTML",
+          "feedback_link" : {
+            "link_type" : "STEPIK"
+          },
+          "task_type" : "edu"
+        },
+        {
+          "choiceOptions" : [
+            {
+              "text" : "peach - fruit",
+              "status" : "INCORRECT"
+            },
+            {
+              "text" : "fruit - peach",
+              "status" : "CORRECT"
+            },
+            {
+              "text" : "mammal - squirrel",
+              "status" : "CORRECT"
+            },
+            {
+              "text" : "pencil - writingUtensil",
+              "status" : "INCORRECT"
+            }
+          ],
+          "isMultipleChoice" : true,
+          "name" : "Exit Ticket - 1",
+          "files" : {
+            "src/Main.java" : {
+              "name" : "src/Main.java",
+              "placeholders" : [ ],
+              "is_visible" : true,
+              "text" : "public class Main {\n   public static void main(String[] args) {\n      // Write your solution here\n   }\n}"
+            }
+          },
+          "description_text" : "<html>\n<body style=\"font-size:1em;\">\n\n<h2>Unit 2 Lesson 1 Exit Ticket: 1</h2>\n<p>Select the pairs below that represent the relationship Class - Object</p>\n\n<p>References:</p>\n<ul>\n    <li><a href=\"https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-1-objects-intro-turtles.html\">2.1. Objects - Instances of Classes</a></li>\n    <li><a href=\"https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-2-constructors.html\">2.2. Creating and Initializing Objects: Constructors</a></li>\n</ul>\n\n</body>\n</html>",
+          "description_format" : "HTML",
+          "feedback_link" : {
+            "link_type" : "STEPIK"
+          },
+          "task_type" : "choice"
+        },
+        {
+          "choiceOptions" : [
+            {
+              "text" : "forward()",
+              "status" : "CORRECT"
+            },
+            {
+              "text" : "Backward()",
+              "status" : "INCORRECT"
+            },
+            {
+              "text" : "pendown()",
+              "status" : "INCORRECT"
+            },
+            {
+              "text" : "turn(degrees: double)",
+              "status" : "CORRECT"
+            },
+            {
+              "text" : "MoveTo(x: int, y: int)",
+              "status" : "INCORRECT"
+            },
+            {
+              "text" : "flip()",
+              "status" : "INCORRECT"
+            },
+            {
+              "text" : "moveTo(x: int, y: int)",
+              "status" : "CORRECT"
+            },
+            {
+              "text" : "turnRight()",
+              "status" : "CORRECT"
+            },
+            {
+              "text" : "turnleft()",
+              "status" : "INCORRECT"
+            }
+          ],
+          "isMultipleChoice" : true,
+          "name" : "Exit Ticket - 2",
+          "files" : {
+            "src/Main.java" : {
+              "name" : "src/Main.java",
+              "placeholders" : [ ],
+              "is_visible" : true,
+              "text" : "public class Main {\n   public static void main(String[] args) {\n      // Write your solution here\n   }\n}"
+            }
+          },
+          "description_text" : "<html>\r\n<body style=\"font-size:1em;\">\r\n\r\n<h2>Unit 2 Lesson 1 Exit Ticket: 2</h2>\r\n<p>Select all methods of the Turtle object below</p>\r\n\r\n<p>References:</p>\r\n<ul>\r\n    <li><a href=\"https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-1-objects-intro-turtles.html\">2.1. Objects - Instances of Classes</a></li>\r\n    <li><a href=\"https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-2-constructors.html\">2.2. Creating and Initializing Objects: Constructors</a></li>\r\n</ul>\r\n\r\n</body>\r\n</html>",
+          "description_format" : "HTML",
+          "feedback_link" : {
+            "link_type" : "STEPIK"
+          },
+          "task_type" : "choice"
+        },
+        {
+          "name" : "Exit Ticket - 3",
+          "files" : {
+            "src/Fraction.java" : {
+              "name" : "src/Fraction.java",
+              "placeholders" : [
+                {
+                  "offset" : 24,
+                  "length" : 39,
+                  "possible_answer" : "    private double numerator;\n    private double denominator;",
+                  "placeholder_text" : "/* TODO Implement instance variables */"
+                },
+                {
+                  "offset" : 86,
+                  "length" : 23,
+                  "possible_answer" : "double",
+                  "placeholder_text" : "/* TODO Declare type */"
+                },
+                {
+                  "offset" : 121,
+                  "length" : 23,
+                  "possible_answer" : "double",
+                  "placeholder_text" : "/* TODO Declare type */"
+                },
+                {
+                  "offset" : 164,
+                  "length" : 40,
+                  "possible_answer" : "        this.numerator = numerator;\n        this.denominator = denominator;",
+                  "placeholder_text" : "/* TODO Initialize instance variables */"
+                },
+                {
+                  "offset" : 223,
+                  "length" : 23,
+                  "possible_answer" : "double",
+                  "placeholder_text" : "/* TODO Declare type */"
+                },
+                {
+                  "offset" : 262,
+                  "length" : 63,
+                  "possible_answer" : "        return numerator/ denominator;",
+                  "placeholder_text" : "/* TODO Implement method to return decimal value of fraction */"
+                }
+              ],
+              "is_visible" : true,
+              "text" : "public class Fraction {\n/* TODO Implement instance variables */\n\n\n    public Fraction(/* TODO Declare type */ numerator, /* TODO Declare type */ denominator)\n    {\n/* TODO Initialize instance variables */\n    }\n\n    public /* TODO Declare type */ getDecimal() {\n/* TODO Implement method to return decimal value of fraction */\n    }\n}"
+            },
+            "test/Tests.java" : {
+              "name" : "test/Tests.java",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : "import org.junit.Assert;\nimport org.junit.Test;\n\nimport static junit.framework.TestCase.assertEquals;\n\npublic class Tests {\n  double epsilon = 0.000001d;\n\n  @Test\n  public void testSolution() {\n    Fraction fraction = new Fraction(1, 3);\n    double actual = fraction.getDecimal();\n    double expected = 1.0/3.0;\n    assertEquals(expected, actual, epsilon);\n  }\n}"
+            }
+          },
+          "description_text" : "<html>\r\n<body style=\"font-size:1em;\">\r\n\r\n<h2>Unit 2 Lesson 1 Exit Ticket: Fraction Class</h2>\r\n\r\n<p>Implement a class that computes the fraction of two numbers.\r\n</p>\r\n<ul>\r\n    <li>Create the Fraction class constructor to accept the <strong>numerator</strong>\r\n        and <strong>denominator</strong>.</li>\r\n    <ul><li><code>public Fraction(type numerator, type denominator)</code> </li></ul>\r\n    <ul><li>Create/initialize instance variables to represent these values </li></ul>\r\n    <li>Create a Fraction class method named getDecimal() that returns the value of the fraction as a decimal.</li>\r\n\r\n</ul>\r\n<div class=\"hint\">\r\n    <code>public type getDecimal()</code>\r\n\r\n</div>\r\n<div class=\"hint\">\r\n    Be sure to use the correct numeric return type.\r\n</div>\r\n\r\n<p>References:</p>\r\n<ul>\r\n    <li><a href=\"https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-1-objects-intro-turtles.html\">2.1. Objects - Instances of Classes</a></li>\r\n    <li><a href=\"https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-2-constructors.html\">2.2. Creating and Initializing Objects: Constructors</a></li>\r\n</ul>\r\n\r\n<p>Check your modified Main class by clicking the <strong>'Check'</strong> button at the bottom of this page.</p>\r\n\r\n</body>\r\n</html>",
+          "description_format" : "HTML",
+          "feedback_link" : {
+            "link_type" : "STEPIK"
+          },
+          "task_type" : "edu"
+        }
+      ],
+      "type" : "lesson"
+    },
+    {
+      "title" : "2.4 Calling Methods with Parameters",
+      "task_list" : [
+        {
+          "name" : "Methods with Parameters",
+          "files" : {
+            "src/Main.java" : {
+              "name" : "src/Main.java",
+              "placeholders" : [ ],
+              "is_visible" : true,
+              "text" : "public class Main {\n   public static void main(String[] args) {\n      // Write your solution here\n   }\n}"
+            }
+          },
+          "description_text" : "<html>\n<body style=\"font-size:1em;\">\n<h2>Methods with Parameters</h2>\n<p>\n    Method Declaration: <code>public int sum(int a, int b) { return a + b; }</code><br>\n    <br>\n    Method Components\n<ul>\n    <li><em>Method Header: </em><code>public int sum(int a, int b)</code></li>\n    <li><em>Method Signature: </em><code>sum(int a, int b)</code></li>\n    <li><em>Access Specifier: </em><code>public</code></li>\n    <li><em>Return Type: </em><code>int</code></li>\n    <li><em>Method Name: </em><code>sum</code></li>\n    <li><em>Parameter List: </em><code>(int a, int b)</code></li>\n    <li><em>Method Body: </em><code>{ return a + b; }</code></li>\n</ul>\n</p>\n\nReferences:\n<ul style=\"font-size:0.9em;\">\n    <li><a href=\"https://www.javatpoint.com/method-in-java\">Javatpoint: Java Methods</a></li>\n    <li><a href=\"https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html\">Class SimpleTurtle Javadoc</a></li>\n    <li><a href=\"https://apcentral.collegeboard.org/pdf/ap-computer-science-a-java-quick-reference.pdf?course=ap-computer-science-a\">AP CSA Java Quick Reference</a></li>\n    <li><a href=\"https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-4-methods-with-params.html\">2.4. Calling Methods With Parameters</a></li>\n</ul>\n<p>Click <strong>'Run'</strong> then click <strong>'Next'</strong> to continue.</p>\n</body>\n</html>",
+          "description_format" : "HTML",
+          "feedback_link" : {
+            "link_type" : "STEPIK"
+          },
+          "task_type" : "theory"
+        },
+        {
+          "name" : "Making Turtles",
+          "files" : {
+            "test/output.txt" : {
+              "name" : "test/output.txt",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : "Turtle{bodyColor=java.awt.Color[r=0,g=255,b=0], shellColor=java.awt.Color[r=255,g=255,b=0], width=15, height=18, xpos=0, ypos=0}\nTurtle{bodyColor=java.awt.Color[r=0,g=255,b=0], shellColor=java.awt.Color[r=255,g=255,b=0], width=15, height=18, xpos=50, ypos=75}\nTurtle{bodyColor=java.awt.Color[r=0,g=0,b=255], shellColor=java.awt.Color[r=255,g=0,b=0], width=15, height=18, xpos=50, ypos=75}\n"
+            },
+            "src/Main.java" : {
+              "name" : "src/Main.java",
+              "placeholders" : [
+                {
+                  "offset" : 157,
+                  "length" : 27,
+                  "possible_answer" : "Turtle",
+                  "placeholder_text" : "/* Declare required type */"
+                },
+                {
+                  "offset" : 205,
+                  "length" : 32,
+                  "possible_answer" : "world",
+                  "placeholder_text" : "/* Pass in required parameter */"
+                },
+                {
+                  "offset" : 432,
+                  "length" : 63,
+                  "possible_answer" : "50, 75, world",
+                  "placeholder_text" : "/* Create a turtle with a starting position: x = 50; y = 75. */"
+                },
+                {
+                  "offset" : 504,
+                  "length" : 27,
+                  "possible_answer" : "System.out.println(turtleXY);",
+                  "placeholder_text" : "/* Print its information */"
+                },
+                {
+                  "offset" : 615,
+                  "length" : 50,
+                  "possible_answer" : "turtleXY.setColor(Color.blue, Color.red);",
+                  "placeholder_text" : "/* Change its colors: Body = blue; Shell = red. */"
+                }
+              ],
+              "is_visible" : true,
+              "text" : "import java.awt.*;\n\npublic class Main {\n   public static void main(String[] args) {\n      World world = new World();\n\n      // Create a default turtle\n      /* Declare required type */ turtle = new Turtle(/* Pass in required parameter */);\n      // Print turtle attributes\n      System.out.println(turtle);\n\n      // Create a turtle with a starting position: x = 50; y = 75. Print its information\n      Turtle turtleXY = new Turtle(/* Create a turtle with a starting position: x = 50; y = 75. */);\n      /* Print its information */\n\n      // Change its colors: Body = blue; Shell = red. Print its information\n      /* Change its colors: Body = blue; Shell = red. */\n      System.out.println(turtleXY);\n   }\n}"
+            },
+            "src/Turtle.java" : {
+              "name" : "src/Turtle.java",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : "import java.awt.*;\n\npublic class Turtle\n{\n    private Color bodyColor = Color.GREEN;\n    private Color shellColor = Color.YELLOW;\n    private int width = 15;\n    private int height = 18;\n    private int xpos = 0;\n    private int ypos = 0;\n    private World world;\n\n    public Turtle(World world){}\n    public Turtle(int x, int y, World world)\n    {\n        this.world = world;\n        xpos = x;\n        ypos = y;\n    }\n\n    public void setColor(Color body, Color shell)\n    {\n        bodyColor = body;\n        shellColor = shell;\n    }\n\n    public void moveTo(int x, int y)\n    {\n        xpos = x;\n        ypos = y;\n    }\n\n\n    @Override\n    public String toString()\n    {\n        return \"Turtle{\" +\n                \"bodyColor=\" + bodyColor +\n                \", shellColor=\" + shellColor +\n                \", width=\" + width +\n                \", height=\" + height +\n                \", xpos=\" + xpos +\n                \", ypos=\" + ypos +\n                '}';\n    }\n}\n"
+            },
+            "src/World.java" : {
+              "name" : "src/World.java",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : "public class World\n{\n    private int width = 640;\n    private int height = 480;\n\n    public World() {}\n    public World(int width, int height)\n    {\n        this.width = width;\n        this.height = height;\n    }\n\n}\n"
+            }
+          },
+          "description_text" : "<html>\n<body style=\"font-size:1em;\">\n<h2>Making Turtles</h2>\n</p>\n<p>Turtle Class Diagram</p>\n\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 1em auto 0em;\">\n    Turtle : SimpleTurtle\n</div>\n\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 0em auto 0em;\">\n    <em>Constructor Signatures:</em><br>\n    <code>Turtle(World world)</code><br>\n    <code>Turtle(int x, int y, World world)</code><br>\n</div>\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 0em auto 0em;\">\n    <em>Attributes:</em><br>\n    <code>bodyColor : Color</code><br>\n    <code>shellColor : Color</code><br>\n    <code>width : int = 15</code><br>\n    <code>height : int = 18</code><br>\n    <code>xpos : int = 0</code><br>\n    <code>ypos : int = 0</code><br>\n</div>\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 0em auto 1em;\">\n    <em>Methods:</em><br>\n    <code>forward()</code><br>\n    <code>backward()</code><br>\n    <code>turnLeft()</code><br>\n    <code>turnRight()</code><br>\n    <code>penUp()</code><br>\n    <code>forward(pixels : int)</code><br>\n    <code>backward(pixels : int)</code><br>\n    <code>turn(degrees : double)</code><br>\n    <code>moveTo(x: int, y: int)</code><br>\n    <code>setColor(bodyColor : Color, shellColor : Color)</code><br>\n    <code>setWidth(width : int)</code><br>\n    <code>setHeight(height : int)</code><br>\n</div>\n\n<p>\n    Modify the Main class in the boxes as indicated by the comments to solve the task.<br>\n    Note: This is a mock Turtle class that does not have all the features of the Swing Turtle class.\n</p>\n\n\nReferences:\n<ul style=\"font-size:0.9em;\">\n    <li><a href=\"https://www.javatpoint.com/method-in-java\">Javatpoint: Java Methods</a></li>\n    <li><a href=\"https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html\">Class SimpleTurtle Javadoc</a></li>\n    <li><a href=\"https://apcentral.collegeboard.org/pdf/ap-computer-science-a-java-quick-reference.pdf?course=ap-computer-science-a\">AP CSA Java Quick Reference</a></li>\n    <li><a href=\"https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-4-methods-with-params.html\">2.4. Calling Methods With Parameters</a></li>\n</ul>\n<p>Click <strong>'Check'</strong> verify your solution.</p>\n</body>\n</html>",
+          "description_format" : "HTML",
+          "feedback_link" : {
+            "link_type" : "STEPIK"
+          },
+          "task_type" : "output"
+        },
+        {
+          "name" : "Making Turtles Method",
+          "files" : {
+            "test/Tests.java" : {
+              "name" : "test/Tests.java",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : "import org.junit.Test;\nimport java.awt.*;\nimport static junit.framework.TestCase.assertTrue;\n\npublic class Tests {\n  @Test\n  public void testSolution() {\n    World world = new World();\n    int x = 50;\n    int y = 75;\n    Color body = Color.blue;\n    Color shell = Color.red;\n    Turtle expectedTurtle = new Turtle(x, y, world);\n    expectedTurtle.setColor(body, shell);\n\n    Turtle actualTurtle =  Main.makingTurtles(world, x, y, body, shell);\n\n    String expected = expectedTurtle.toString();\n    String actual = actualTurtle.toString();\n\n    assertTrue(expected.equals(actual));\n  }\n}"
+            },
+            "src/Turtle.java" : {
+              "name" : "src/Turtle.java",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : "import java.awt.*;\n\npublic class Turtle\n{\n    private Color bodyColor = Color.GREEN;\n    private Color shellColor = Color.YELLOW;\n    private int width = 15;\n    private int height = 18;\n    private int xpos = 0;\n    private int ypos = 0;\n    private World world;\n\n    public Turtle(World world){}\n    public Turtle(int x, int y, World world)\n    {\n        this.world = world;\n        xpos = x;\n        ypos = y;\n    }\n\n    public void setColor(Color body, Color shell)\n    {\n        bodyColor = body;\n        shellColor = shell;\n    }\n\n    public void moveTo(int x, int y)\n    {\n        xpos = x;\n        ypos = y;\n    }\n\n    @Override\n    public String toString()\n    {\n        return \"Turtle{\" +\n                \"bodyColor=\" + bodyColor +\n                \", shellColor=\" + shellColor +\n                \", width=\" + width +\n                \", height=\" + height +\n                \", xpos=\" + xpos +\n                \", ypos=\" + ypos +\n                '}';\n    }\n}\n"
+            },
+            "src/World.java" : {
+              "name" : "src/World.java",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : "public class World\n{\n    private int width = 640;\n    private int height = 480;\n\n    public World() {}\n    public World(int width, int height)\n    {\n        this.width = width;\n        this.height = height;\n    }\n\n}\n"
+            },
+            "src/Main.java" : {
+              "name" : "src/Main.java",
+              "placeholders" : [
+                {
+                  "offset" : 546,
+                  "length" : 103,
+                  "possible_answer" : "        x = 25;\n        y = 0;\n        body = Color.green;\n        shell = Color.yellow;\n        Turtle turtleNew =  makingTurtles(world, x, y, body, shell);",
+                  "placeholder_text" : "/* Make a new turtle with starting position: x = 25; y = 0; and colors: Body = green; Shell = yellow */"
+                },
+                {
+                  "offset" : 698,
+                  "length" : 42,
+                  "possible_answer" : "        System.out.println(turtleNew);",
+                  "placeholder_text" : "/* Print turtle information to console. */"
+                },
+                {
+                  "offset" : 942,
+                  "length" : 90,
+                  "possible_answer" : "        Turtle turtle = new Turtle(x, y, world);\n        turtle.setColor(body, shell);\n        return turtle;",
+                  "placeholder_text" : "/* Implement method body to create a new turtle at position x, y with body/shell colors */"
+                }
+              ],
+              "is_visible" : true,
+              "text" : "import java.awt.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        World world = new World();\n\n        // Call makingTurtles with starting position: x = 50; y = 75; and colors: Body = blue; Shell = red\n        int x = 50;\n        int y = 75;\n        Color body = Color.blue;\n        Color shell = Color.red;\n        Turtle turtle =  makingTurtles(world, x, y, body, shell);\n        System.out.println(turtle);\n\n        // Make a new turtle with starting position: x = 25; y = 0; and colors: Body = green; Shell = yellow\n/* Make a new turtle with starting position: x = 25; y = 0; and colors: Body = green; Shell = yellow */\n        // Print turtle information to console.\n/* Print turtle information to console. */\n\n    }\n\n    public static Turtle makingTurtles(World world, int x, int y, Color body, Color shell)\n    {\n        // Implement method body to create a new turtle at position x, y with body/shell colors\n/* Implement method body to create a new turtle at position x, y with body/shell colors */\n    }\n}"
+            }
+          },
+          "description_text" : "<html>\n<body style=\"font-size:1em;\">\n<h2>Making Turtles Method</h2>\n</p>\n<p>Turtle Class Diagram</p>\n\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 1em auto 0em;\">\n    Turtle : SimpleTurtle\n</div>\n\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 0em auto 0em;\">\n    <em>Constructor Signatures:</em><br>\n    <code>Turtle(World world)</code><br>\n    <code>Turtle(int x, int y, World world)</code><br>\n</div>\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 0em auto 0em;\">\n    <em>Attributes:</em><br>\n    <code>bodyColor : Color</code><br>\n    <code>shellColor : Color</code><br>\n    <code>width : int = 15</code><br>\n    <code>height : int = 18</code><br>\n    <code>xpos : int = 0</code><br>\n    <code>ypos : int = 0</code><br>\n</div>\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 0em auto 1em;\">\n    <em>Methods:</em><br>\n    <code>forward()</code><br>\n    <code>backward()</code><br>\n    <code>turnLeft()</code><br>\n    <code>turnRight()</code><br>\n    <code>penUp()</code><br>\n    <code>forward(pixels : int)</code><br>\n    <code>backward(pixels : int)</code><br>\n    <code>turn(degrees : double)</code><br>\n    <code>moveTo(x: int, y: int)</code><br>\n    <code>setColor(bodyColor : Color, shellColor : Color)</code><br>\n    <code>setWidth(width : int)</code><br>\n    <code>setHeight(height : int)</code><br>\n</div>\n\n<p>\n    Modify the Main class in the boxes as indicated by the comments to solve the task.<br>\n    Note: This is a mock Turtle class that does not have all the features of the Swing Turtle class.\n</p>\n\n\nReferences:\n<ul style=\"font-size:0.9em;\">\n    <li><a href=\"https://www.javatpoint.com/method-in-java\">Javatpoint: Java Methods</a></li>\n    <li><a href=\"https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html\">Class SimpleTurtle Javadoc</a></li>\n    <li><a href=\"https://apcentral.collegeboard.org/pdf/ap-computer-science-a-java-quick-reference.pdf?course=ap-computer-science-a\">AP CSA Java Quick Reference</a></li>\n    <li><a href=\"https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-4-methods-with-params.html\">2.4. Calling Methods With Parameters</a></li>\n</ul>\n<p>Click <strong>'Check'</strong> verify your solution.</p>\n</body>\n</html>",
+          "description_format" : "HTML",
+          "feedback_link" : {
+            "link_type" : "STEPIK"
+          },
+          "task_type" : "edu"
+        },
+        {
+          "name" : "Turtle House",
+          "files" : {
+            "src/Main.java" : {
+              "name" : "src/Main.java",
+              "placeholders" : [ ],
+              "is_visible" : true,
+              "text" : "public class Main {\n   public static void main(String[] args) {\n      // Write your solution here\n   }\n}"
+            }
+          },
+          "description_text" : "<html>\n<body style=\"font-size:1em;\">\n<h2>Programming Challenge : Turtle House</h2>\n\n<p>Follow the <a href=\"https://repl.it/@BerylHoffman/Java-Swing-Turtle\">repl.it link</a>, fork the solution\n    (or wait for a multiplayer link for collaborative coding) and try the following tasks.</p>\n\n    This creative challenge is fun to do collaboratively in groups.\n    Design a house and have the turtle draw it with different colors\n    (use this <a href=\"https://repl.it/@BerylHoffman/Java-Swing-Turtle\">repl.it link</a>).\n    Can you add windows and a door? Come up with your own house design as a team.<br><br>\n    To draw a window, you will need to do <code>penUp()</code> to walk the turtle into position,\n    for example:<br>\n\n<ul>\n    <code>builder.penUp();</code><br>\n    <code>builder.moveTo(120,200);</code><br>\n    <code>builder.penDown();</code>\n</ul>\n\n<p>Turtle Class Diagram</p>\n\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 1em auto 0em;\">\n    Turtle : SimpleTurtle\n</div>\n\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 0em auto 0em;\">\n    <em>Constructor Signatures:</em><br>\n    <code>Turtle(World world)</code><br>\n    <code>Turtle(int x, int y, World world)</code><br>\n</div>\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 0em auto 0em;\">\n    <em>Attributes:</em><br>\n    <code>bodyColor : Color</code><br>\n    <code>shellColor : Color</code><br>\n    <code>width : int = 15</code><br>\n    <code>height : int = 18</code><br>\n    <code>xpos : int = 0</code><br>\n    <code>ypos : int = 0</code><br>\n</div>\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 0em auto 1em;\">\n    <em>Methods:</em><br>\n    <code>forward()</code><br>\n    <code>backward()</code><br>\n    <code>turnLeft()</code><br>\n    <code>turnRight()</code><br>\n    <code>penUp()</code><br>\n    <code>forward(pixels : int)</code><br>\n    <code>backward(pixels : int)</code><br>\n    <code>turn(degrees : double)</code><br>\n    <code>moveTo(x: int, y: int)</code><br>\n    <code>setColor(bodyColor : Color, shellColor : Color)</code><br>\n    <code>setWidth(width : int)</code><br>\n    <code>setHeight(height : int)</code><br>\n</div>\n\nReferences:\n<ul style=\"font-size:0.9em;\">\n    <li><a href=\"https://www.javatpoint.com/method-in-java\">Javatpoint: Java Methods</a></li>\n    <li><a href=\"https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html\">Class SimpleTurtle Javadoc</a></li>\n    <li><a href=\"https://apcentral.collegeboard.org/pdf/ap-computer-science-a-java-quick-reference.pdf?course=ap-computer-science-a\">AP CSA Java Quick Reference</a></li>\n    <li><a href=\"https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-4-methods-with-params.html\">2.4. Calling Methods With Parameters</a></li>\n</ul>\n<p>Click <strong>'Run'</strong> then click <strong>'Next'</strong> to continue.</p>\n</body>\n</html>",
+          "description_format" : "HTML",
+          "feedback_link" : {
+            "link_type" : "STEPIK"
+          },
+          "task_type" : "theory"
+        },
+        {
+          "name" : "Turtle Practice - Bonus",
+          "files" : {
+            "src/Main.java" : {
+              "name" : "src/Main.java",
+              "placeholders" : [ ],
+              "is_visible" : true,
+              "text" : "public class Main {\n   public static void main(String[] args) {\n      // Write your solution here\n   }\n}"
+            }
+          },
+          "description_text" : "<html>\n<body style=\"font-size:1em;\">\n<h2>Turtles Practice - Bonus</h2>\n\n<p>Follow the <a href=\"https://repl.it/@BerylHoffman/Java-Swing-Turtle\">repl.it link</a>, fork the solution fork the solution\n    (or wait for a multiplayer link for collaborative coding) and try the following tasks.</p>\n\n<ol>\n    <li>Can you make yertle draw a square and change the pen color for each side of the square?\n        Try something like: <code>yertle.setColor(Color.red);</code>\n        This uses the Color class in Java which has some colors predefined like red, yellow, blue,\n        magenta, cyan. You can also use more specific methods like <code>setPenColor(...)</code>,\n        <code>setBodyColor(...)</code>, and <code>setShellColor(...)</code>.</li>\n    <li>Can you draw a triangle? The <code>turnRight()</code> method always does 90 degree turns,\n        but you’ll need external angles of 120 degree for an equilateral triangle.\n        Use the turn method which has a parameter for the angle of the turn in degrees.\n        For example, <code>turn(90)</code> is the same as <code>turnRight()</code>. Try drawing a triangle with different colors.</li>\n\n</ol>\n\n<p>Turtle Class Diagram</p>\n\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 1em auto 0em;\">\n    Turtle : SimpleTurtle\n</div>\n\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 0em auto 0em;\">\n    <em>Constructor Signatures:</em><br>\n    <code>Turtle(World world)</code><br>\n    <code>Turtle(int x, int y, World world)</code><br>\n</div>\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 0em auto 0em;\">\n    <em>Attributes:</em><br>\n    <code>bodyColor : Color</code><br>\n    <code>shellColor : Color</code><br>\n    <code>width : int = 15</code><br>\n    <code>height : int = 18</code><br>\n    <code>xpos : int = 0</code><br>\n    <code>ypos : int = 0</code><br>\n</div>\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 0em auto 1em;\">\n    <em>Methods:</em><br>\n    <code>forward()</code><br>\n    <code>backward()</code><br>\n    <code>turnLeft()</code><br>\n    <code>turnRight()</code><br>\n    <code>penUp()</code><br>\n    <code>forward(pixels : int)</code><br>\n    <code>backward(pixels : int)</code><br>\n    <code>turn(degrees : double)</code><br>\n    <code>moveTo(x: int, y: int)</code><br>\n    <code>setColor(bodyColor : Color, shellColor : Color)</code><br>\n    <code>setWidth(width : int)</code><br>\n    <code>setHeight(height : int)</code><br>\n</div>\n\nReferences:\n<ul style=\"font-size:0.9em;\">\n    <li><a href=\"https://www.javatpoint.com/method-in-java\">Javatpoint: Java Methods</a></li>\n    <li><a href=\"https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html\">Class SimpleTurtle Javadoc</a></li>\n    <li><a href=\"https://apcentral.collegeboard.org/pdf/ap-computer-science-a-java-quick-reference.pdf?course=ap-computer-science-a\">AP CSA Java Quick Reference</a></li>\n    <li><a href=\"https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-4-methods-with-params.html\">2.4. Calling Methods With Parameters</a></li>\n</ul>\n<p>Click <strong>'Run'</strong> to continue to next task.</p>\n</body>\n</html>",
+          "description_format" : "HTML",
+          "feedback_link" : {
+            "link_type" : "STEPIK"
+          },
+          "task_type" : "theory"
+        }
+      ],
+      "type" : "lesson"
+    }
+  ],
+  "additional_files" : [
+    {
+      "name" : "build.gradle",
+      "placeholders" : [ ],
+      "is_visible" : true,
+      "text" : "buildscript {\n    repositories {\n        mavenCentral()\n    }\n}\n\ndef printOutput(def output) {\n    return tasks.create(\"printOutput\") {\n        println \"#educational_plugin_checker_version 1\"\n        def separator = System.lineSeparator()\n        def lines = output.toString().split(\"(?<=${separator})|(?=${separator})\")\n        for (line in lines) {\n            println \"#educational_plugin\" + line\n        }\n    }\n}\n\nsubprojects {\n    apply plugin: 'application'\n    apply plugin: 'java'\n\n    sourceCompatibility = 1.8\n\n    repositories {\n        mavenCentral()\n    }\n\n    dependencies {\n        testImplementation group: 'junit', name: 'junit', version: '4.12'\n    }\n\n    sourceSets {\n        main {\n            java.srcDir 'src'\n        }\n        test {\n            java.srcDir 'test'\n        }\n    }\n\n    mainClassName = project.hasProperty(\"mainClass\") ? project.getProperty(\"mainClass\") : \"\"\n\n    if (project.hasProperty(\"educationalRun\") && \"true\".equalsIgnoreCase(project.getProperty(\"educationalRun\"))) {\n        def runOutput = new ByteArrayOutputStream()\n        tasks.run.setStandardOutput(runOutput)\n        tasks.run.doLast { printOutput(runOutput) }\n    }\n}\n\nproject(':util') {\n    dependencies {\n        implementation group: 'junit', name: 'junit', version: '4.12'\n    }\n}\n\nconfigure(subprojects.findAll { it.name != 'util' }) {\n    dependencies {\n        implementation project(':util').sourceSets.main.output\n        testImplementation project(':util').sourceSets.test.output\n    }\n}\n"
+    }
+  ],
+  "version" : 11
+}
