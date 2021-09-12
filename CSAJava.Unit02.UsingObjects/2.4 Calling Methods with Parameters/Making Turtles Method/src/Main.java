@@ -9,21 +9,22 @@ public class Main {
         int y = 75;
         Color body = Color.blue;
         Color shell = Color.red;
-        Turtle turtle =  makingTurtles(world, x, y, body, shell);
+        Turtle turtle =  makeTurtle(world, x, y, body, shell);  // makeTurtle(...) must be implemented below
         System.out.println(turtle);
 
+        // Using the method you implement below:
         // Make a new turtle with starting position: x = 25; y = 0; and colors: Body = green; Shell = yellow
         x = 25;
         y = 0;
         body = Color.green;
         shell = Color.yellow;
-        Turtle turtleNew =  makingTurtles(world, x, y, body, shell);
+        Turtle turtleNew =  makeTurtle(world, x, y, body, shell);
         // Print turtle information to console.
         System.out.println(turtleNew);
 
     }
 
-    public static Turtle makingTurtles(World world, int x, int y, Color body, Color shell)
+    public static Turtle makeTurtle(World world, int x, int y, Color body, Color shell)
     {
         // Implement method body to create a new turtle at position x, y with body/shell colors
         Turtle turtle = new Turtle(x, y, world);

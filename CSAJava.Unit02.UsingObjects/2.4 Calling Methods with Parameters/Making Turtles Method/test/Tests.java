@@ -13,7 +13,7 @@ public class Tests {
     Turtle expectedTurtle = new Turtle(x, y, world);
     expectedTurtle.setColor(body, shell);
 
-    Turtle actualTurtle =  Main.makingTurtles(world, x, y, body, shell);
+    Turtle actualTurtle =  Main.makeTurtle(world, x, y, body, shell);
 
     String expected = expectedTurtle.toString();
     String actual = actualTurtle.toString();
