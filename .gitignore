@@ -18,6 +18,12 @@
 **/bin/*
 **/build/*
 
+# Maven files
+# Default ignored files
+/shelf/
+/workspace.xml
+
+
 # BlueJ files
 *.ctxt
 
