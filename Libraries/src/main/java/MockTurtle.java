@@ -27,9 +27,9 @@ public class MockTurtle
     /**
      * Instantiates a new Mock turtle.
      *
-     * @param xPosition     the xPosition
-     * @param yPosition     the yPosition
-     * @param world the world
+     * @param xPosition the xPosition
+     * @param yPosition the yPosition
+     * @param world     the world
      */
     public MockTurtle(int xPosition, int yPosition, World world)
     {
@@ -213,11 +213,21 @@ public class MockTurtle
         return heading;
     }
 
+    /**
+     * Gets body color.
+     *
+     * @return the body color
+     */
     public Color getBodyColor()
     {
         return bodyColor;
     }
 
+    /**
+     * Gets shell color.
+     *
+     * @return the shell color
+     */
     public Color getShellColor()
     {
         return shellColor;
