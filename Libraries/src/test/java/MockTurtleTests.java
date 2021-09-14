@@ -4,6 +4,8 @@ import static org.testng.AssertJUnit.assertEquals;
 
 public class MockTurtleTests
 {
+    final double EPSILON = 0.00001;
+
     @Test
     public void testSetXYPositionNeg()
     {
@@ -114,7 +116,18 @@ public class MockTurtleTests
         yExpected -= 50;
         assertEquals(xExpected, turtle.getxPosition());
         assertEquals(yExpected, turtle.getyPosition());
+    }
 
+    @Test
+    public void testGetDistance()
+    {
+        World world = new World();
+        MockTurtle turtle = new MockTurtle(world);
+        int xPosition = turtle.getxPosition();
+        int yPosition = turtle.getyPosition();
 
+        double distanceExpected = Math.sqrt((xPosition * xPosition) + (yPosition * yPosition));
+        double distanceActual = turtle.getDistance(0,0);
+        assertEquals(distanceExpected, distanceActual, EPSILON);
     }
 }

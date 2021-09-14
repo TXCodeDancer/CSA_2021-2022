@@ -12,7 +12,7 @@ public class MockTurtle
     private int xPosition;
     private int yPosition;
     private World world;
-    private int heading = 90; // degrees angle
+    private double heading = 90; // degrees angle
 
     /**
      * Instantiates a new Mock turtle.
@@ -74,13 +74,13 @@ public class MockTurtle
      *
      * @param degrees the degrees
      */
-    public void turn(int degrees)
+    public void turn(double degrees)
     {
         heading -= degrees;
         heading = normalizeAngle(heading);
     }
 
-    private int normalizeAngle(int angle)
+    private double normalizeAngle(double angle)
     {
         if(angle == 360)
             angle = 0;
@@ -170,8 +170,6 @@ public class MockTurtle
         yPosition = y;
     }
 
-
-
     @Override
     public String toString()
     {
@@ -210,7 +208,7 @@ public class MockTurtle
      *
      * @return the heading
      */
-    public int getHeading()
+    public double getHeading()
     {
         return heading;
     }
