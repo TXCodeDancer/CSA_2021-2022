@@ -27,14 +27,14 @@ public class MockTurtle
     /**
      * Instantiates a new Mock turtle.
      *
-     * @param x     the x
-     * @param y     the y
+     * @param xPosition     the xPosition
+     * @param yPosition     the yPosition
      * @param world the world
      */
-    public MockTurtle(int x, int y, World world)
+    public MockTurtle(int xPosition, int yPosition, World world)
     {
         this.world = world;
-        setXYPosition(x, y);
+        setXYPosition(xPosition, yPosition);
     }
 
     private void setXYPosition(int x, int y)
@@ -188,7 +188,7 @@ public class MockTurtle
      *
      * @return the position
      */
-    public int getxPosition()
+    public int getXPosition()
     {
         return xPosition;
     }
@@ -198,7 +198,7 @@ public class MockTurtle
      *
      * @return the position
      */
-    public int getyPosition()
+    public int getYPosition()
     {
         return yPosition;
     }
@@ -211,5 +211,15 @@ public class MockTurtle
     public double getHeading()
     {
         return heading;
+    }
+
+    public Color getBodyColor()
+    {
+        return bodyColor;
+    }
+
+    public Color getShellColor()
+    {
+        return shellColor;
     }
 }
