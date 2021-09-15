@@ -1,0 +1,16 @@
+type: output
+files:
+- name: test/output.txt
+  visible: false
+- name: src/Main.java
+  visible: true
+  placeholders:
+  - offset: 881
+    length: 18
+    placeholder_text: /* Change Bowie's status to record that he is sleeping. */
+  - offset: 1161
+    length: 24
+    placeholder_text: /* Print each cat's information to the console on a separate
+      line. */
+- name: src/Cat.java
+  visible: true

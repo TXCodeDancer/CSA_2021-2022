@@ -1,0 +1,82 @@
+<html>
+<body style="font-size:1em;">
+<h2>Programming Challenge : Turtle House</h2>
+
+<p>Follow the <a href="https://repl.it/@BerylHoffman/Java-Swing-Turtle">repl.it link</a>, fork the solution
+    (or wait for a multiplayer link for collaborative coding) and try the following tasks.</p>
+
+    This creative challenge is fun to do collaboratively in groups.
+    Design a house and have the turtle draw it with different colors
+    (use this <a href="https://repl.it/@BerylHoffman/Java-Swing-Turtle">repl.it link</a>).
+    Can you add windows and a door? Come up with your own house design as a team.<br><br>
+    To draw a window, you will need to do <code>penUp()</code> to walk the turtle into position,
+    for example:<br>
+
+<ul>
+    <code>builder.penUp();</code><br>
+    <code>builder.moveTo(120,200);</code><br>
+    <code>builder.penDown();</code>
+</ul>
+
+<p>Turtle Class Diagram</p>
+
+<div style="
+            padding: .5em;
+            border: .05em solid lightgray;
+            margin: 1em auto 0em;">
+    Turtle : SimpleTurtle
+</div>
+
+<div style="
+            padding: .5em;
+            border: .05em solid lightgray;
+            margin: 0em auto 0em;">
+    <em>Constructor Signatures:</em><br>
+    <code>Turtle(World world)</code><br>
+    <code>Turtle(int x, int y, World world)</code><br>
+</div>
+<div style="
+            padding: .5em;
+            border: .05em solid lightgray;
+            margin: 0em auto 0em;">
+    <em>Attributes:</em><br>
+    <code>bodyColor : Color</code><br>
+    <code>shellColor : Color</code><br>
+    <code>width : int = 15</code><br>
+    <code>height : int = 18</code><br>
+    <code>xpos : int = 0</code><br>
+    <code>ypos : int = 0</code><br>
+</div>
+<div style="
+            padding: .5em;
+            border: .05em solid lightgray;
+            margin: 0em auto 1em;">
+    <em>Methods:</em><br>
+    <code>forward()</code><br>
+    <code>backward()</code><br>
+    <code>turnLeft()</code><br>
+    <code>turnRight()</code><br>
+    <code>penUp()</code><br>
+    <code>penDown()</code><br>
+    <code>forward(pixels : int)</code><br>
+    <code>backward(pixels : int)</code><br>
+    <code>turn(degrees : double)</code><br>
+    <code>getXPos()</code><br>
+    <code>getYPos()</code><br>
+    <code>moveTo(x: int, y: int)</code><br>
+    <code>setColor(pen : Color)</code><br>
+    <code>setColor(bodyColor : Color, shellColor : Color)</code><br>
+    <code>setWidth(width : int)</code><br>
+    <code>setHeight(height : int)</code><br>
+</div>
+
+References:
+<ul style="font-size:0.9em;">
+    <li><a href="https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html">SimpleTurtle Class Javadoc</a></li>
+    <li><a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-java-quick-reference.pdf?course=ap-computer-science-a">AP CSA Java Quick Reference</a></li>
+    <li><a href="https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-4-methods-with-params.html">2.4. Calling Methods With Parameters</a></li>
+    <li><a href="https://www.javatpoint.com/method-in-java">Javatpoint: Java Methods</a></li>
+</ul>
+<p>Click <strong>'Next'</strong> to continue.</p>
+</body>
+</html>

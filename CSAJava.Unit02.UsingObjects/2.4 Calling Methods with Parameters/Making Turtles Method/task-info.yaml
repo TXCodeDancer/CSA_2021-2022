@@ -1,0 +1,22 @@
+type: edu
+files:
+- name: test/Tests.java
+  visible: false
+- name: src/MockTurtle.java
+  visible: false
+- name: src/World.java
+  visible: false
+- name: src/Main.java
+  visible: true
+  placeholders:
+  - offset: 642
+    length: 158
+    placeholder_text: '/* Make a new turtle with starting position: x = 25; y = 0;
+      and colors: Body = green; Shell = yellow */'
+  - offset: 849
+    length: 38
+    placeholder_text: /* Print turtle information to console. */
+  - offset: 1090
+    length: 117
+    placeholder_text: /* Implement method body to create a new turtle at position
+      x, y with body/shell colors */

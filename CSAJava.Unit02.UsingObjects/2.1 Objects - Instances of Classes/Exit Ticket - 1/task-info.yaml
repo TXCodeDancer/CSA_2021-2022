@@ -1,0 +1,16 @@
+type: choice
+is_multiple_choice: true
+options:
+  - text: peach - fruit
+    is_correct: false
+  - text: fruit - peach
+    is_correct: true
+  - text: mammal - squirrel
+    is_correct: true
+  - text: pencil - writingUtensil
+    is_correct: false
+message_correct: Congratulations!
+message_incorrect: Incorrect solution
+files:
+  - name: src/Main.java
+    visible: true

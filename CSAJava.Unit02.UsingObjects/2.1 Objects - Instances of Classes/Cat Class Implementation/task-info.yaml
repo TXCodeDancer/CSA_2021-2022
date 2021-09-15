@@ -1,0 +1,27 @@
+type: edu
+files:
+- name: src/Cat.java
+  visible: true
+  placeholders:
+  - offset: 55
+    length: 115
+    placeholder_text: '/* Implement instance variables here: name, age, color and
+      isSleeping */'
+  - offset: 242
+    length: 62
+    placeholder_text: /* Implement missing initializations */
+  - offset: 508
+    length: 49
+    placeholder_text: /* Implement missing initializations */
+  - offset: 629
+    length: 32
+    placeholder_text: /* Implement missing initializations */
+  - offset: 811
+    length: 18
+    placeholder_text: |-
+      /* Modify instance variable to indicated that
+            the cat is sleeping */
+- name: test/Tests.java
+  visible: false
+- name: src/Main.java
+  visible: true

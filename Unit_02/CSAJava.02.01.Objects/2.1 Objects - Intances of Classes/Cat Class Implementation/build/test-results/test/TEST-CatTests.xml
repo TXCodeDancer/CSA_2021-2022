@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CatTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-09-05T17:05:18" hostname="PC-RVB-2020" time="0.002">
-  <properties/>
-  <testcase name="testDefault" classname="CatTests" time="0.001"/>
-  <testcase name="testIsSleeping" classname="CatTests" time="0.0"/>
-  <testcase name="testParameterConstructor" classname="CatTests" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
