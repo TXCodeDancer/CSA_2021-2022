@@ -10,10 +10,10 @@ public class Tests {
     int y = 75;
     Color body = Color.blue;
     Color shell = Color.red;
-    Turtle expectedTurtle = new Turtle(x, y, world);
+    MockTurtle expectedTurtle = new MockTurtle(x, y, world);
     expectedTurtle.setColor(body, shell);
 
-    Turtle actualTurtle =  Main.makeTurtle(world, x, y, body, shell);
+    MockTurtle actualTurtle =  Main.makeTurtle(world, x, y, body, shell);
 
     String expected = expectedTurtle.toString();
     String actual = actualTurtle.toString();
