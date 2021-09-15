@@ -5,12 +5,12 @@ public class Main {
       World world = new World();
 
       // Create a default turtle
-      Turtle turtle = new Turtle(world);
+      MockTurtle turtle = new MockTurtle(world);
       // Print turtle attributes
       System.out.println(turtle);
 
       // Create a turtle with a starting position: x = 50; y = 75. Print its information
-      Turtle turtleXY = new Turtle(50, 75, world);
+      MockTurtle turtleXY = new MockTurtle(50, 75, world);
       System.out.println(turtleXY);
 
       // Change its colors: Body = blue; Shell = red. Print its information
