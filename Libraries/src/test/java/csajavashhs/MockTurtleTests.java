@@ -1,3 +1,5 @@
+package csajavashhs;
+
 import org.testng.annotations.Test;
 
 import java.awt.*;
