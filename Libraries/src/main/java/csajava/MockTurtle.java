@@ -1,4 +1,4 @@
-package csajavashhs;
+package csajava;
 
 import java.awt.*;
 
