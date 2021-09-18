@@ -1,4 +1,10 @@
-package csajavashhs;
+package csa.java;
+/*
+ ** @package csa.java
+ ** @project MockTurtle
+ ** @author Rick Brunson, Team Brunson Software, LLC
+ ** @created 9/18/2021
+ */
 
 import java.awt.*;
 
