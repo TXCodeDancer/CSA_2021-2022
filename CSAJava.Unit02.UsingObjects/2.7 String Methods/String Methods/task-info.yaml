@@ -1,0 +1,32 @@
+type: output
+files:
+- name: test/output.txt
+  visible: false
+- name: src/Main.java
+  visible: true
+  placeholders:
+  - offset: 253
+    length: 11
+    placeholder_text: /* Print the length of s1 */
+  - offset: 273
+    length: 32
+    placeholder_text: /* Print the length of s2 */
+  - offset: 345
+    length: 5
+    placeholder_text: /* Use correct substring parameters to print "Java is awesome"
+      */
+  - offset: 360
+    length: 39
+    placeholder_text: /* Use the substring() method to print 'Oseguera' */
+  - offset: 438
+    length: 1
+    placeholder_text: /* Enter a single parameter to print 'awesome at SHHS!' */
+  - offset: 480
+    length: 6
+    placeholder_text: /* Print the index of 'SHHS' in s1 */
+  - offset: 515
+    length: 16
+    placeholder_text: /* Print the index of 'my'  in s2 */
+  - offset: 571
+    length: 2
+    placeholder_text: /* Print the index of 'is' in s3 */
