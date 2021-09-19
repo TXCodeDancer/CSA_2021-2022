@@ -1,0 +1,19 @@
+type: output
+files:
+- name: test/output.txt
+  visible: false
+- name: src/Main.java
+  visible: false
+  placeholders:
+  - offset: 260
+    length: 2
+    placeholder_text: /* Compare s1 to s2 */
+  - offset: 291
+    length: 13
+    placeholder_text: /* Compare s1 to s3 */
+  - offset: 332
+    length: 13
+    placeholder_text: /* Compare s1 to s4 */
+  - offset: 373
+    length: 23
+    placeholder_text: /* Compare s1 to s4, ignoring case */
