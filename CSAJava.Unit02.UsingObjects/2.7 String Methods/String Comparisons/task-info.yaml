@@ -5,15 +5,19 @@ files:
 - name: src/Main.java
   visible: false
   placeholders:
-  - offset: 260
+  - offset: 340
     length: 2
     placeholder_text: /* Compare s1 to s2 */
-  - offset: 291
+  - offset: 371
     length: 13
     placeholder_text: /* Compare s1 to s3 */
-  - offset: 332
+  - offset: 412
     length: 13
     placeholder_text: /* Compare s1 to s4 */
-  - offset: 373
+  - offset: 453
     length: 23
     placeholder_text: /* Compare s1 to s4, ignoring case */
+  - offset: 1105
+    length: 22
+    placeholder_text: /* Use compareTo() to print our friend's names in lexicographical
+      order */
