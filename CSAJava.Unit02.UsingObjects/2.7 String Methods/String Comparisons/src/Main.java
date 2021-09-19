@@ -4,6 +4,7 @@ public class Main {
       String s2 = "Java is Fun!";
       String s3 = new String("Java is Fun!");
       String s4 = new String("Java is fun!");
+      String s5 = s1;
 
       System.out.println();
       System.out.println("Using equals() method:");
@@ -17,6 +18,7 @@ public class Main {
       System.out.println(s1 == s2);
       System.out.println(s1 == s3);
       System.out.println(s1 == s4);
+      System.out.println(s1 == s5);
 
       String f1 = "Issac";
       String f2 = "Zeke";

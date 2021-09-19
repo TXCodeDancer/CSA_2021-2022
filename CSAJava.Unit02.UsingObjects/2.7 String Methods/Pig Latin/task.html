@@ -1,18 +1,24 @@
 <html>
 <body style="font-size:1em;">
-<h2>String Comparisons</h2>
+<h2>Pig Latin</h2>
 </p>
 <p>
-    There are three ways to compare a String in Java
-<ol>
-    <li><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html#equals(java.lang.Object)">equals()</a> method</li>
-    <li><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html#compareTo(java.lang.String)">compareTo()</a> method</li>
-    <li>== operator: Compares references <strong>not</strong> values. <em>Caution: Only works if using same string constant pool instance.</em></li>
-    <code>String s1="Welcome"; // Creates new instance</code><br>
-    <code>String s2="Welcome"; // Doesn't create new instance</code>
-</ol>
-
+    In Pig Latin, you take the first letter and put it at the end of the word and
+    add the letters “ay” to the end. For example, “pig” becomes “igpay”. Create
+    a program that takes a word and transforms it to Pig Latin using String methods.
+    You may need the word’s length, a substring that does not include the first letter,
+    and a substring that is just the first letter (you can get the ith letter of a
+    string using substring(i,i+1) so for example the letter at index 3 would be substring(3,4)).<br>
+    <br>
+    Modify <code>ConvertWord(String word)</code> in the PigLatin class to implement converting a
+    single word from normal text to Pig Latin.
 </p>
+
+<div class="hint">
+    Use <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html#substring(int)">substring(int)</a>
+    and <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html#substring(int,int)">substring(int, int)</a>
+    to complete this task.<br>
+</div>
 
 <div style="
             padding: .5em;
@@ -34,22 +40,6 @@
 </div>
 
 <p>Enter the correct code in the placeholder boxes as instructed.</p>
-
-<div class="hint">
-    Use <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html#equalsIgnoreCase(java.lang.String)">equalsIgnoreCase()</a>
-    or <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html#compareToIgnoreCase(java.lang.String)">compareToIgnoreCase()</a> to ignore case when performing string comparisons.<br>
-</div>
-
-<p>
-    Questions:
-<ol>
-    <li>Why did the comparison of s1 to s3 pass?</li>
-    <li>Why did the comparison of s1 to s4 fail?</li>
-    <li>How did you make it pass?</li>
-    <li>What surprised you about the == operator?</li>
-    <li>Why is compareTo() useful?</li>
-</ol>
-</p>
 
 References:
 <ul style="font-size:0.9em;">

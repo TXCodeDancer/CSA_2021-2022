@@ -1,0 +1,12 @@
+type: edu
+files:
+- name: src/PigLatin.java
+  visible: true
+  placeholders:
+  - offset: 602
+    length: 207
+    placeholder_text: /* Implement method to convert a single word to Pig Latin */
+- name: test/Tests.java
+  visible: false
+- name: src/Main.java
+  visible: true
