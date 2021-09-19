@@ -1,0 +1,14 @@
+type: output
+files:
+- name: test/output.txt
+  visible: false
+- name: src/Main.java
+  visible: true
+  placeholders:
+  - offset: 243
+    length: 4
+    placeholder_text: /* Assign result of cancat() cal to original String variable
+      */
+  - offset: 296
+    length: 2
+    placeholder_text: /* Print new String value */

@@ -3,10 +3,15 @@
 <h2>String Methods</h2>
 </p>
 <p>
-    Strings hold a sequence of characters. Each character has a zero based index in the string.
-    The index indicates the character's position in the string. The length of a string is the
-    number of characters in string include spaces. The length of the following string <em>s</em> is 24:
-    <code>String s = "Java is awesome at SHHS!";</code>
+    There are three ways to compare a String in Java
+<ol>
+    <li><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html#equals(java.lang.Object)">equals()</a> method</li>
+    <li><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html#compareTo(java.lang.String)">compareTo()</a> method</li>
+    <li>== operator: Compares references <strong>not</strong> values. <em>Caution: Only works if using same string constant pool instance.</em></li>
+    <code>String s1="Welcome"; // Creates new instance</code><br>
+    <code>String s2="Welcome"; // Doesn't create new instance</code>
+</ol>
+
 </p>
 
 <div style="
@@ -33,9 +38,9 @@
 <p>
     Questions:
 <ol>
-    <li>Did you check the results for indexOf()?</li>
-    <li>Did you get the index for 'is' that you expected?</li>
-    <li>What happens if indexOf() has a parameter that's not in the string? </li>
+    <li>What do you need to do to append a string to end of another string?</li>
+    <li>Why do we need to do that?</li>
+    <li></li>
 </ol>
 </p>
 
