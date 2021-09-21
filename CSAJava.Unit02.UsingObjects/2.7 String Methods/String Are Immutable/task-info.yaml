@@ -7,7 +7,7 @@ files:
   placeholders:
   - offset: 243
     length: 4
-    placeholder_text: /* Assign result of cancat() cal to original String variable
+    placeholder_text: /* Assign result of concat() cal to original String variable
       */
   - offset: 296
     length: 2

@@ -3,8 +3,17 @@ import java.util.List;
 
 import static java.lang.String.join;
 
+/**
+ * The type Pig latin.
+ */
 public class PigLatin {
-  public static String Convert(String text)
+    /**
+     * Convert string.
+     *
+     * @param text the text
+     * @return the string
+     */
+    public static String Convert(String text)
   {
       List<String> pigLatinWords = new ArrayList();
       String[] words = text.split(" ");
@@ -17,6 +26,12 @@ public class PigLatin {
       return pigLatin;
   }
 
+    /**
+     * Convert word string.
+     *
+     * @param word the word
+     * @return the string
+     */
     public static String ConvertWord(String word)
     {
         // Implement method to convert a single word to Pig Latin
