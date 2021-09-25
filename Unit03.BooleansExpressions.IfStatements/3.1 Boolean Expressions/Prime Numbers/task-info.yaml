@@ -1,0 +1,18 @@
+type: edu
+files:
+- name: test/Tests.java
+  visible: false
+- name: src/Main.java
+  visible: true
+- name: src/Prime.java
+  visible: true
+  placeholders:
+  - offset: 206
+    length: 44
+    placeholder_text: /* Reject any number less than 2 */
+  - offset: 305
+    length: 58
+    placeholder_text: /* Reject any number that is a multiple of i  */
+  - offset: 365
+    length: 17
+    placeholder_text: /* Increment i */
