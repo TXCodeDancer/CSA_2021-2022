@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":2.7_String_Methods-Pig_Latin:main" external.linked.project.path="$MODULE_DIR$/../../../../2.7 String Methods/Pig Latin" external.root.project.path="$MODULE_DIR$/../../../.." external.system.id="GRADLE" external.system.module.group="CSAJava.Unit02.UsingObjects" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/../../../../2.7 String Methods/Pig Latin/out/production/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../2.7 String Methods/Pig Latin/src">
+      <sourceFolder url="file://$MODULE_DIR$/../../../../2.7 String Methods/Pig Latin/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="CSAJava.Unit02.UsingObjects.util.main" />
+  </component>
+</module>

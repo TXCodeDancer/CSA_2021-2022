@@ -1,0 +1,62 @@
+<html>
+<body style="font-size:1em;">
+<h2>String Comparisons</h2>
+</p>
+<p>
+    There are three ways to compare a String in Java
+<ol>
+    <li><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html#equals(java.lang.Object)">equals()</a> method</li>
+    <li><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html#compareTo(java.lang.String)">compareTo()</a> method</li>
+    <li>== operator: Compares references <strong>not</strong> values. <em>Caution: Only works if using same string constant pool instance.</em></li>
+    <code>String s1="Welcome"; // Creates new instance</code><br>
+    <code>String s2="Welcome"; // Doesn't create new instance</code>
+</ol>
+
+</p>
+
+<div style="
+            padding: .5em;
+            border: .05em solid lightgray;
+            margin: 1em auto 0em;">
+    <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html">String Methods</a>
+    for AP CS A Exam
+</div>
+
+<div style="
+            padding: .5em;
+            border: .05em solid lightgray;
+            margin: 0em auto 1em;">
+    <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html#length()"><code>int length()</code></a><br>
+    <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html#substring(int,int)"><code>String substring(int from, int to)</code></a><br>
+    <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html#indexOf(java.lang.String)"><code>int indexOf(String str)</code></a><br>
+    <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html#compareTo(java.lang.String)"><code>int compareTo(String str)</code></a><br>
+    <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html#equals(java.lang.Object)"><code>boolean equals(String other)</code></a><br>
+</div>
+
+<p>Enter the correct code in the placeholder boxes as instructed.</p>
+
+<div class="hint">
+    Use <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html#equalsIgnoreCase(java.lang.String)">equalsIgnoreCase()</a>
+    or <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html#compareToIgnoreCase(java.lang.String)">compareToIgnoreCase()</a> to ignore case when performing string comparisons.<br>
+</div>
+
+<p>
+    Questions:
+<ol>
+    <li>Why did the comparison of s1 to s3 pass?</li>
+    <li>Why did the comparison of s1 to s4 fail?</li>
+    <li>How did you make it pass?</li>
+    <li>What surprised you about the == operator?</li>
+    <li>Why is compareTo() useful?</li>
+</ol>
+</p>
+
+References:
+<ul style="font-size:0.9em;">
+    <li><a href="https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-7-string-methods.html">2.7. String Methods</a></li>
+    <li><a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html">Class String</a></li>
+    <li><a href="https://www.javatpoint.com/java-string">Javatpoint: Java String</a></li>
+</ul>
+<p>Click <strong>'Check'</strong> verify your solution.</p>
+</body>
+</html>

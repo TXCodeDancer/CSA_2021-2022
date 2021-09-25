@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":2.7_String_Methods-lengh___substring___indexOf__" external.linked.project.path="$MODULE_DIR$/../../../../2.7 String Methods/lengh() substring() indexOf()" external.root.project.path="$MODULE_DIR$/../../../.." external.system.id="GRADLE" external.system.module.group="CSAJava.Unit02.UsingObjects" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../2.7 String Methods/lengh() substring() indexOf()">
+      <excludeFolder url="file://$MODULE_DIR$/../../../../2.7 String Methods/lengh() substring() indexOf()/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../2.7 String Methods/lengh() substring() indexOf()/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../2.7 String Methods/lengh() substring() indexOf()/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

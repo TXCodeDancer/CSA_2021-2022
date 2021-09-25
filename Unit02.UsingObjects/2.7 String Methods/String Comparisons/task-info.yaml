@@ -1,0 +1,23 @@
+type: output
+files:
+- name: test/output.txt
+  visible: false
+- name: src/Main.java
+  visible: true
+  placeholders:
+  - offset: 362
+    length: 2
+    placeholder_text: /* Compare s1 to s2 */
+  - offset: 393
+    length: 13
+    placeholder_text: /* Compare s1 to s3 */
+  - offset: 434
+    length: 13
+    placeholder_text: /* Compare s1 to s4 */
+  - offset: 475
+    length: 23
+    placeholder_text: /* Compare s1 to s4, ignoring case */
+  - offset: 1163
+    length: 22
+    placeholder_text: /* Use compareTo() to print our friend's names in lexicographical
+      order */

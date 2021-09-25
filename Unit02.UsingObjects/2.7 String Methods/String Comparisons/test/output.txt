@@ -1,0 +1,17 @@
+
+Using equals() method:
+true
+true
+false
+true
+
+Using == operator:
+true
+false
+false
+true
+
+Using compareTo() method:
+Issac is before Zeke.
+Isabella is before Issac.
+Ours friends have the same name.
