@@ -7,32 +7,32 @@
 
 public class BooleanExpressions
 {
-    public static boolean equals( int A, int B)
+    public static boolean equals(int A, int B)
     {
         return (A == B);
     }
 
-    public static boolean notEquals( int A, int B)
+    public static boolean notEquals(int A, int B)
     {
         return (A != B);
     }
 
-    public static boolean lessThan( int A, int B)
+    public static boolean lessThan(int A, int B)
     {
         return (A < B);
     }
 
-    public static boolean greaterThan( int A, int B)
+    public static boolean greaterThan(int A, int B)
     {
         return (A > B);
     }
 
-    public static boolean lessThanEquals( int A, int B)
+    public static boolean lessThanEquals(int A, int B)
     {
         return (A <= B);
     }
 
-    public static boolean greaterThanEquals( int A, int B)
+    public static boolean greaterThanEquals(int A, int B)
     {
         return (A >= B);
     }

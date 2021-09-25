@@ -6,3 +6,33 @@ files:
   visible: true
 - name: src/BooleanExpressions.java
   visible: true
+  placeholders:
+  - offset: 233
+    length: 16
+    placeholder_text: /* Implement the method */
+  - offset: 261
+    length: 21
+    placeholder_text: /* Implement the method header  */
+  - offset: 321
+    length: 16
+    placeholder_text: /* Implement the method */
+  - offset: 349
+    length: 21
+    placeholder_text: /* Implement the method header */
+  - offset: 380
+    length: 12
+    placeholder_text: /* Implement the method header */
+  - offset: 408
+    length: 15
+    placeholder_text: /* Implement the method */
+  - offset: 483
+    length: 35
+    placeholder_text: /* Implement the method */
+  - offset: 617
+    length: 90
+    placeholder_text: /* Implement a static public method called greaterThanEquals
+      that accepts compares two integer parameters. It should return true if the first
+      parameter is greater or equal to the second, otherwise it should return false  */
+  - offset: 575
+    length: 36
+    placeholder_text: /* Implement the method */
