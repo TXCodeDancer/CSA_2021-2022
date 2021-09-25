@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Unit03.BooleansExpressions.IfStatements.iml" filepath="$PROJECT_DIR$/.idea/modules/Unit03.BooleansExpressions.IfStatements.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/3.1 Boolean Expressions/Testing Equality/Unit03.BooleansExpressions.IfStatements.3.1_Boolean_Expressions-Testing_Equality.iml" filepath="$PROJECT_DIR$/.idea/modules/3.1 Boolean Expressions/Testing Equality/Unit03.BooleansExpressions.IfStatements.3.1_Boolean_Expressions-Testing_Equality.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/3.1 Boolean Expressions/Testing Equality/Unit03.BooleansExpressions.IfStatements.3.1_Boolean_Expressions-Testing_Equality.main.iml" filepath="$PROJECT_DIR$/.idea/modules/3.1 Boolean Expressions/Testing Equality/Unit03.BooleansExpressions.IfStatements.3.1_Boolean_Expressions-Testing_Equality.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/3.1 Boolean Expressions/Testing Equality/Unit03.BooleansExpressions.IfStatements.3.1_Boolean_Expressions-Testing_Equality.test.iml" filepath="$PROJECT_DIR$/.idea/modules/3.1 Boolean Expressions/Testing Equality/Unit03.BooleansExpressions.IfStatements.3.1_Boolean_Expressions-Testing_Equality.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson1/task1/Unit03.BooleansExpressions.IfStatements.lesson1-task1.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson1/task1/Unit03.BooleansExpressions.IfStatements.lesson1-task1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson1/task1/Unit03.BooleansExpressions.IfStatements.lesson1-task1.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson1/task1/Unit03.BooleansExpressions.IfStatements.lesson1-task1.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson1/task1/Unit03.BooleansExpressions.IfStatements.lesson1-task1.test.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson1/task1/Unit03.BooleansExpressions.IfStatements.lesson1-task1.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/Unit03.BooleansExpressions.IfStatements.util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/Unit03.BooleansExpressions.IfStatements.util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/Unit03.BooleansExpressions.IfStatements.util.main.iml" filepath="$PROJECT_DIR$/.idea/modules/util/Unit03.BooleansExpressions.IfStatements.util.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/Unit03.BooleansExpressions.IfStatements.util.test.iml" filepath="$PROJECT_DIR$/.idea/modules/util/Unit03.BooleansExpressions.IfStatements.util.test.iml" />
+    </modules>
+  </component>
+</project>
