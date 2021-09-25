@@ -4,5 +4,27 @@ files:
   visible: false
 - name: src/BooleanExpressions.java
   visible: true
+  placeholders:
+  - offset: 230
+    length: 15
+    placeholder_text: /* Implement method */
+  - offset: 297
+    length: 35
+    placeholder_text: /* Implement method */
+  - offset: 367
+    length: 5
+    placeholder_text: /* TODO */
+  - offset: 374
+    length: 40
+    placeholder_text: /* Implement method */
+  - offset: 416
+    length: 79
+    placeholder_text: /* Implement isOdd method */
+  - offset: 556
+    length: 29
+    placeholder_text: /* Test if A is a multiple of B */
+  - offset: 338
+    length: 21
+    placeholder_text: /* TODO */
 - name: src/Main.java
   visible: true
