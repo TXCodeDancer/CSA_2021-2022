@@ -13,7 +13,7 @@ and a private key that is known only by the receiver.
             padding: .5em;
             border: .05em solid lightgray;
             margin: 1em auto 0em;">
-    Public Key &lt;n, k&gt;
+    Public Key &lt;n, e&gt;: Encode Message
 </div>
 
 <div style="
@@ -21,11 +21,22 @@ and a private key that is known only by the receiver.
             border: .05em solid lightgray;
             margin: 0em auto 1em;">
 <ol>
-    <li>Select two distinct prime numbers, <em>p</em> and <em>q</em>. We'll use primes from 20 to 100.</li>
-    <li>Multiply <em>p</em> and <em>q</em> to get <em>n</em>, the encryption modulus. <ul><em>n = p * q</em> </ul></li>
-    <li>Select value <em>k</em> that is relatively prime to <em>(p-1) * (q-1).</em> We'll use a prime value from 3 to 20.</li>
-    <li>Compute cipher text <em>C</em> from plain text <em>M</em> using public key &lt;n, k&gt;:
-       <ul><em> C ≡ M<sup>k</sup> mod n</em> </li></ul>
+    <li>Select two distinct primes, <em>p</em> and <em>q</em>. We'll use primes from 20 to 100.</li>
+    <li>Multiply <em>p</em> and <em>q</em> to get <em>n</em>, the encryption modulus.
+        <ul><em>n = p * q</em> </ul></li>
+    <li>Select prime <em>k</em> that is less than n and relatively prime to <em>(p-1) * (q-1).</em>
+        <em>
+            <ul>φ(n) = (p-1) * (q-1)</ul>
+            <ul> 1 &lt; e &lt; φ (n)</ul>
+            <ul>gcd(e, d (n)) = 1 &emsp; i.e. φ (n) % e != 0</ul>
+        </em></li>
+    <li>Convert message String to ASCII values <em>bytes</em> from plain text <em>P</em>.
+        <ul><code>byte[] M = P.getBytes(StandardCharsets.UTF-8);</code></ul></li>
+    <li>Encrypt plain text <em>m</em> byte into cipher text <em>C</em> using public key &lt;n, e&gt;.
+        <em>
+            <ul> For each byte in M: m = byte</ul>
+            <ul> C ≡ m<sup>e</sup> mod n</ul>
+        </em></li>
 </ol>
 
 </div>
@@ -34,34 +45,48 @@ and a private key that is known only by the receiver.
             padding: .5em;
             border: .05em solid lightgray;
             margin: 1em auto 0em;">
-    Testing with Boolean Expressions
+    Private Key&lt;n,d&gt;: Decode Message
 </div>
 
 <div style="
             padding: .5em;
             border: .05em solid lightgray;
             margin: 0em auto 1em;">
-    <code> if (number > 0) </code>&emsp;&emsp;&emsp; Test if number is positive <br>
-    <code> if (number < 0) </code>&emsp;&emsp;&emsp; Test if number is negative <br>
-    <code> if (number % 2 == 0) </code>&emsp;Test if number is even <br>
-    <code> if (number % 2 > 0) </code>&emsp;&ensp;Test if number is odd <br>
-    <code> if (number % x == 0) </code>&emsp;Test if number is a multiple of x <br>
+<ol>
+    <li>Determine private key <em>d</em>.
+    <em>
+        <ul>(e*d) mod φ(n) ≡ 1</ul>
+        <ul>d = (k * φ(n) + 1)/e &emsp; [let k = 0, 1, 2, 3 ...]</ul>
+        <ul>&emsp; i.e. Find lowest k where (k * φ(n) + 1) mod e ≡ 0</ul>
+    </em></li>
+    <li>Decrypt cipher text <em>C</em> from into decoded byte text <em>m</em> using private key &lt;n, d&gt;.
+        <em>
+            <ul> For each byte in C: c = C</ul>
+            <ul> M ≡ c<sup>d</sup> mod n</ul>
+        </em></li>
+    <li>Convert decoded byte text from ASCII values <em>M</em> to plain text <em>P</em>.
+        <ul><code>String P = new String(M, StandardCharsets.UTF-8);</code></ul></li>
+
+</ol>
 </div>
 
 <p>Enter the correct code in the placeholder boxes as instructed.</p>
 
-<div class="hint">
-    Implement the methods in the Prime class to pass the unit tests.
-</div>
-<div class="hint">
-    Two is the first prime number, so any number less than two is not prime.
-</div>
+<!--<div class="hint">-->
+<!--    Implement the methods in the Prime class to pass the unit tests.-->
+<!--</div>-->
+<!--<div class="hint">-->
+<!--    Two is the first prime number, so any number less than two is not prime.-->
+<!--</div>-->
 
 
 
 References:
 <ul style="font-size:0.9em;">
-    <li><a href="https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-1-booleans.html">3.1 Boolean Expressions</a></li>
+    <li><a href="https://csawesome.runestone.academy/runestone/books/published/csawesome/index.html">AP CS A Java Course</a></li>
+    <li><a href="https://www.javatpoint.com/rsa-encryption-algorithm">javaTpoint: RSA Encryption Algorithm</a></li>
+    <li><a href="https://www.thejavaprogrammer.com/rsa-algorithm-in-java/">The Java Programmer: RSA Algorithm in Java (Encryption and Decryption)</a></li>
+    <li><a href="https://mkyong.com/java/how-to-convert-character-to-ascii-in-java/">Mkyong.com: Java – Convert Character to ASCII</a></li>
 </ul>
 <p>Click <strong>'Check'</strong> verify your solution.</p>
 </body>
