@@ -9,5 +9,8 @@
         <module name="MockTurtle" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="MockTurtle" target="16" />
+    </bytecodeTargetLevel>
   </component>
 </project>

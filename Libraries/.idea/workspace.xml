@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RunManager" selected="TestNG.TurtleTest">
+    <configuration name="MockTurtleTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MockTurtle" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="csa.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="csa.java" />
+      <option name="MAIN_CLASS_NAME" value="csa.java.MockTurtleTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TurtleTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MockTurtle" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="csa.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="csa.java" />
+      <option name="MAIN_CLASS_NAME" value="csa.java.TurtleTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.TurtleTest" />
+        <item itemvalue="TestNG.MockTurtleTests" />
+      </list>
+    </recent_temporary>
+  </component>
+</project>
