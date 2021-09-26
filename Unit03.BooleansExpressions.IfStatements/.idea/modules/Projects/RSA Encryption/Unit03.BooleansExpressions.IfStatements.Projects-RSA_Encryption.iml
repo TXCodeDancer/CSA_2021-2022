@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":Projects-RSA_Encryption" external.linked.project.path="$MODULE_DIR$/../../../../Projects/RSA Encryption" external.root.project.path="$MODULE_DIR$/../../../.." external.system.id="GRADLE" external.system.module.group="Unit03.BooleansExpressions.IfStatements" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../Projects/RSA Encryption">
+      <excludeFolder url="file://$MODULE_DIR$/../../../../Projects/RSA Encryption/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../Projects/RSA Encryption/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../Projects/RSA Encryption/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

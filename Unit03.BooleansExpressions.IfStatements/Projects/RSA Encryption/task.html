@@ -1,0 +1,68 @@
+<html>
+<body style="font-size:1em;">
+<h2>RSA Encryption</h2>
+</p>
+
+RSA encryption allows coded messages to be sent without the sender (or any third-party)
+knowing how to decode the message. This encryption works using a public keys that is known to everyone
+and a private key that is known only by the receiver.
+
+<ul>Watch <a href="https://www.youtube.com/embed/sBO3gH1uGzQ?end=190" target="_blank">RSA encryption in 5 minutes</a></ul>
+
+</p><div style="
+            padding: .5em;
+            border: .05em solid lightgray;
+            margin: 1em auto 0em;">
+    Public Key &lt;n, k&gt;
+</div>
+
+<div style="
+            padding: .5em;
+            border: .05em solid lightgray;
+            margin: 0em auto 1em;">
+<ol>
+    <li>Select two distinct prime numbers, <em>p</em> and <em>q</em>. We'll use primes from 20 to 100.</li>
+    <li>Multiply <em>p</em> and <em>q</em> to get <em>n</em>, the encryption modulus. <ul><em>n = p * q</em> </ul></li>
+    <li>Select value <em>k</em> that is relatively prime to <em>(p-1) * (q-1).</em> We'll use a prime value from 3 to 20.</li>
+    <li>Compute cipher text <em>C</em> from plain text <em>M</em> using public key &lt;n, k&gt;:
+       <ul><em> C ≡ M<sup>k</sup> mod n</em> </li></ul>
+</ol>
+
+</div>
+
+<div style="
+            padding: .5em;
+            border: .05em solid lightgray;
+            margin: 1em auto 0em;">
+    Testing with Boolean Expressions
+</div>
+
+<div style="
+            padding: .5em;
+            border: .05em solid lightgray;
+            margin: 0em auto 1em;">
+    <code> if (number > 0) </code>&emsp;&emsp;&emsp; Test if number is positive <br>
+    <code> if (number < 0) </code>&emsp;&emsp;&emsp; Test if number is negative <br>
+    <code> if (number % 2 == 0) </code>&emsp;Test if number is even <br>
+    <code> if (number % 2 > 0) </code>&emsp;&ensp;Test if number is odd <br>
+    <code> if (number % x == 0) </code>&emsp;Test if number is a multiple of x <br>
+</div>
+
+<p>Enter the correct code in the placeholder boxes as instructed.</p>
+
+<div class="hint">
+    Implement the methods in the Prime class to pass the unit tests.
+</div>
+<div class="hint">
+    Two is the first prime number, so any number less than two is not prime.
+</div>
+
+
+
+References:
+<ul style="font-size:0.9em;">
+    <li><a href="https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-1-booleans.html">3.1 Boolean Expressions</a></li>
+</ul>
+<p>Click <strong>'Check'</strong> verify your solution.</p>
+</body>
+</html>
