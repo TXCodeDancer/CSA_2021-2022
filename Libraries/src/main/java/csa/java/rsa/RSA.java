@@ -20,13 +20,39 @@ public class RSA
 //        this.n = publicKey.getN();
 //        this.e = publicKey.getE();
 //        int phi_n = publicKey.getPhi_n();
-        this.n = 39;
-        this.e = 3;
+        this.n = 77;
+        this.e = 7;
 //        int phi_n = 20;
 //
 //        PrivateKey privateKey = new PrivateKey(n, phi_n, e);
 //        d = privateKey.getD();
-        d = 7;
+        d = 43;
+    }
+
+    public long[] encode(long[] M)
+    {
+        long[] C = new long[M.length];
+        for (int i = 0; i < M.length; i++)
+        {
+            long m = M[i];
+//            long c = ((long)Math.pow(m, e) % n);
+            long c = modPower(m, e, n);
+            C[i] = c;
+        }
+        return C;
+    }
+
+    public long[] decode(long[] cipherText)
+    {
+        long[] M = new long[cipherText.length];
+        for (int i = 0; i < cipherText.length; i++)
+        {
+            long c = cipherText[i];
+//            int m = (int) Math.pow(c, d) % n;
+            long m = modPower(c, d, n);
+            M[i] = m;
+        }
+        return M;
     }
 
     public long[] encode(String plainText)
@@ -43,24 +69,25 @@ public class RSA
         return C;
     }
 
-    public String decode(long[] cipherText)
-    {
-        int a = (int)'a';
-        char[] M = new char[cipherText.length];
-        for (int i = 0; i < cipherText.length; i++)
-        {
-            long c = cipherText[i];
-            int m = (int)Math.pow(c, d) % n;
-            char ch = (char)(m + a);
-            M[i] = ch;
-        }
+//        public String decode(long[] cipherText)
+//        {
+//            int a = (int) 'a';
+//            char[] M = new char[cipherText.length];
+//            for (int i = 0; i < cipherText.length; i++)
+//            {
+//                long c = cipherText[i];
+//                int m = (int) Math.pow(c, d) % n;
+//                char ch = (char) (m + a);
+//                M[i] = ch;
+//            }
+//
+//            return new String(M);
+//        }
+//    }
 
-        return new String(M);
-    }
-
-    private static int modPower(int x, int y, int p)
+    private static long modPower(long x, long y, long p)
     {
-        int result = 1; // Initialize result
+        long result = 1; // Initialize result
 
         x = x % p; // Update x if it is more than or
         // equal to p
