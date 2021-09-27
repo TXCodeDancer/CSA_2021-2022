@@ -1,0 +1,187 @@
+type: edu
+files:
+- name: test/Tests.java
+  visible: false
+  text: |-
+    import org.junit.Assert;
+    import org.junit.Test;
+
+    public class Tests {
+      @Test
+      public void testSolution() {
+       Assert.assertTrue(BooleanExpressions.isPositive(1));
+        Assert.assertFalse(BooleanExpressions.isPositive(0));
+        Assert.assertFalse(BooleanExpressions.isPositive(-1));
+
+        Assert.assertFalse(BooleanExpressions.isNegative(1));
+        Assert.assertFalse(BooleanExpressions.isNegative(0));
+        Assert.assertTrue(BooleanExpressions.isNegative(-1));
+
+        Assert.assertTrue(BooleanExpressions.isEven(0));
+        Assert.assertFalse(BooleanExpressions.isEven(1));
+        Assert.assertTrue(BooleanExpressions.isEven(2));
+
+        Assert.assertFalse(BooleanExpressions.isOdd(0));
+        Assert.assertTrue(BooleanExpressions.isOdd(1));
+        Assert.assertFalse(BooleanExpressions.isOdd(2));
+
+        Assert.assertTrue(BooleanExpressions.isMultipleOf(4, 2));
+        Assert.assertFalse(BooleanExpressions.isMultipleOf(5, 2));
+      }
+    }
+  learner_created: false
+- name: src/BooleanExpressions.java
+  visible: true
+  placeholders:
+  - offset: 230
+    length: 22
+    placeholder_text: /* Implement method */
+    initial_state:
+      length: 22
+      offset: 230
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: return (A > 0);
+  - offset: 304
+    length: 22
+    placeholder_text: /* Implement method */
+    initial_state:
+      length: 22
+      offset: 304
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |2-
+          {
+              return (A < 0);
+          }
+  - offset: 332
+    length: 10
+    placeholder_text: /* TODO */
+    initial_state:
+      length: 10
+      offset: 332
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: public static boolean
+  - offset: 350
+    length: 10
+    placeholder_text: /* TODO */
+    initial_state:
+      length: 10
+      offset: 350
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: int A
+  - offset: 362
+    length: 22
+    placeholder_text: /* Implement method */
+    initial_state:
+      length: 22
+      offset: 362
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |2-
+          {
+              return (A % 2 == 0);
+          }
+  - offset: 386
+    length: 28
+    placeholder_text: /* Implement isOdd method */
+    initial_state:
+      length: 28
+      offset: 386
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |2-
+          public static boolean isOdd(int A)
+          {
+              return (A % 2 != 0);
+          }
+  - offset: 475
+    length: 34
+    placeholder_text: /* Test if A is a multiple of B */
+    initial_state:
+      length: 34
+      offset: 475
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |2
+              return (A % B == 0);
+  text: |2
+
+    /*
+     ** @project Unit03.BooleansExpressions.IfStatements
+     ** @author Rick Brunson, Team Brunson Software, LLC
+     ** @created 9/25/2021
+     */
+
+    public class BooleanExpressions
+    {
+        public static boolean isPositive(int A)
+        {
+            /* Implement method */
+        }
+
+        public static boolean isNegative(int A)
+    /* Implement method */
+
+        /* TODO */ isEven(/* TODO */)
+    /* Implement method */
+
+    /* Implement isOdd method */
+
+        public static boolean isMultipleOf(int A, int B)
+        {
+    /* Test if A is a multiple of B */    }
+
+    }
+  learner_created: false
+- name: src/Main.java
+  visible: true
+  text: |2
+
+    /*
+     ** @project Unit03.BooleansExpressions.IfStatements
+     ** @author Rick Brunson, Team Brunson Software, LLC
+     ** @created 9/25/2021
+     */
+
+    public class Main
+    {
+        public static void main(String[] args)
+        {
+            int x, y;
+            x = 1;
+            y = 1;
+            System.out.println();
+            System.out.println("isPositive():");
+            System.out.println("isPositive(" + x + "): " + BooleanExpressions.isPositive(x));
+
+            System.out.println();
+            System.out.println("isNegative():");
+            System.out.println("isNegative(" + x + "): " + BooleanExpressions.isNegative(x));
+
+            System.out.println();
+            System.out.println("isEven():");
+            System.out.println("isEven(" + x + "): " + BooleanExpressions.isEven(x));
+
+            System.out.println();
+            System.out.println("isOdd():");
+            System.out.println("isOdd(" + x + "): " + BooleanExpressions.isOdd(x));
+
+            System.out.println();
+            System.out.println("isMultipleOf():");
+            System.out.println("isMultipleOf(" + x + ", " + y + "): " + BooleanExpressions.isMultipleOf(x, y));
+
+        }
+    }
+  learner_created: false
+status: Unchecked
+record: -1

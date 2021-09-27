@@ -1,0 +1,223 @@
+type: edu
+files:
+- name: test/Tests.java
+  visible: false
+  text: |-
+    import org.junit.Assert;
+    import org.junit.Test;
+
+    public class Tests {
+      @Test
+      public void testSolution() {
+        // put your test here
+        Assert.assertTrue(BooleanExpressions.equals(1, 1));
+        Assert.assertFalse(BooleanExpressions.equals(0, 1));
+
+        Assert.assertTrue(BooleanExpressions.notEquals(0, 1));
+        Assert.assertFalse(BooleanExpressions.notEquals(1, 1));
+
+        Assert.assertTrue(BooleanExpressions.lessThan(0, 1));
+        Assert.assertFalse(BooleanExpressions.lessThan(1, 1));
+        Assert.assertFalse(BooleanExpressions.lessThan(2, 1));
+
+        Assert.assertFalse(BooleanExpressions.greaterThan(0, 1));
+        Assert.assertFalse(BooleanExpressions.greaterThan(1, 1));
+        Assert.assertTrue(BooleanExpressions.greaterThan(2, 1));
+
+        Assert.assertTrue(BooleanExpressions.lessThanEquals(0, 1));
+        Assert.assertTrue(BooleanExpressions.lessThanEquals(1, 1));
+        Assert.assertFalse(BooleanExpressions.lessThanEquals(2, 1));
+
+        Assert.assertFalse(BooleanExpressions.greaterThanEquals(0, 1));
+        Assert.assertTrue(BooleanExpressions.greaterThanEquals(1, 1));
+        Assert.assertTrue(BooleanExpressions.greaterThanEquals(2, 1));
+
+      }
+    }
+  learner_created: false
+- name: src/Main.java
+  visible: true
+  text: |2
+
+    /*
+     ** @project Unit03.BooleansExpressions.IfStatements
+     ** @author Rick Brunson, Team Brunson Software, LLC
+     ** @created 9/25/2021
+     */
+
+    public class Main
+    {
+        public static void main(String[] args)
+        {
+            int x, y;
+            System.out.println();
+            System.out.println("equals():");
+            x = 1;
+            y = 1;
+            System.out.println("equals(" + x + ", " + y + "): " + BooleanExpressions.equals(x, y));
+            x = 0;
+            System.out.println("equals(" + x + ", " + y + "): " + BooleanExpressions.equals(x, y));
+
+            System.out.println();
+            System.out.println("notEquals():");
+            System.out.println("notEquals(" + x + ", " + y + "): " + BooleanExpressions.notEquals(x, y));
+
+            System.out.println();
+            System.out.println("lessThan():");
+            System.out.println("lessThan(" + x + ", " + y + "): " + BooleanExpressions.lessThan(x, y));
+
+            System.out.println();
+            System.out.println("greaterThan():");
+            System.out.println("greaterThan(" + x + ", " + y + "): " + BooleanExpressions.greaterThan(x, y));
+
+            System.out.println();
+            System.out.println("lessThanEquals():");
+            System.out.println("lessThanEquals(" + x + ", " + y + "): " + BooleanExpressions.lessThanEquals(x, y));
+
+            System.out.println();
+            System.out.println("greaterThanEquals():");
+            System.out.println("greaterThanEquals(" + x + ", " + y + "): " + BooleanExpressions.greaterThanEquals(x, y));
+        }
+    }
+  learner_created: false
+- name: src/BooleanExpressions.java
+  visible: true
+  placeholders:
+  - offset: 233
+    length: 26
+    placeholder_text: /* Implement the method */
+    initial_state:
+      length: 26
+      offset: 233
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: return (A == B);
+  - offset: 271
+    length: 34
+    placeholder_text: /* Implement the method header  */
+    initial_state:
+      length: 34
+      offset: 271
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: public static boolean
+  - offset: 344
+    length: 26
+    placeholder_text: /* Implement the method */
+    initial_state:
+      length: 26
+      offset: 344
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: return (A != B);
+  - offset: 382
+    length: 33
+    placeholder_text: /* Implement the method header */
+    initial_state:
+      length: 33
+      offset: 382
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: public static boolean
+  - offset: 425
+    length: 33
+    placeholder_text: /* Implement the method header */
+    initial_state:
+      length: 33
+      offset: 425
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: int A, int B
+  - offset: 474
+    length: 26
+    placeholder_text: /* Implement the method */
+    initial_state:
+      length: 26
+      offset: 474
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: return (A < B);
+  - offset: 560
+    length: 26
+    placeholder_text: /* Implement the method */
+    initial_state:
+      length: 26
+      offset: 560
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |2-
+          {
+              return (A > B);
+          }
+  - offset: 643
+    length: 26
+    placeholder_text: /* Implement the method */
+    initial_state:
+      length: 26
+      offset: 643
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |2-
+          {
+              return (A <= B);
+          }
+  - offset: 675
+    length: 223
+    placeholder_text: /* Implement a static public method called greaterThanEquals
+      that accepts compares two integer parameters. It should return true if the first
+      parameter is greater or equal to the second, otherwise it should return false  */
+    initial_state:
+      length: 223
+      offset: 675
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |-
+      public static boolean greaterThanEquals(int A, int B)
+          {
+              return (A >= B);
+          }
+  text: |2
+
+    /*
+     ** @project Unit03.BooleansExpressions.IfStatements
+     ** @author Rick Brunson, Team Brunson Software, LLC
+     ** @created 9/25/2021
+     */
+
+    public class BooleanExpressions
+    {
+        public static boolean equals(int A, int B)
+        {
+            /* Implement the method */
+        }
+
+        /* Implement the method header  */ notEquals(int A, int B)
+        {
+            /* Implement the method */
+        }
+
+        /* Implement the method header */ lessThan(/* Implement the method header */)
+        {
+            /* Implement the method */
+        }
+
+        public static boolean greaterThan(int A, int B)
+    /* Implement the method */
+
+        public static boolean lessThanEquals(int A, int B)
+    /* Implement the method */
+
+        /* Implement a static public method called greaterThanEquals that accepts compares two integer parameters. It should return true if the first parameter is greater or equal to the second, otherwise it should return false  */
+    }
+  learner_created: false
+status: Unchecked
+record: -1

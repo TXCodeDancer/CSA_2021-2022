@@ -20,13 +20,15 @@ public class RSA
 //        this.n = publicKey.getN();
 //        this.e = publicKey.getE();
 //        int phi_n = publicKey.getPhi_n();
-        this.n = 77;
-        this.e = 7;
+        this.n = 221;
+        this.e = 35;
 //        int phi_n = 20;
 //
 //        PrivateKey privateKey = new PrivateKey(n, phi_n, e);
 //        d = privateKey.getD();
-        d = 43;
+        d = 11;
+
+        
     }
 
     public long[] encode(long[] M)
@@ -35,7 +37,19 @@ public class RSA
         for (int i = 0; i < M.length; i++)
         {
             long m = M[i];
-//            long c = ((long)Math.pow(m, e) % n);
+            long c = modPower(m, e, n);
+            C[i] = c;
+        }
+        return C;
+    }
+
+    public long[] encode(String plainText)
+    {
+        byte[] M = plainText.getBytes(StandardCharsets.US_ASCII);
+        long[] C = new long[M.length];
+        for (int i = 0; i < M.length; i++)
+        {
+            long m = M[i];
             long c = modPower(m, e, n);
             C[i] = c;
         }
@@ -48,45 +62,27 @@ public class RSA
         for (int i = 0; i < cipherText.length; i++)
         {
             long c = cipherText[i];
-//            int m = (int) Math.pow(c, d) % n;
             long m = modPower(c, d, n);
             M[i] = m;
         }
         return M;
     }
 
-    public long[] encode(String plainText)
+    public String decodeToString(long[] cipherText)
     {
-        long a = Character.getNumericValue('a');
-        char[] M = plainText.toCharArray();
-        long[] C = new long[M.length];
-        for (int i = 0; i < M.length; i++)
+        long[] D = decode(cipherText);
+        char[] M = new char[cipherText.length];
+        for(int i = 0; i < D.length; i++)
         {
-            long m = Character.getNumericValue(M[i]) - a;
-            long c = ((long)Math.pow(m, e) % n);
-            C[i] = c;
+            M[i] = (char)D[i];
         }
-        return C;
-    }
 
-//        public String decode(long[] cipherText)
-//        {
-//            int a = (int) 'a';
-//            char[] M = new char[cipherText.length];
-//            for (int i = 0; i < cipherText.length; i++)
-//            {
-//                long c = cipherText[i];
-//                int m = (int) Math.pow(c, d) % n;
-//                char ch = (char) (m + a);
-//                M[i] = ch;
-//            }
-//
-//            return new String(M);
-//        }
-//    }
+        return new String(M);
+    }
 
     private static long modPower(long x, long y, long p)
     {
+        // https://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/
         long result = 1; // Initialize result
 
         x = x % p; // Update x if it is more than or

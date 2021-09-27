@@ -1,0 +1,141 @@
+type: edu
+files:
+- name: test/Tests.java
+  visible: false
+  text: |-
+    import org.junit.Assert;
+    import org.junit.Test;
+
+    public class Tests {
+      @Test
+      public void testSolution() {
+        // put your test here
+        String expected = "2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 ";
+
+        String actual = "";
+        for (int i = 0; i < 100; i++)
+        {
+          if (Prime.isPrime(i))
+          {
+            actual += i + " ";
+          }
+        }
+
+        Assert.assertTrue(expected.equals(actual));
+      }
+    }
+  learner_created: false
+- name: src/Main.java
+  visible: true
+  text: |2
+
+    /*
+     ** @project Unit03.BooleansExpressions.IfStatements
+     ** @author Rick Brunson, Team Brunson Software, LLC
+     ** @created 9/25/2021
+     */
+
+    import java.util.InputMismatchException;
+    import java.util.Scanner;
+
+    public class Main
+    {
+        public static void main(String[] args)
+        {
+            System.out.println();
+            int number = Integer.MIN_VALUE;
+            Scanner scanner = new Scanner(System.in);
+
+            try
+            {
+                System.out.println("Enter a number check: ");
+                number = scanner.nextInt();
+            } catch (InputMismatchException e)
+            {
+                System.out.println("That wasn't a number: " + e);
+            }
+
+            if(Prime.isPrime(number))
+                System.out.println(number + " is prime.");
+            else
+                System.out.println(number + " is not prime.");
+
+            System.out.println();
+            System.out.println("*** Prime Numbers between 0 to 100 ***");
+            for (int i = 0; i < 100; i++)
+            {
+                if (Prime.isPrime(i))
+                {
+                    System.out.print(i + "  ");
+                }
+            }
+
+            System.out.println();
+        }
+    }
+  learner_created: false
+- name: src/Prime.java
+  visible: true
+  placeholders:
+  - offset: 206
+    length: 35
+    placeholder_text: /* Reject any number less than 2 */
+    initial_state:
+      length: 35
+      offset: 206
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |2-
+              if(n <= 1)
+                  return false;
+  - offset: 296
+    length: 48
+    placeholder_text: /* Reject any number that is a multiple of i  */
+    initial_state:
+      length: 48
+      offset: 296
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |2-
+                  if((n % i == 0))
+                      return false;
+  - offset: 346
+    length: 17
+    placeholder_text: /* Increment i */
+    initial_state:
+      length: 17
+      offset: 346
+    initialized_from_dependency: false
+    selected: false
+    status: Unchecked
+    encrypted_possible_answer: |2
+                  i++;
+  text: |2
+
+    /*
+     ** @project Unit03.BooleansExpressions.IfStatements
+     ** @author Rick Brunson, Team Brunson Software, LLC
+     ** @created 9/25/2021
+     */
+
+    public class Prime
+    {
+        public static boolean isPrime(int n)
+        {
+    /* Reject any number less than 2 */
+
+            int i = 2;
+            while(i <= n/2)
+            {
+    /* Reject any number that is a multiple of i  */
+
+    /* Increment i */        }
+
+            return true;
+        }
+    }
+  learner_created: false
+status: Unchecked
+record: -1
