@@ -1,0 +1,260 @@
+{
+  "summary" : "AP CSA Java course: Using Objects\n- The course covers use of Boolean expression and If statements.\n- The course is based on CSAwesome Unit 3.",
+  "title" : "CSAJava.Unit03.BooleanExpressions.IfStatements",
+  "authors" : [
+    "Rick V Brunson"
+  ],
+  "programming_language" : "JAVA",
+  "language" : "en",
+  "course_type" : "PyCharm",
+  "items" : [
+    {
+      "title" : "3.1 Boolean Expressions",
+      "task_list" : [
+        {
+          "name" : "Testing Equality",
+          "files" : {
+            "test/Tests.java" : {
+              "name" : "test/Tests.java",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : "import org.junit.Assert;\nimport org.junit.Test;\n\npublic class Tests {\n  @Test\n  public void testSolution() {\n    // put your test here\n    Assert.assertTrue(BooleanExpressions.equals(1, 1));\n    Assert.assertFalse(BooleanExpressions.equals(0, 1));\n\n    Assert.assertTrue(BooleanExpressions.notEquals(0, 1));\n    Assert.assertFalse(BooleanExpressions.notEquals(1, 1));\n\n    Assert.assertTrue(BooleanExpressions.lessThan(0, 1));\n    Assert.assertFalse(BooleanExpressions.lessThan(1, 1));\n    Assert.assertFalse(BooleanExpressions.lessThan(2, 1));\n\n    Assert.assertFalse(BooleanExpressions.greaterThan(0, 1));\n    Assert.assertFalse(BooleanExpressions.greaterThan(1, 1));\n    Assert.assertTrue(BooleanExpressions.greaterThan(2, 1));\n\n    Assert.assertTrue(BooleanExpressions.lessThanEquals(0, 1));\n    Assert.assertTrue(BooleanExpressions.lessThanEquals(1, 1));\n    Assert.assertFalse(BooleanExpressions.lessThanEquals(2, 1));\n\n    Assert.assertFalse(BooleanExpressions.greaterThanEquals(0, 1));\n    Assert.assertTrue(BooleanExpressions.greaterThanEquals(1, 1));\n    Assert.assertTrue(BooleanExpressions.greaterThanEquals(2, 1));\n\n  }\n}"
+            },
+            "src/Main.java" : {
+              "name" : "src/Main.java",
+              "placeholders" : [ ],
+              "is_visible" : true,
+              "text" : "\n/*\n ** @project Unit03.BooleansExpressions.IfStatements\n ** @author Rick Brunson, Team Brunson Software, LLC\n ** @created 9/25/2021\n */\n\npublic class Main\n{\n    public static void main(String[] args)\n    {\n        int x, y;\n        System.out.println();\n        System.out.println(\"equals():\");\n        x = 1;\n        y = 1;\n        System.out.println(\"equals(\" + x + \", \" + y + \"): \" + BooleanExpressions.equals(x, y));\n        x = 0;\n        System.out.println(\"equals(\" + x + \", \" + y + \"): \" + BooleanExpressions.equals(x, y));\n\n        System.out.println();\n        System.out.println(\"notEquals():\");\n        System.out.println(\"notEquals(\" + x + \", \" + y + \"): \" + BooleanExpressions.notEquals(x, y));\n\n        System.out.println();\n        System.out.println(\"lessThan():\");\n        System.out.println(\"lessThan(\" + x + \", \" + y + \"): \" + BooleanExpressions.lessThan(x, y));\n\n        System.out.println();\n        System.out.println(\"greaterThan():\");\n        System.out.println(\"greaterThan(\" + x + \", \" + y + \"): \" + BooleanExpressions.greaterThan(x, y));\n\n        System.out.println();\n        System.out.println(\"lessThanEquals():\");\n        System.out.println(\"lessThanEquals(\" + x + \", \" + y + \"): \" + BooleanExpressions.lessThanEquals(x, y));\n\n        System.out.println();\n        System.out.println(\"greaterThanEquals():\");\n        System.out.println(\"greaterThanEquals(\" + x + \", \" + y + \"): \" + BooleanExpressions.greaterThanEquals(x, y));\n    }\n}\n"
+            },
+            "src/BooleanExpressions.java" : {
+              "name" : "src/BooleanExpressions.java",
+              "placeholders" : [
+                {
+                  "offset" : 233,
+                  "length" : 26,
+                  "possible_answer" : "return (A == B);",
+                  "placeholder_text" : "/* Implement the method */"
+                },
+                {
+                  "offset" : 271,
+                  "length" : 34,
+                  "possible_answer" : "public static boolean",
+                  "placeholder_text" : "/* Implement the method header  */"
+                },
+                {
+                  "offset" : 344,
+                  "length" : 26,
+                  "possible_answer" : "return (A != B);",
+                  "placeholder_text" : "/* Implement the method */"
+                },
+                {
+                  "offset" : 382,
+                  "length" : 33,
+                  "possible_answer" : "public static boolean",
+                  "placeholder_text" : "/* Implement the method header */"
+                },
+                {
+                  "offset" : 425,
+                  "length" : 33,
+                  "possible_answer" : "int A, int B",
+                  "placeholder_text" : "/* Implement the method header */"
+                },
+                {
+                  "offset" : 474,
+                  "length" : 26,
+                  "possible_answer" : "return (A < B);",
+                  "placeholder_text" : "/* Implement the method */"
+                },
+                {
+                  "offset" : 560,
+                  "length" : 26,
+                  "possible_answer" : "    {\n        return (A > B);\n    }",
+                  "placeholder_text" : "/* Implement the method */"
+                },
+                {
+                  "offset" : 643,
+                  "length" : 26,
+                  "possible_answer" : "    {\n        return (A <= B);\n    }",
+                  "placeholder_text" : "/* Implement the method */"
+                },
+                {
+                  "offset" : 675,
+                  "length" : 223,
+                  "possible_answer" : "public static boolean greaterThanEquals(int A, int B)\n    {\n        return (A >= B);\n    }",
+                  "placeholder_text" : "/* Implement a static public method called greaterThanEquals that accepts compares two integer parameters. It should return true if the first parameter is greater or equal to the second, otherwise it should return false  */"
+                }
+              ],
+              "is_visible" : true,
+              "text" : "\n/*\n ** @project Unit03.BooleansExpressions.IfStatements\n ** @author Rick Brunson, Team Brunson Software, LLC\n ** @created 9/25/2021\n */\n\npublic class BooleanExpressions\n{\n    public static boolean equals(int A, int B)\n    {\n        /* Implement the method */\n    }\n\n    /* Implement the method header  */ notEquals(int A, int B)\n    {\n        /* Implement the method */\n    }\n\n    /* Implement the method header */ lessThan(/* Implement the method header */)\n    {\n        /* Implement the method */\n    }\n\n    public static boolean greaterThan(int A, int B)\n/* Implement the method */\n\n    public static boolean lessThanEquals(int A, int B)\n/* Implement the method */\n\n    /* Implement a static public method called greaterThanEquals that accepts compares two integer parameters. It should return true if the first parameter is greater or equal to the second, otherwise it should return false  */\n}\n"
+            }
+          },
+          "description_text" : "<html>\n<body style=\"font-size:1em;\">\n<h2>Testing Equality (==)</h2>\n</p>\n\nThe operators == and != (not equal) can be used to compare values.\nThey return true or false boolean values.<br>\nWatch<a href=\"https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-1-booleans.html\"> CS Awesome: 3.1 Equal Equal (==) with ints and objects.</a>\n\n</p>\n\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 1em auto 0em;\">\n    Java Boolean Expressions\n</div>\n\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 0em auto 1em;\">\n    <code> A == B </code>&emsp;True if A and B are equal, otherwise False <br>\n    <code> A != B </code>&emsp;False if A and B are equal, otherwise True <br>\n    <code> A < B </code>&emsp;&ensp;True if A is less than B, otherwise False <br>\n    <code> A > B </code>&emsp;&ensp;True if A is greater than B, otherwise False <br>\n    <code> A <= B </code>&emsp;True if A is less than or equal to B, otherwise False <br>\n    <code> A >= B </code>&emsp;True if A is greater than or equal to B, otherwise False <br>\n</div>\n\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 1em auto 0em;\">\n    Testing with Boolean Expressions\n</div>\n\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 0em auto 1em;\">\n    <code> if (number > 0) </code>&emsp;&emsp;&emsp; Test if number is positive <br>\n    <code> if (number < 0) </code>&emsp;&emsp;&emsp; Test if number is negative <br>\n    <code> if (number % 2 == 0) </code>&emsp;Test if number is even <br>\n    <code> if (number % 2 > 0) </code>&emsp;&ensp;Test if number is odd <br>\n    <code> if (number % x == 0) </code>&emsp;Test if number is a multiple of x <br>\n</div>\n\n<p>Enter the correct code in the placeholder boxes as instructed.</p>\n\n<div class=\"hint\">\n    Implement the methods in the BooleanExpressions class to pass the unit tests.\n</div>\n<div class=\"hint\">\n    Modify the values of x and y in the Main class to help you verify your code.\n</div>\n\n\n\nReferences:\n<ul style=\"font-size:0.9em;\">\n    <li><a href=\"https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-1-booleans.html\">3.1 Boolean Expressions</a></li>\n</ul>\n<p>Click <strong>'Check'</strong> verify your solution.</p>\n</body>\n</html>",
+          "description_format" : "HTML",
+          "feedback_link" : {
+            "link_type" : "STEPIK"
+          },
+          "task_type" : "edu"
+        },
+        {
+          "name" : "Testing with Modulus",
+          "files" : {
+            "test/Tests.java" : {
+              "name" : "test/Tests.java",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : "import org.junit.Assert;\nimport org.junit.Test;\n\npublic class Tests {\n  @Test\n  public void testSolution() {\n   Assert.assertTrue(BooleanExpressions.isPositive(1));\n    Assert.assertFalse(BooleanExpressions.isPositive(0));\n    Assert.assertFalse(BooleanExpressions.isPositive(-1));\n\n    Assert.assertFalse(BooleanExpressions.isNegative(1));\n    Assert.assertFalse(BooleanExpressions.isNegative(0));\n    Assert.assertTrue(BooleanExpressions.isNegative(-1));\n\n    Assert.assertTrue(BooleanExpressions.isEven(0));\n    Assert.assertFalse(BooleanExpressions.isEven(1));\n    Assert.assertTrue(BooleanExpressions.isEven(2));\n\n    Assert.assertFalse(BooleanExpressions.isOdd(0));\n    Assert.assertTrue(BooleanExpressions.isOdd(1));\n    Assert.assertFalse(BooleanExpressions.isOdd(2));\n\n    Assert.assertTrue(BooleanExpressions.isMultipleOf(4, 2));\n    Assert.assertFalse(BooleanExpressions.isMultipleOf(5, 2));\n  }\n}"
+            },
+            "src/BooleanExpressions.java" : {
+              "name" : "src/BooleanExpressions.java",
+              "placeholders" : [
+                {
+                  "offset" : 230,
+                  "length" : 22,
+                  "possible_answer" : "return (A > 0);",
+                  "placeholder_text" : "/* Implement method */"
+                },
+                {
+                  "offset" : 304,
+                  "length" : 22,
+                  "possible_answer" : "    {\n        return (A < 0);\n    }",
+                  "placeholder_text" : "/* Implement method */"
+                },
+                {
+                  "offset" : 332,
+                  "length" : 10,
+                  "possible_answer" : "public static boolean",
+                  "placeholder_text" : "/* TODO */"
+                },
+                {
+                  "offset" : 350,
+                  "length" : 10,
+                  "possible_answer" : "int A",
+                  "placeholder_text" : "/* TODO */"
+                },
+                {
+                  "offset" : 362,
+                  "length" : 22,
+                  "possible_answer" : "    {\n        return (A % 2 == 0);\n    }",
+                  "placeholder_text" : "/* Implement method */"
+                },
+                {
+                  "offset" : 386,
+                  "length" : 28,
+                  "possible_answer" : "    public static boolean isOdd(int A)\n    {\n        return (A % 2 != 0);\n    }",
+                  "placeholder_text" : "/* Implement isOdd method */"
+                },
+                {
+                  "offset" : 475,
+                  "length" : 34,
+                  "possible_answer" : "        return (A % B == 0);\n",
+                  "placeholder_text" : "/* Test if A is a multiple of B */"
+                }
+              ],
+              "is_visible" : true,
+              "text" : "\n/*\n ** @project Unit03.BooleansExpressions.IfStatements\n ** @author Rick Brunson, Team Brunson Software, LLC\n ** @created 9/25/2021\n */\n\npublic class BooleanExpressions\n{\n    public static boolean isPositive(int A)\n    {\n        /* Implement method */\n    }\n\n    public static boolean isNegative(int A)\n/* Implement method */\n\n    /* TODO */ isEven(/* TODO */)\n/* Implement method */\n\n/* Implement isOdd method */\n\n    public static boolean isMultipleOf(int A, int B)\n    {\n/* Test if A is a multiple of B */    }\n\n}\n"
+            },
+            "src/Main.java" : {
+              "name" : "src/Main.java",
+              "placeholders" : [ ],
+              "is_visible" : true,
+              "text" : "\n/*\n ** @project Unit03.BooleansExpressions.IfStatements\n ** @author Rick Brunson, Team Brunson Software, LLC\n ** @created 9/25/2021\n */\n\npublic class Main\n{\n    public static void main(String[] args)\n    {\n        int x, y;\n        x = 1;\n        y = 1;\n        System.out.println();\n        System.out.println(\"isPositive():\");\n        System.out.println(\"isPositive(\" + x + \"): \" + BooleanExpressions.isPositive(x));\n\n        System.out.println();\n        System.out.println(\"isNegative():\");\n        System.out.println(\"isNegative(\" + x + \"): \" + BooleanExpressions.isNegative(x));\n\n        System.out.println();\n        System.out.println(\"isEven():\");\n        System.out.println(\"isEven(\" + x + \"): \" + BooleanExpressions.isEven(x));\n\n        System.out.println();\n        System.out.println(\"isOdd():\");\n        System.out.println(\"isOdd(\" + x + \"): \" + BooleanExpressions.isOdd(x));\n\n        System.out.println();\n        System.out.println(\"isMultipleOf():\");\n        System.out.println(\"isMultipleOf(\" + x + \", \" + y + \"): \" + BooleanExpressions.isMultipleOf(x, y));\n\n    }\n}\n"
+            }
+          },
+          "description_text" : "<html>\n<body style=\"font-size:1em;\">\n<h2>Testing with Modulus (%)</h2>\n</p>\n\nThe modulus operator, %, has many uses in programming including encryption and buffering data. <br>\n\n</p>\n\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 1em auto 0em;\">\n    Java Boolean Expressions\n</div>\n\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 0em auto 1em;\">\n    <code> A == B </code>&emsp;True if A and B are equal, otherwise False <br>\n    <code> A != B </code>&emsp;False if A and B are equal, otherwise True <br>\n    <code> A < B </code>&emsp;&ensp;True if A is less than B, otherwise False <br>\n    <code> A > B </code>&emsp;&ensp;True if A is greater than B, otherwise False <br>\n    <code> A <= B </code>&emsp;True if A is less than or equal to B, otherwise False <br>\n    <code> A >= B </code>&emsp;True if A is greater than or equal to B, otherwise False <br>\n</div>\n\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 1em auto 0em;\">\n    Testing with Boolean Expressions\n</div>\n\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 0em auto 1em;\">\n    <code> if (number > 0) </code>&emsp;&emsp;&emsp; Test if number is positive <br>\n    <code> if (number < 0) </code>&emsp;&emsp;&emsp; Test if number is negative <br>\n    <code> if (number % 2 == 0) </code>&emsp;Test if number is even <br>\n    <code> if (number % 2 > 0) </code>&emsp;&ensp;Test if number is odd <br>\n    <code> if (number % x == 0) </code>&emsp;Test if number is a multiple of x <br>\n</div>\n\n<p>Enter the correct code in the placeholder boxes as instructed.</p>\n\n<div class=\"hint\">\n    Implement the methods in the BooleanExpressions class to pass the unit tests.\n</div>\n<div class=\"hint\">\n    Modify the values of x and y in the Main class to help you verify your code.\n</div>\n\n\n\nReferences:\n<ul style=\"font-size:0.9em;\">\n    <li><a href=\"https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-1-booleans.html\">3.1 Boolean Expressions</a></li>\n</ul>\n<p>Click <strong>'Check'</strong> verify your solution.</p>\n</body>\n</html>",
+          "description_format" : "HTML",
+          "feedback_link" : {
+            "link_type" : "STEPIK"
+          },
+          "task_type" : "edu"
+        },
+        {
+          "name" : "Prime Numbers",
+          "files" : {
+            "test/Tests.java" : {
+              "name" : "test/Tests.java",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : "import org.junit.Assert;\nimport org.junit.Test;\n\npublic class Tests {\n  @Test\n  public void testSolution() {\n    // put your test here\n    String expected = \"2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 \";\n\n    String actual = \"\";\n    for (int i = 0; i < 100; i++)\n    {\n      if (Prime.isPrime(i))\n      {\n        actual += i + \" \";\n      }\n    }\n\n    Assert.assertTrue(expected.equals(actual));\n  }\n}"
+            },
+            "src/Main.java" : {
+              "name" : "src/Main.java",
+              "placeholders" : [ ],
+              "is_visible" : true,
+              "text" : "\n/*\n ** @project Unit03.BooleansExpressions.IfStatements\n ** @author Rick Brunson, Team Brunson Software, LLC\n ** @created 9/25/2021\n */\n\nimport java.util.InputMismatchException;\nimport java.util.Scanner;\n\npublic class Main\n{\n    public static void main(String[] args)\n    {\n        System.out.println();\n        int number = Integer.MIN_VALUE;\n        Scanner scanner = new Scanner(System.in);\n\n        try\n        {\n            System.out.println(\"Enter a number check: \");\n            number = scanner.nextInt();\n        } catch (InputMismatchException e)\n        {\n            System.out.println(\"That wasn't a number: \" + e);\n        }\n\n        if(Prime.isPrime(number))\n            System.out.println(number + \" is prime.\");\n        else\n            System.out.println(number + \" is not prime.\");\n\n        System.out.println();\n        System.out.println(\"*** Prime Numbers between 0 to 100 ***\");\n        for (int i = 0; i < 100; i++)\n        {\n            if (Prime.isPrime(i))\n            {\n                System.out.print(i + \"  \");\n            }\n        }\n\n        System.out.println();\n    }\n}\n"
+            },
+            "src/Prime.java" : {
+              "name" : "src/Prime.java",
+              "placeholders" : [
+                {
+                  "offset" : 206,
+                  "length" : 35,
+                  "possible_answer" : "        if(n <= 1)\n            return false;",
+                  "placeholder_text" : "/* Reject any number less than 2 */"
+                },
+                {
+                  "offset" : 296,
+                  "length" : 48,
+                  "possible_answer" : "            if((n % i == 0))\n                return false;",
+                  "placeholder_text" : "/* Reject any number that is a multiple of i  */"
+                },
+                {
+                  "offset" : 346,
+                  "length" : 17,
+                  "possible_answer" : "            i++;\n",
+                  "placeholder_text" : "/* Increment i */"
+                }
+              ],
+              "is_visible" : true,
+              "text" : "\n/*\n ** @project Unit03.BooleansExpressions.IfStatements\n ** @author Rick Brunson, Team Brunson Software, LLC\n ** @created 9/25/2021\n */\n\npublic class Prime\n{\n    public static boolean isPrime(int n)\n    {\n/* Reject any number less than 2 */\n\n        int i = 2;\n        while(i <= n/2)\n        {\n/* Reject any number that is a multiple of i  */\n\n/* Increment i */        }\n\n        return true;\n    }\n}\n"
+            }
+          },
+          "description_text" : "<html>\n<body style=\"font-size:1em;\">\n<h2>Prime Numbers</h2>\n</p>\n\nA Prime Number is a number which is greater than 1 and divisible by 1 and itself.\nSome Prime Numbers are 2, 3, 5, 7, 11, 13, 17, etc.\n\n<ul>\n    <li><em>Is zero prime?</em> Zero has an infinite number of divisors, so zero is not a prime.</li>\n    <li><em>Is one prime?</em> One has only one factor, one, so it is not prime.</li>\n</ul>\n\n</p>\n\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 1em auto 0em;\">\n    Java Boolean Expressions\n</div>\n\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 0em auto 1em;\">\n    <code> A == B </code>&emsp;True if A and B are equal, otherwise False <br>\n    <code> A != B </code>&emsp;False if A and B are equal, otherwise True <br>\n    <code> A < B </code>&emsp;&ensp;True if A is less than B, otherwise False <br>\n    <code> A > B </code>&emsp;&ensp;True if A is greater than B, otherwise False <br>\n    <code> A <= B </code>&emsp;True if A is less than or equal to B, otherwise False <br>\n    <code> A >= B </code>&emsp;True if A is greater than or equal to B, otherwise False <br>\n</div>\n\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 1em auto 0em;\">\n    Testing with Boolean Expressions\n</div>\n\n<div style=\"\n            padding: .5em;\n            border: .05em solid lightgray;\n            margin: 0em auto 1em;\">\n    <code> if (number > 0) </code>&emsp;&emsp;&emsp; Test if number is positive <br>\n    <code> if (number < 0) </code>&emsp;&emsp;&emsp; Test if number is negative <br>\n    <code> if (number % 2 == 0) </code>&emsp;Test if number is even <br>\n    <code> if (number % 2 > 0) </code>&emsp;&ensp;Test if number is odd <br>\n    <code> if (number % x == 0) </code>&emsp;Test if number is a multiple of x <br>\n</div>\n\n<p>Enter the correct code in the placeholder boxes as instructed.</p>\n\n<div class=\"hint\">\n    Implement the methods in the Prime class to pass the unit tests.\n</div>\n<div class=\"hint\">\n    Two is the first prime number, so any number less than two is not prime.\n</div>\n\n\n\nReferences:\n<ul style=\"font-size:0.9em;\">\n    <li><a href=\"https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit3-If-Statements/topic-3-1-booleans.html\">3.1 Boolean Expressions</a></li>\n</ul>\n<p>Click <strong>'Check'</strong> verify your solution.</p>\n</body>\n</html>",
+          "description_format" : "HTML",
+          "feedback_link" : {
+            "link_type" : "STEPIK"
+          },
+          "task_type" : "edu"
+        }
+      ],
+      "type" : "lesson"
+    },
+    {
+      "title" : "Projects",
+      "task_list" : [
+        {
+          "name" : "RSA Encryption",
+          "files" : {
+            "src/Task.java" : {
+              "name" : "src/Task.java",
+              "placeholders" : [ ],
+              "is_visible" : true,
+              "text" : "public class Task {\n  //put your task here\n}"
+            },
+            "test/Tests.java" : {
+              "name" : "test/Tests.java",
+              "placeholders" : [ ],
+              "is_visible" : false,
+              "text" : "import org.junit.Assert;\nimport org.junit.Test;\n\npublic class Tests {\n  @Test\n  public void testSolution() {\n    // put your test here\n    Assert.fail(\"Tests not implemented for the task\");\n  }\n}"
+            }
+          },
+          "description_text" : "<html>\r\n<body style=\"font-size:1em;\">\r\n<h2>RSA Encryption</h2>\r\n</p>\r\n\r\nRSA encryption allows coded messages to be sent without the sender (or any third-party)\r\nknowing how to decode the message. This encryption works using a public keys that is known to everyone\r\nand a private key that is known only by the receiver.\r\n\r\n<ul>Watch <a href=\"https://www.youtube.com/embed/sBO3gH1uGzQ?end=190\" target=\"_blank\">RSA encryption in 5 minutes</a></ul>\r\n\r\n</p><div style=\"\r\n            padding: .5em;\r\n            border: .05em solid lightgray;\r\n            margin: 1em auto 0em;\">\r\n    Public Key &lt;n, e&gt;: Encode Message\r\n</div>\r\n\r\n<div style=\"\r\n            padding: .5em;\r\n            border: .05em solid lightgray;\r\n            margin: 0em auto 1em;\">\r\n<ol>\r\n    <li>Select two distinct primes, <em>p</em> and <em>q</em>. We'll use primes from 20 to 100.</li>\r\n    <li>Multiply <em>p</em> and <em>q</em> to get <em>n</em>, the encryption modulus.\r\n        <ul><em>n = p * q</em> </ul></li>\r\n    <li>Select prime <em>e</em> that is less than n and relatively prime to <em>(p-1) * (q-1).</em>\r\n        <em>\r\n            <ul>φ(n) = (p-1) * (q-1)</ul>\r\n            <ul> 1 &lt; e &lt; φ (n)</ul>\r\n            <ul>gcd(e, d (n)) = 1 &emsp; i.e. φ (n) % e != 0</ul>\r\n        </em></li>\r\n    <li>Convert message String to ASCII values <em>bytes</em> from plain text <em>P</em>.\r\n        <ul><code>byte[] M = P.getBytes(StandardCharsets.UTF-8);</code></ul></li>\r\n    <li>Encrypt plain text <em>m</em> byte into cipher text <em>C</em> using public key &lt;n, e&gt;.\r\n        <em>\r\n            <ul> For each byte in M: m = byte</ul>\r\n            <ul> C ≡ m<sup>e</sup> mod n</ul>\r\n        </em></li>\r\n</ol>\r\n\r\n</div>\r\n\r\n<div style=\"\r\n            padding: .5em;\r\n            border: .05em solid lightgray;\r\n            margin: 1em auto 0em;\">\r\n    Private Key&lt;n, d&gt;: Decode Message\r\n</div>\r\n\r\n<div style=\"\r\n            padding: .5em;\r\n            border: .05em solid lightgray;\r\n            margin: 0em auto 1em;\">\r\n<ol>\r\n    <li>Determine private key <em>d</em>.\r\n    <em>\r\n        <ul>(k*d) mod φ(n) ≡ 1</ul>\r\n        <ul>d = (k * φ(n) + 1)/e &emsp; [let k = 0, 1, 2, 3 ...]</ul>\r\n        <ul>&emsp; i.e. Find lowest k where (k * φ(n) + 1) mod e ≡ 0</ul>\r\n    </em></li>\r\n    <li>Decrypt cipher text <em>C</em> from into decoded byte text <em>m</em> using private key &lt;n, d&gt;.\r\n        <em>\r\n            <ul> For each byte in C: c = C</ul>\r\n            <ul> M ≡ c<sup>d</sup> mod n</ul>\r\n        </em></li>\r\n    <li>Convert decoded byte text from ASCII values <em>M</em> to plain text <em>P</em>.\r\n        <ul><code>String P = new String(M, StandardCharsets.UTF-8);</code></ul></li>\r\n\r\n</ol>\r\n</div>\r\n\r\n<p>Enter the correct code in the placeholder boxes as instructed.</p>\r\n\r\n<!--<div class=\"hint\">-->\r\n<!--    Implement the methods in the Prime class to pass the unit tests.-->\r\n<!--</div>-->\r\n<!--<div class=\"hint\">-->\r\n<!--    Two is the first prime number, so any number less than two is not prime.-->\r\n<!--</div>-->\r\n\r\n\r\n\r\nReferences:\r\n<ul style=\"font-size:0.9em;\">\r\n    <li><a href=\"https://csawesome.runestone.academy/runestone/books/published/csawesome/index.html\">AP CS A Java Course</a></li>\r\n    <li><a href=\"https://www.javatpoint.com/rsa-encryption-algorithm\">javaTpoint: RSA Encryption Algorithm</a></li>\r\n    <li><a href=\"https://www.thejavaprogrammer.com/rsa-algorithm-in-java/\">The Java Programmer: RSA Algorithm in Java (Encryption and Decryption)</a></li>\r\n    <li><a href=\"https://mkyong.com/java/how-to-convert-character-to-ascii-in-java/\">Mkyong.com: Java – Convert Character to ASCII</a></li>\r\n</ul>\r\n<p>Click <strong>'Check'</strong> verify your solution.</p>\r\n</body>\r\n</html>",
+          "description_format" : "HTML",
+          "feedback_link" : {
+            "link_type" : "STEPIK"
+          },
+          "task_type" : "edu"
+        }
+      ],
+      "type" : "lesson"
+    }
+  ],
+  "additional_files" : [
+    {
+      "name" : "build.gradle",
+      "placeholders" : [ ],
+      "is_visible" : true,
+      "text" : "buildscript {\n    repositories {\n        mavenCentral()\n    }\n}\n\ndef printOutput(def output) {\n    return tasks.create(\"printOutput\") {\n        println \"#educational_plugin_checker_version 1\"\n        def separator = System.lineSeparator()\n        def lines = output.toString().split(\"(?<=${separator})|(?=${separator})\")\n        for (line in lines) {\n            println \"#educational_plugin\" + line\n        }\n    }\n}\n\nsubprojects {\n    apply plugin: 'application'\n    apply plugin: 'java'\n\n    sourceCompatibility = 1.8\n\n    repositories {\n        mavenCentral()\n    }\n\n    dependencies {\n        testImplementation group: 'junit', name: 'junit', version: '4.12'\n    }\n\n    sourceSets {\n        main {\n            java.srcDir 'src'\n        }\n        test {\n            java.srcDir 'test'\n        }\n    }\n\n    mainClassName = project.hasProperty(\"mainClass\") ? project.getProperty(\"mainClass\") : \"\"\n\n    if (project.hasProperty(\"educationalRun\") && \"true\".equalsIgnoreCase(project.getProperty(\"educationalRun\"))) {\n        def runOutput = new ByteArrayOutputStream()\n        tasks.run.setStandardOutput(runOutput)\n        tasks.run.doLast { printOutput(runOutput) }\n    }\n}\n\nproject(':util') {\n    dependencies {\n        implementation group: 'junit', name: 'junit', version: '4.12'\n    }\n}\n\nconfigure(subprojects.findAll { it.name != 'util' }) {\n    dependencies {\n        implementation project(':util').sourceSets.main.output\n        testImplementation project(':util').sourceSets.test.output\n    }\n}\n"
+    }
+  ],
+  "version" : 11
+}

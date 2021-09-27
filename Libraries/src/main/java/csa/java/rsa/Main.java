@@ -10,7 +10,7 @@ public class Main
     public static void main(String[] args)
     {
         RSA rsa = new RSA();
-        int[] codedMessage = rsa.encode("This is a test!");
+        long[] codedMessage = rsa.encode("abcdefghjk");
 
         for(long c : codedMessage)
         {

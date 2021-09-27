@@ -17,39 +17,45 @@ public class RSA
     RSA()
     {
         PublicKey publicKey = new PublicKey();
-        this.n = publicKey.getN();
-        this.e = publicKey.getE();
-        int phi_n = publicKey.getPhi_n();
-
-        PrivateKey privateKey = new PrivateKey(n, phi_n, e);
-        d = privateKey.getD();
+//        this.n = publicKey.getN();
+//        this.e = publicKey.getE();
+//        int phi_n = publicKey.getPhi_n();
+        this.n = 39;
+        this.e = 3;
+//        int phi_n = 20;
+//
+//        PrivateKey privateKey = new PrivateKey(n, phi_n, e);
+//        d = privateKey.getD();
+        d = 7;
     }
 
-    public int[] encode(String plainText)
+    public long[] encode(String plainText)
     {
-        byte[] M = plainText.getBytes(StandardCharsets.UTF_8);
-        int[] C = new int[M.length];
+        long a = Character.getNumericValue('a');
+        char[] M = plainText.toCharArray();
+        long[] C = new long[M.length];
         for (int i = 0; i < M.length; i++)
         {
-            int m = M[i];
-            int c = modPower(m, e, n);
+            long m = Character.getNumericValue(M[i]) - a;
+            long c = ((long)Math.pow(m, e) % n);
             C[i] = c;
         }
         return C;
     }
 
-    public String decode(int[] cipherText)
+    public String decode(long[] cipherText)
     {
-        byte[] M = new byte[cipherText.length];
+        int a = (int)'a';
+        char[] M = new char[cipherText.length];
         for (int i = 0; i < cipherText.length; i++)
         {
-            int c = cipherText[i];
-            int m = modPower(c, d, n);
-            M[i] = (byte)m;
+            long c = cipherText[i];
+            int m = (int)Math.pow(c, d) % n;
+            char ch = (char)(m + a);
+            M[i] = ch;
         }
 
-        String plainText = new String(M, StandardCharsets.UTF_8);
-        return plainText;
+        return new String(M);
     }
 
     private static int modPower(int x, int y, int p)
