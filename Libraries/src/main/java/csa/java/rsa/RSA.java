@@ -31,46 +31,46 @@ public class RSA
         
     }
 
-    public long[] encode(long[] M)
+    public int[] encode(int[] M)
     {
-        long[] C = new long[M.length];
+        int[] C = new int[M.length];
         for (int i = 0; i < M.length; i++)
         {
-            long m = M[i];
-            long c = modPower(m, e, n);
+            int m = M[i];
+            int c = modPower(m, e, n);
             C[i] = c;
         }
         return C;
     }
 
-    public long[] encode(String plainText)
+    public int[] encode(String plainText)
     {
         byte[] M = plainText.getBytes(StandardCharsets.US_ASCII);
-        long[] C = new long[M.length];
+        int[] C = new int[M.length];
         for (int i = 0; i < M.length; i++)
         {
-            long m = M[i];
-            long c = modPower(m, e, n);
+            int m = M[i];
+            int c = modPower(m, e, n);
             C[i] = c;
         }
         return C;
     }
 
-    public long[] decode(long[] cipherText)
+    public int[] decode(int[] cipherText)
     {
-        long[] M = new long[cipherText.length];
+        int[] M = new int[cipherText.length];
         for (int i = 0; i < cipherText.length; i++)
         {
-            long c = cipherText[i];
-            long m = modPower(c, d, n);
+            int c = cipherText[i];
+            int m = modPower(c, d, n);
             M[i] = m;
         }
         return M;
     }
 
-    public String decodeToString(long[] cipherText)
+    public String decodeToString(int[] cipherText)
     {
-        long[] D = decode(cipherText);
+        int[] D = decode(cipherText);
         char[] M = new char[cipherText.length];
         for(int i = 0; i < D.length; i++)
         {
@@ -80,10 +80,10 @@ public class RSA
         return new String(M);
     }
 
-    private static long modPower(long x, long y, long p)
+    private static int modPower(int x, int y, int p)
     {
         // https://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/
-        long result = 1; // Initialize result
+        int result = 1; // Initialize result
 
         x = x % p; // Update x if it is more than or
         // equal to p
@@ -104,5 +104,6 @@ public class RSA
         }
         return result;
     }
+
 
 }

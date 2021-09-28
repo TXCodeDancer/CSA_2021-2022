@@ -10,27 +10,27 @@ public class Main
     public static void main(String[] args)
     {
         RSA rsa = new RSA();
-        long[] message = {0,1,2,3,4,5,6,7,8,9, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 210, 220, 221, 222, 223, 224, 225};
-        for(long m : message)
+        int[] message = {0,1,2,3,4,5,6,7,8,9, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 210, 220, 221, 222, 223, 224, 225};
+        for(int m : message)
         {
             System.out.print(m + ", ");
         }
         System.out.println();
 
-        long[] encodedMessage = rsa.encode(message);
+        int[] encodedMessage = rsa.encode(message);
 
-        for(long e : encodedMessage)
+        for(int e : encodedMessage)
         {
             System.out.print(String.format("%02X", e) + ", ");
-            String h = Long.toHexString(e);
-            long l = Long.parseLong(h, 16);
+            String h = Integer.toHexString(e);
+            int l = Integer.parseInt(h, 16);
 //            System.out.print(l);
 
         }
         System.out.println();
 
-        long[] decodedMessage = rsa.decode(encodedMessage);
-        for(long d : decodedMessage)
+        int[] decodedMessage = rsa.decode(encodedMessage);
+        for(int d : decodedMessage)
         {
             System.out.print(d + ", ");
         }
@@ -43,11 +43,11 @@ public class Main
 
         encodedMessage = rsa.encode(planText);
 
-        for(long e : encodedMessage)
+        for(int e : encodedMessage)
         {
             System.out.print(String.format("%02X", e));
-            String h = Long.toHexString(e);
-            long l = Long.parseLong(h, 16);
+            String h = Integer.toHexString(e);
+            int l = Integer.parseInt(h, 16);
 //            System.out.print(l);
         }
         System.out.println();
