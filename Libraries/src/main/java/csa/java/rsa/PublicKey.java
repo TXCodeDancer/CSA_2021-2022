@@ -10,7 +10,7 @@ import java.util.List;
 public class PublicKey
 {
     private int e = Integer.MIN_VALUE;
-    private int n;
+    private int n = Integer.MIN_VALUE;
     private int p;
     private int q;
     private int phi_n;
@@ -18,7 +18,7 @@ public class PublicKey
     public PublicKey()
     {
         // Select primes p and q between 20 - 100
-        List<Integer> primes = Prime.getPrimes(5, 20);
+        List<Integer> primes = Prime.getPrimes(20, 100);
         p = getRandomPrime(primes);
         q = getRandomPrime(primes);
 

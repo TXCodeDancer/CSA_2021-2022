@@ -17,18 +17,29 @@ public class RSA
     RSA()
     {
         PublicKey publicKey = new PublicKey();
-//        this.n = publicKey.getN();
-//        this.e = publicKey.getE();
-//        int phi_n = publicKey.getPhi_n();
-        this.n = 221;
-        this.e = 35;
-//        int phi_n = 20;
-//
-//        PrivateKey privateKey = new PrivateKey(n, phi_n, e);
-//        d = privateKey.getD();
-        d = 11;
+        this.n = publicKey.getN();
+        this.e = publicKey.getE();
+        int phi_n = publicKey.getPhi_n();
 
-        
+        PrivateKey privateKey = new PrivateKey(n, phi_n, e);
+        d = privateKey.getD();
+    }
+
+    RSA(int n, int e, int d)
+    {
+        this.n = n;
+        this.e = e;
+        this.d = d;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "RSA{" +
+                "n=" + n +
+                ", e=" + e +
+                ", d=" + d +
+                '}';
     }
 
     public int[] encode(int[] M)
