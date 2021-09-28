@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="MockTurtle" />
+        <module name="Libraries" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="MockTurtle" target="16" />
+      <module name="Libraries" target="16" />
     </bytecodeTargetLevel>
   </component>
 </project>

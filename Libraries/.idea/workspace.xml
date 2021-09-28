@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37bd9827-ec55-4027-803c-7f2de3ecf4d6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csa/java/rsa/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csa/java/rsa/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csa/java/rsa/PublicKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csa/java/rsa/PublicKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csa/java/rsa/RSA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csa/java/rsa/RSA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MockTurtle.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Libraries.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +42,7 @@
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="csa.java.rsa.Main" />
-      <module name="MockTurtle" />
+      <module name="Libraries" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="csa.java.rsa.*" />
@@ -54,7 +54,7 @@
       </method>
     </configuration>
     <configuration name="MockTurtleTests (1)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MockTurtle" />
+      <module name="Libraries" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="csa.java.turtle.*" />
@@ -71,7 +71,7 @@
       </method>
     </configuration>
     <configuration name="MockTurtleTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MockTurtle" />
+      <module name="Libraries" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="csa.java.*" />
@@ -88,7 +88,7 @@
       </method>
     </configuration>
     <configuration name="TurtleTest (1)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MockTurtle" />
+      <module name="Libraries" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="csa.java.turtle.*" />
@@ -105,7 +105,7 @@
       </method>
     </configuration>
     <configuration name="TurtleTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MockTurtle" />
+      <module name="Libraries" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="csa.java.*" />
