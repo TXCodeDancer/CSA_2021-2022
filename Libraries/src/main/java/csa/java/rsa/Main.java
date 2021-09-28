@@ -21,7 +21,11 @@ public class Main
 
         for(long e : encodedMessage)
         {
-            System.out.print(e + ", ");
+            System.out.print(String.format("%02X", e) + ", ");
+            String h = Long.toHexString(e);
+            long l = Long.parseLong(h, 16);
+//            System.out.print(l);
+
         }
         System.out.println();
 
@@ -41,7 +45,10 @@ public class Main
 
         for(long e : encodedMessage)
         {
-            System.out.print(e + ", ");
+            System.out.print(String.format("%02X", e));
+            String h = Long.toHexString(e);
+            long l = Long.parseLong(h, 16);
+//            System.out.print(l);
         }
         System.out.println();
 
