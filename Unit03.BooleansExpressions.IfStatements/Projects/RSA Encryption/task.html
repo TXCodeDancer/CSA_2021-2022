@@ -31,7 +31,7 @@ and a private key that is known only by the receiver.
             <ul>gcd(e, d (n)) = 1 &emsp; i.e. φ (n) % e != 0</ul>
         </em></li>
     <li>Convert message String to ASCII values <em>bytes</em> from plain text <em>P</em>.
-        <ul><code>byte[] M = P.getBytes(StandardCharsets.UTF-8);</code></ul></li>
+        <ul><code>byte[] M = P.getBytes(StandardCharsets.UTF_8);</code></ul></li>
     <li>Encrypt plain text <em>m</em> byte into cipher text <em>C</em> using public key &lt;n, e&gt;.
         <em>
             <ul> For each byte in M: m = byte</ul>
@@ -65,7 +65,7 @@ and a private key that is known only by the receiver.
             <ul> M ≡ c<sup>d</sup> mod n</ul>
         </em></li>
     <li>Convert decoded byte text from ASCII values <em>M</em> to plain text <em>P</em>.
-        <ul><code>String P = new String(M, StandardCharsets.UTF-8);</code></ul></li>
+        <ul><code>String P = new String(M, StandardCharsets.UTF_8);</code></ul></li>
 
 </ol>
 </div>
