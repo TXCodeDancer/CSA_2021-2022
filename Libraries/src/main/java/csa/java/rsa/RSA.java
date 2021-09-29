@@ -8,12 +8,18 @@ package csa.java.rsa;
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 
+/**
+ * The type Rsa.
+ */
 public class RSA
 {
     private int n;
     private int e;
     private int d;
 
+    /**
+     * Instantiates a new Rsa.
+     */
     RSA()
     {
         PublicKey publicKey = new PublicKey();
@@ -25,6 +31,13 @@ public class RSA
         d = privateKey.getD();
     }
 
+    /**
+     * Instantiates a new Rsa.
+     *
+     * @param n the n
+     * @param e the e
+     * @param d the d
+     */
     RSA(int n, int e, int d)
     {
         this.n = n;
@@ -42,18 +55,30 @@ public class RSA
                 '}';
     }
 
+    /**
+     * Encode int [ ].
+     *
+     * @param M the m
+     * @return the int [ ]
+     */
     public int[] encode(int[] M)
     {
         int[] C = new int[M.length];
         for (int i = 0; i < M.length; i++)
         {
             int m = M[i];
-            int c = modPower(m, e, n);
+            int c = Maths.powerMod(m, e, n);
             C[i] = c;
         }
         return C;
     }
 
+    /**
+     * Encode int [ ].
+     *
+     * @param plainText the plain text
+     * @return the int [ ]
+     */
     public int[] encode(String plainText)
     {
         byte[] M = plainText.getBytes(StandardCharsets.US_ASCII);
@@ -61,24 +86,36 @@ public class RSA
         for (int i = 0; i < M.length; i++)
         {
             int m = M[i];
-            int c = modPower(m, e, n);
+            int c = Maths.powerMod(m, e, n);
             C[i] = c;
         }
         return C;
     }
 
+    /**
+     * Decode int [ ].
+     *
+     * @param cipherText the cipher text
+     * @return the int [ ]
+     */
     public int[] decode(int[] cipherText)
     {
         int[] M = new int[cipherText.length];
         for (int i = 0; i < cipherText.length; i++)
         {
             int c = cipherText[i];
-            int m = modPower(c, d, n);
+            int m = Maths.powerMod(c, d, n);
             M[i] = m;
         }
         return M;
     }
 
+    /**
+     * Decode to string string.
+     *
+     * @param cipherText the cipher text
+     * @return the string
+     */
     public String decodeToString(int[] cipherText)
     {
         int[] D = decode(cipherText);
@@ -89,31 +126,6 @@ public class RSA
         }
 
         return new String(M);
-    }
-
-    private static int modPower(int x, int y, int p)
-    {
-        // https://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/
-        int result = 1; // Initialize result
-
-        x = x % p; // Update x if it is more than or
-        // equal to p
-
-        if (x == 0)
-            return 0; // In case x is divisible by p;
-
-        while (y > 0)
-        {
-
-            // If y is odd, multiply x with result
-            if ((y & 1) != 0)
-                result = (result * x) % p;
-
-            // y must be even now
-            y = y >> 1; // y = y/2
-            x = (x * x) % p;
-        }
-        return result;
     }
 
 

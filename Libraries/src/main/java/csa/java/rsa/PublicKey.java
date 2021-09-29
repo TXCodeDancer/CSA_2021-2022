@@ -7,6 +7,9 @@ package csa.java.rsa;
 
 import java.util.List;
 
+/**
+ * The type Public key.
+ */
 public class PublicKey
 {
     private int e = Integer.MIN_VALUE;
@@ -15,10 +18,13 @@ public class PublicKey
     private int q;
     private int phi_n;
 
+    /**
+     * Instantiates a new Public key.
+     */
     public PublicKey()
     {
         // Select primes p and q between 20 - 100
-        List<Integer> primes = Prime.getPrimes(20, 100);
+        List<Integer> primes = Maths.getPrimes(20, 100);
         p = getRandomPrime(primes);
         q = getRandomPrime(primes);
 
@@ -42,7 +48,7 @@ public class PublicKey
 
     private void setE()
     {
-        List<Integer> primes = Prime.getPrimes(1, phi_n);
+        List<Integer> primes = Maths.getPrimes(1, phi_n);
         for(int i : primes)
         {
             if((phi_n % i) != 0)
@@ -53,16 +59,31 @@ public class PublicKey
         }
     }
 
+    /**
+     * Gets n.
+     *
+     * @return the n
+     */
     public int getN()
     {
         return n;
     }
 
+    /**
+     * Gets e.
+     *
+     * @return the e
+     */
     public int getE()
     {
         return e;
     }
 
+    /**
+     * Gets phi n.
+     *
+     * @return the phi n
+     */
     public int getPhi_n()
     {
         return phi_n;
