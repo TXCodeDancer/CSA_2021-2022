@@ -31,8 +31,6 @@ public class PublicKey
         setFields();
     }
 
-
-
     private void setFields()
     {
         // Compute n

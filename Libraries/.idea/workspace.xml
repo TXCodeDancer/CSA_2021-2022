@@ -9,10 +9,8 @@
   <component name="ChangeListManager">
     <list default="true" id="37bd9827-ec55-4027-803c-7f2de3ecf4d6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csa/java/rsa/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csa/java/rsa/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csa/java/rsa/PrivateKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csa/java/rsa/PrivateKey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/csa/java/rsa/PublicKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csa/java/rsa/PublicKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csa/java/rsa/RSA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csa/java/rsa/RSA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/csa/java/turtle/TurtleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/csa/java/turtle/TurtleTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +41,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.project" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="TestNG.RSATests.testTextDecode">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="csa.java.rsa.Main" />
       <module name="Libraries" />
@@ -74,17 +72,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MockTurtleTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RSATests.testTextDecode" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Libraries" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="csa.java.*" />
+          <option name="PATTERN" value="csa.java.rsa.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="csa.java" />
-      <option name="MAIN_CLASS_NAME" value="csa.java.MockTurtleTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PACKAGE_NAME" value="csa.java.rsa" />
+      <option name="MAIN_CLASS_NAME" value="csa.java.rsa.RSATests" />
+      <option name="METHOD_NAME" value="testTextDecode" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RSATests.testTextEncode" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Libraries" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="csa.java.rsa.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="csa.java.rsa" />
+      <option name="MAIN_CLASS_NAME" value="csa.java.rsa.RSATests" />
+      <option name="METHOD_NAME" value="testTextEncode" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -108,30 +125,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TurtleTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Libraries" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="csa.java.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="csa.java" />
-      <option name="MAIN_CLASS_NAME" value="csa.java.TurtleTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.RSATests.testTextDecode" />
+        <item itemvalue="TestNG.RSATests.testTextEncode" />
         <item itemvalue="Application.Main" />
         <item itemvalue="TestNG.TurtleTest (1)" />
         <item itemvalue="TestNG.MockTurtleTests (1)" />
-        <item itemvalue="TestNG.TurtleTest" />
-        <item itemvalue="TestNG.MockTurtleTests" />
       </list>
     </recent_temporary>
   </component>
@@ -166,20 +166,26 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/csa/java/rsa/RSA.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/csa/java/rsa/RSA.java</url>
           <line>93</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/csa/java/rsa/RSA.java</url>
-          <line>76</line>
-          <option name="timeStamp" value="15" />
+          <url>file://$PROJECT_DIR$/src/test/java/csa/java/rsa/RSATests.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/csa/java/rsa/RSATests.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="TestNG">
+        <watch expression="actual" language="JAVA" />
+        <watch expression="actual" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
