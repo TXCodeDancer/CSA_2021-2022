@@ -5,21 +5,14 @@ package csa.java.rsa;
  ** @created 9/26/2021
  */
 
-import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 
-/**
- * The type Rsa.
- */
 public class RSA
 {
     private int n;
     private int e;
     private int d;
 
-    /**
-     * Instantiates a new Rsa.
-     */
     RSA()
     {
         PublicKey publicKey = new PublicKey();
@@ -31,18 +24,22 @@ public class RSA
         d = privateKey.getD();
     }
 
-    /**
-     * Instantiates a new Rsa.
-     *
-     * @param n the n
-     * @param e the e
-     * @param d the d
-     */
     RSA(int n, int e, int d)
     {
         this.n = n;
         this.e = e;
         this.d = d;
+    }
+
+    RSA(int p, int q)
+    {
+        PublicKey publicKey = new PublicKey(p, q);
+        this.n = publicKey.getN();
+        this.e = publicKey.getE();
+        int phi_n = publicKey.getPhi_n();
+
+        PrivateKey privateKey = new PrivateKey(n, phi_n, e);
+        d = privateKey.getD();
     }
 
     @Override
@@ -55,13 +52,7 @@ public class RSA
                 '}';
     }
 
-    /**
-     * Encode int [ ].
-     *
-     * @param M the m
-     * @return the int [ ]
-     */
-    public int[] encode(int[] M)
+    private int[] encode(int[] M)
     {
         int[] C = new int[M.length];
         for (int i = 0; i < M.length; i++)
@@ -73,13 +64,7 @@ public class RSA
         return C;
     }
 
-    /**
-     * Encode int [ ].
-     *
-     * @param plainText the plain text
-     * @return the int [ ]
-     */
-    public int[] encode(String plainText)
+    public String encode(String plainText)
     {
         byte[] M = plainText.getBytes(StandardCharsets.US_ASCII);
         int[] C = new int[M.length];
@@ -89,16 +74,10 @@ public class RSA
             int c = Maths.powerMod(m, e, n);
             C[i] = c;
         }
-        return C;
+        return IntArrayToHexString(C);
     }
 
-    /**
-     * Decode int [ ].
-     *
-     * @param cipherText the cipher text
-     * @return the int [ ]
-     */
-    public int[] decode(int[] cipherText)
+    private int[] decodeToInt(int[] cipherText)
     {
         int[] M = new int[cipherText.length];
         for (int i = 0; i < cipherText.length; i++)
@@ -110,23 +89,44 @@ public class RSA
         return M;
     }
 
-    /**
-     * Decode to string string.
-     *
-     * @param cipherText the cipher text
-     * @return the string
-     */
-    public String decodeToString(int[] cipherText)
+    private String decode(int[] cipherText)
     {
-        int[] D = decode(cipherText);
+        int[] D = decodeToInt(cipherText);
         char[] M = new char[cipherText.length];
         for(int i = 0; i < D.length; i++)
         {
             M[i] = (char)D[i];
         }
-
         return new String(M);
     }
 
+    public String decode(String cipherText)
+    {
+        String str = decode(hexStringToIntArray(cipherText));
+        return str;
+    }
 
+    private int[] hexStringToIntArray(String cipherText)
+    {
+        final int hexSize = 4;
+        int arrayLength = cipherText.length()/hexSize;
+        int[] array = new int[arrayLength];
+        for(int i = 0; i < arrayLength; i++)
+        {
+            String str = cipherText.substring(0, hexSize);
+            cipherText = cipherText.substring(hexSize);
+            array[i] = Integer.parseInt(str, 16);
+        }
+        return array;
+    }
+
+    private String IntArrayToHexString(int[] cipherText)
+    {
+        String output = "";
+        for(int e : cipherText)
+        {
+            output += String.format("%04X", e);
+        }
+        return output;
+    }
 }
