@@ -12,6 +12,7 @@ public class RSA
     private int n;
     private int e;
     private int d;
+    final private int asciiSize = 128;
 
     RSA()
     {
@@ -67,12 +68,22 @@ public class RSA
     public String encode(String plainText)
     {
         byte[] M = plainText.getBytes(StandardCharsets.US_ASCII);
-        int[] C = new int[M.length];
-        for (int i = 0; i < M.length; i++)
+        int cLength = M.length/2;
+        if(M.length % 2 != 0)
         {
-            int m = M[i];
+            cLength++;
+        }
+        int[] C = new int[cLength];
+        for (int i = 0, j = 0; i <= M.length - 1; i += 2, j++ )
+        {
+            int m = M[i] * asciiSize;
+            if(i <= M.length - 2)
+            {
+                m += M[i+1];
+            }
+
             int c = Maths.powerMod(m, e, n);
-            C[i] = c;
+            C[j] = c;
         }
         return IntArrayToHexString(C);
     }
@@ -91,8 +102,16 @@ public class RSA
 
     private String decode(int[] cipherText)
     {
-        int[] D = decodeToInt(cipherText);
-        char[] M = new char[cipherText.length];
+        int[] splitCipherText = new int[cipherText.length * 2];
+        for (int i = 0, j = 0; i < cipherText.length; i++, j+=2)
+        {
+            splitCipherText[j] = cipherText[i] / asciiSize;
+            splitCipherText[j + 1] = cipherText[i] % asciiSize;
+        }
+
+
+        int[] D = decodeToInt(splitCipherText);
+        char[] M = new char[D.length];
         for(int i = 0; i < D.length; i++)
         {
             M[i] = (char)D[i];
@@ -102,7 +121,8 @@ public class RSA
 
     public String decode(String cipherText)
     {
-        String str = decode(hexStringToIntArray(cipherText));
+        int[] intArray = hexStringToIntArray(cipherText);
+        String str = decode(intArray);
         return str;
     }
 
@@ -120,6 +140,22 @@ public class RSA
         return array;
     }
 
+//    private int[] hexStringPairToIntArray(String cipherText)
+//    {
+//        final int hexSize = 4;
+//        int arrayLength = (cipherText.length() * 2)/hexSize;
+//        int[] array = new int[arrayLength];
+//        for(int i = 0; i < arrayLength; i += 2)
+//        {
+//            String str = cipherText.substring(0, hexSize);
+//            cipherText = cipherText.substring(hexSize);
+//            int pair = Integer.parseInt(str, 16);
+//            array[i] = pair/asciiSize;
+//            array[i + 1] = pair % asciiSize;
+//        }
+//        return array;
+//    }
+
     private String IntArrayToHexString(int[] cipherText)
     {
         String output = "";
@@ -129,4 +165,19 @@ public class RSA
         }
         return output;
     }
+
+//    private String IntArrayPairToHexString(int[] cipherText)
+//    {
+//        String output = "";
+//        for(int j = 0, i = cipherText.length - 1; i >= 0; j++, i -= 2)
+//        {
+//            int pair = cipherText[j] * asciiSize;
+//            if(i > 0)
+//            {
+//                pair += cipherText[j + 1];
+//            }
+//            output += String.format("%08X", pair);
+//        }
+//        return output;
+//    }
 }

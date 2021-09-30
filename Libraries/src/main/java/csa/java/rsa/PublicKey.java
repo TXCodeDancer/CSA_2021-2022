@@ -18,7 +18,7 @@ public class PublicKey
     public PublicKey()
     {
         // Select primes p and q between 20 - 100
-        List<Integer> primes = Maths.getPrimes(20, 100);
+        List<Integer> primes = Maths.getPrimes(127, 200);
         this.p = getRandomPrime(primes);
         this.q = getRandomPrime(primes);
         setFields();
