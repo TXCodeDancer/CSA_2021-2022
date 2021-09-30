@@ -126,16 +126,20 @@ public class RSA
 
     private String decodeHard(int[] cipherText)
     {
-        int[] splitCipherText = new int[cipherText.length * 2];
+        int[] D = new int[cipherText.length * 2];
         for (int i = 0, j = 0; i < cipherText.length; i++, j+=2)
         {
-            splitCipherText[j] = cipherText[i] / asciiSize;
-            splitCipherText[j + 1] = cipherText[i] % asciiSize;
+            D[j] = cipherText[i] / asciiSize;
+            D[j + 1] = cipherText[i] % asciiSize;
         }
 
-        int[] D = decodeToInt(splitCipherText);
-        char[] M = new char[D.length];
-        for(int i = 0; i < D.length; i++)
+        int mLength = D.length;
+        if(D[D.length - 1] == 0)
+        {
+            mLength--;
+        }
+        char[] M = new char[mLength];
+        for(int i = 0; i < mLength; i++)
         {
             M[i] = (char)D[i];
         }
@@ -151,7 +155,8 @@ public class RSA
     public String decodeHard(String cipherText)
     {
         int[] intArray = hexStringToIntArray(cipherText);
-        String str = decode(intArray);
+        int[] D = decodeToInt(intArray);
+        String str = decodeHard(D);
         return str;
     }
 
