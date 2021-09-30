@@ -16,13 +16,17 @@ public class RSA
     private int e;
     private int d;
     final private int asciiSize = 128;
+    /**
+     * The Public key.
+     */
+    public PublicKey publicKey;
 
     /**
      * Instantiates a new Rsa.
      */
     RSA()
     {
-        PublicKey publicKey = new PublicKey();
+        this.publicKey = new PublicKey();
         this.n = publicKey.getN();
         this.e = publicKey.getE();
         int phi_n = publicKey.getPhi_n();
@@ -38,8 +42,9 @@ public class RSA
      */
     RSA(PublicKey publicKey)
     {
-        this.n = publicKey.getN();
-        this.e = publicKey.getE();
+        this.publicKey = publicKey;
+        this.n = this.publicKey.getN();
+        this.e = this.publicKey.getE();
     }
 
     /**
@@ -64,7 +69,7 @@ public class RSA
      */
     RSA(int p, int q)
     {
-        PublicKey publicKey = new PublicKey(p, q);
+        this.publicKey = new PublicKey();
         this.n = publicKey.getN();
         this.e = publicKey.getE();
         int phi_n = publicKey.getPhi_n();
@@ -77,8 +82,8 @@ public class RSA
     public String toString()
     {
         return "RSA Public Key{" +
-                "n=" + n +
-                ", e=" + e +
+                "n=" + publicKey.getN() +
+                ", e=" + publicKey.getE() +
                 '}';
     }
 
@@ -235,25 +240,5 @@ public class RSA
             output += String.format("%04X", e);
         }
         return output;
-    }
-
-    /**
-     * Gets n.
-     *
-     * @return the n
-     */
-    public int getN()
-    {
-        return n;
-    }
-
-    /**
-     * Gets e.
-     *
-     * @return the e
-     */
-    public int getE()
-    {
-        return e;
     }
 }
