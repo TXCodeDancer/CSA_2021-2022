@@ -10,7 +10,7 @@ import java.util.List;
 public class PublicKey
 {
     private int e = Integer.MIN_VALUE;
-    private int n;
+    private int n = Integer.MIN_VALUE;
     private int p;
     private int q;
     private int phi_n;
@@ -18,18 +18,30 @@ public class PublicKey
     public PublicKey()
     {
         // Select primes p and q between 20 - 100
-        List<Integer> primes = Prime.getPrimes(5, 20);
-        p = getRandomPrime(primes);
-        q = getRandomPrime(primes);
+        // List<Integer> primes = Maths.getPrimes(127, 200);
+        List<Integer> primes = Maths.getPrimes(20, 100);
+        this.p = getRandomPrime(primes);
+        this.q = getRandomPrime(primes);
+        setFields();
+    }
 
+    public PublicKey(int p, int q)
+    {
+        this.p = p;
+        this.q = q;
+        setFields();
+    }
+
+    private void setFields()
+    {
         // Compute n
-        n = p * q;
+        this.n = p * q;
 
         // Compute phi_n
-        phi_n = (p-1) * (q-1);
+        this.phi_n = (p - 1) * (q - 1);
 
         // Find e
-        setE();
+        findE();
     }
 
     private int getRandomPrime(List<Integer> primes)
@@ -40,9 +52,9 @@ public class PublicKey
         return randomPrime;
     }
 
-    private void setE()
+    private void findE()
     {
-        List<Integer> primes = Prime.getPrimes(1, phi_n);
+        List<Integer> primes = Maths.getPrimes(1, phi_n);
         for(int i : primes)
         {
             if((phi_n % i) != 0)

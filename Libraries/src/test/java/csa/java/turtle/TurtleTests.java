@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-public class TurtleTest
+public class TurtleTests
 {
     @Test
     public void testWorldConstructor()
