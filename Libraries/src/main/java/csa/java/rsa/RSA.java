@@ -174,22 +174,6 @@ public class RSA
         return array;
     }
 
-//    private int[] hexStringPairToIntArray(String cipherText)
-//    {
-//        final int hexSize = 4;
-//        int arrayLength = (cipherText.length() * 2)/hexSize;
-//        int[] array = new int[arrayLength];
-//        for(int i = 0; i < arrayLength; i += 2)
-//        {
-//            String str = cipherText.substring(0, hexSize);
-//            cipherText = cipherText.substring(hexSize);
-//            int pair = Integer.parseInt(str, 16);
-//            array[i] = pair/asciiSize;
-//            array[i + 1] = pair % asciiSize;
-//        }
-//        return array;
-//    }
-
     private String IntArrayToHexString(int[] cipherText)
     {
         String output = "";
@@ -199,19 +183,4 @@ public class RSA
         }
         return output;
     }
-
-//    private String IntArrayPairToHexString(int[] cipherText)
-//    {
-//        String output = "";
-//        for(int j = 0, i = cipherText.length - 1; i >= 0; j++, i -= 2)
-//        {
-//            int pair = cipherText[j] * asciiSize;
-//            if(i > 0)
-//            {
-//                pair += cipherText[j + 1];
-//            }
-//            output += String.format("%08X", pair);
-//        }
-//        return output;
-//    }
 }
