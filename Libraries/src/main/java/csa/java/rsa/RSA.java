@@ -68,6 +68,19 @@ public class RSA
     public String encode(String plainText)
     {
         byte[] M = plainText.getBytes(StandardCharsets.US_ASCII);
+        int[] C = new int[M.length];
+        for (int i = 0; i < M.length; i++)
+        {
+            int m = M[i];
+            int c = Maths.powerMod(m, e, n);
+            C[i] = c;
+        }
+        return IntArrayToHexString(C);
+    }
+
+    public String encodeHard(String plainText)
+    {
+        byte[] M = plainText.getBytes(StandardCharsets.US_ASCII);
         int cLength = M.length/2;
         if(M.length % 2 != 0)
         {
@@ -102,13 +115,23 @@ public class RSA
 
     private String decode(int[] cipherText)
     {
+        int[] D = decodeToInt(cipherText);
+        char[] M = new char[cipherText.length];
+        for(int i = 0; i < D.length; i++)
+        {
+            M[i] = (char)D[i];
+        }
+        return new String(M);
+    }
+
+    private String decodeHard(int[] cipherText)
+    {
         int[] splitCipherText = new int[cipherText.length * 2];
         for (int i = 0, j = 0; i < cipherText.length; i++, j+=2)
         {
             splitCipherText[j] = cipherText[i] / asciiSize;
             splitCipherText[j + 1] = cipherText[i] % asciiSize;
         }
-
 
         int[] D = decodeToInt(splitCipherText);
         char[] M = new char[D.length];
@@ -120,6 +143,12 @@ public class RSA
     }
 
     public String decode(String cipherText)
+    {
+        String str = decode(hexStringToIntArray(cipherText));
+        return str;
+    }
+
+    public String decodeHard(String cipherText)
     {
         int[] intArray = hexStringToIntArray(cipherText);
         String str = decode(intArray);
