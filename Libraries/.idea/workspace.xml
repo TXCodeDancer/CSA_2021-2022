@@ -9,8 +9,6 @@
   <component name="ChangeListManager">
     <list default="true" id="37bd9827-ec55-4027-803c-7f2de3ecf4d6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/csa/java/rsa/PublicKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/csa/java/rsa/PublicKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/csa/java/turtle/TurtleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/csa/java/turtle/TurtleTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +39,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.project" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
-  <component name="RunManager" selected="TestNG.RSATests.testTextDecode">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="csa.java.rsa.Main" />
       <module name="Libraries" />
@@ -127,9 +125,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="TestNG.RSATests.testTextDecode" />
         <item itemvalue="TestNG.RSATests.testTextEncode" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="TestNG.TurtleTest (1)" />
         <item itemvalue="TestNG.MockTurtleTests (1)" />
       </list>
