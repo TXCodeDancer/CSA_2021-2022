@@ -90,7 +90,7 @@ public class RSATests
     @Test
     public void testPrintableAsciiEncodeDecodeHard()
     {
-        RSA rsa = new RSA(221, 35, 11);
+        RSA rsa = new RSA(127, 131);
         List<Character> characters = new ArrayList<Character>();
         for(char ch = 32; ch < 127; ch++)
         {
@@ -102,19 +102,15 @@ public class RSATests
             chars[i] = characters.get(i);
         }
         String plainText = new String(chars);
+
         String cipherText = rsa.encodeHard(plainText);
         String actual = cipherText;
-
-        String expected = "0080004300BB007800D400D60040005B00830014005700310063008D001C00AE00D3002B005400330034009000A300D9001700D800250002005300850038002D0026008F00C4002100CC00CD000800B400840039001D00AD001300A8004100D100D700BF004B003C003200770012002A005F0095008E00B6006900BD006400DA0049000B006A006D005E00BA0088006700C3001B0062004A007200BE00CE000F001F006B0093007B00C2001A007600550023007F0070007300D200940003";
-
-//        assertTrue(expected.equals(actual));
+        String expected = "38FC1F3526120546355F40853753290A170C229031352B4037C12FB92BCA016D293D1C25065A2700065C21A404A121820715109C20383ABF285E0596371D17623DB7332E3E3F037F2D43097B0D813579167210643D3D38F31B762D5E053F1C46";
+        assertTrue(expected.equals(actual));
 
         actual = rsa.decodeHard(cipherText);
         expected = plainText;
-
         assertTrue(expected.equals(actual));
     }
-
-
 }
 
