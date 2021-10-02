@@ -18,9 +18,7 @@ public class Main
         String AliceMessageToBob = "Bob, what's the plan?";
         System.out.println(AliceMessageToBob);
 
-        PublicKey bobPublicKey = new PublicKey();
-        bobPublicKey.setN(rsaBob.getN());
-        bobPublicKey.setE(rsaBob.getE());
+        PublicKey bobPublicKey =rsaBob.publicKey;
         RSA aliceToBob = new RSA(bobPublicKey);
         String ciphertextToBob = aliceToBob.encode(AliceMessageToBob);
         System.out.println(ciphertextToBob);
@@ -36,9 +34,7 @@ public class Main
         String BobMessageToAlice = "Alice, attack at 7am.";
         System.out.println(BobMessageToAlice);
 
-        PublicKey alicePublicKey = new PublicKey();
-        alicePublicKey.setN(rsaAlice.getN());
-        alicePublicKey.setE(rsaAlice.getE());
+        PublicKey alicePublicKey = rsaAlice.publicKey;
         RSA bobToAlice = new RSA(alicePublicKey);
         String ciphertextToAlice = bobToAlice.encode(BobMessageToAlice);
         System.out.println(ciphertextToAlice);

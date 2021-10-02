@@ -68,30 +68,34 @@ public class Maths
         return getPrimes(0, upTo);
     }
 
-    public static int powerMod(int x, int y, int p)
+    /**
+     * Power mod int.
+     *
+     * @param base     the base
+     * @param exponent the exponent
+     * @param modulus  the modulus
+     * @return the int
+     */
+    public static int powerMod(int base, int exponent, int modulus)
     {
         // https://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/
         int result = 1; // Initialize result
 
-        x = x % p; // Update x if it is more than or
-        // equal to p
+        base = base % modulus; // Update base if it is more than or equal to modulus
 
-        if (x == 0)
-            return 0; // In case x is divisible by p;
+        if (base == 0)
+            return 0; // In case base is divisible by modulus;
 
-        while (y > 0)
+        while (exponent > 0)
         {
+            // If exponent is odd, multiply base with result
+            if ((exponent & 1) != 0)
+                result = (result * base) % modulus;
 
-            // If y is odd, multiply x with result
-            if ((y & 1) != 0)
-                result = (result * x) % p;
-
-            // y must be even now
-            y = y >> 1; // y = y/2
-            x = (x * x) % p;
+            // exponent must be even now
+            exponent = exponent >> 1; // exponent = exponent/2
+            base = (base * base) % modulus;
         }
         return result;
     }
-
-
 }
