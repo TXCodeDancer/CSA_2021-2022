@@ -7,6 +7,9 @@ package csa.java.rsa;
 
 import java.nio.charset.StandardCharsets;
 
+/**
+ * The type Rsa.
+ */
 public class RSA
 {
     private int n;
@@ -14,6 +17,9 @@ public class RSA
     private int d;
     final private int asciiSize = 128;
 
+    /**
+     * Instantiates a new Rsa.
+     */
     RSA()
     {
         PublicKey publicKey = new PublicKey();
@@ -25,6 +31,24 @@ public class RSA
         d = privateKey.getD();
     }
 
+    /**
+     * Instantiates a new Rsa.
+     *
+     * @param publicKey the public key
+     */
+    RSA(PublicKey publicKey)
+    {
+        this.n = publicKey.getN();
+        this.e = publicKey.getE();
+    }
+
+    /**
+     * Instantiates a new Rsa.
+     *
+     * @param n the n
+     * @param e the e
+     * @param d the d
+     */
     RSA(int n, int e, int d)
     {
         this.n = n;
@@ -32,6 +56,12 @@ public class RSA
         this.d = d;
     }
 
+    /**
+     * Instantiates a new Rsa.
+     *
+     * @param p the p
+     * @param q the q
+     */
     RSA(int p, int q)
     {
         PublicKey publicKey = new PublicKey(p, q);
@@ -46,10 +76,9 @@ public class RSA
     @Override
     public String toString()
     {
-        return "RSA{" +
+        return "RSA Public Key{" +
                 "n=" + n +
                 ", e=" + e +
-                ", d=" + d +
                 '}';
     }
 
@@ -65,6 +94,12 @@ public class RSA
         return C;
     }
 
+    /**
+     * Encode string.
+     *
+     * @param plainText the plain text
+     * @return the string
+     */
     public String encode(String plainText)
     {
         byte[] M = plainText.getBytes(StandardCharsets.US_ASCII);
@@ -78,6 +113,12 @@ public class RSA
         return IntArrayToHexString(C);
     }
 
+    /**
+     * Encode hard string.
+     *
+     * @param plainText the plain text
+     * @return the string
+     */
     public String encodeHard(String plainText)
     {
         byte[] M = plainText.getBytes(StandardCharsets.US_ASCII);
@@ -146,12 +187,24 @@ public class RSA
         return new String(M);
     }
 
+    /**
+     * Decode string.
+     *
+     * @param cipherText the cipher text
+     * @return the string
+     */
     public String decode(String cipherText)
     {
         String str = decode(hexStringToIntArray(cipherText));
         return str;
     }
 
+    /**
+     * Decode hard string.
+     *
+     * @param cipherText the cipher text
+     * @return the string
+     */
     public String decodeHard(String cipherText)
     {
         int[] intArray = hexStringToIntArray(cipherText);
@@ -182,5 +235,25 @@ public class RSA
             output += String.format("%04X", e);
         }
         return output;
+    }
+
+    /**
+     * Gets n.
+     *
+     * @return the n
+     */
+    public int getN()
+    {
+        return n;
+    }
+
+    /**
+     * Gets e.
+     *
+     * @return the e
+     */
+    public int getE()
+    {
+        return e;
     }
 }

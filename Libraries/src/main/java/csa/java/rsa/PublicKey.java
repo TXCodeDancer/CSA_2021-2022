@@ -7,24 +7,46 @@ package csa.java.rsa;
 
 import java.util.List;
 
+/**
+ * The type Public key.
+ */
 public class PublicKey
 {
     private int e = Integer.MIN_VALUE;
     private int n = Integer.MIN_VALUE;
     private int p;
     private int q;
-    private int phi_n;
+    private int phi_n = Integer.MIN_VALUE;
 
+    /**
+     * Instantiates a new Public key.
+     */
     public PublicKey()
     {
-        // Select primes p and q between 20 - 100
-        // List<Integer> primes = Maths.getPrimes(127, 200);
-        List<Integer> primes = Maths.getPrimes(20, 100);
+        // Select primes p and q between 127 - 200
+        List<Integer> primes = Maths.getPrimes(127, 200);
         this.p = getRandomPrime(primes);
         this.q = getRandomPrime(primes);
         setFields();
     }
 
+    /**
+     * Instantiates a new Public key.
+     *
+     * @param publicKey the public key
+     */
+    public PublicKey(PublicKey publicKey)
+    {
+        this.n = publicKey.getN();
+        this.e = publicKey.getE();
+    }
+
+    /**
+     * Instantiates a new Public key.
+     *
+     * @param p the p
+     * @param q the q
+     */
     public PublicKey(int p, int q)
     {
         this.p = p;
@@ -55,8 +77,10 @@ public class PublicKey
     private void findE()
     {
         List<Integer> primes = Maths.getPrimes(1, phi_n);
-        for(int i : primes)
+
+        while(primes.size() > 0)
         {
+            int i = getRandomPrime(primes);
             if((phi_n % i) != 0)
             {
                 this.e = i;
@@ -65,18 +89,53 @@ public class PublicKey
         }
     }
 
-    public int getN()
+    /**
+     * Gets phi n.
+     *
+     * @return the phi n
+     */
+    public int getPhi_n()
     {
-        return n;
+        return phi_n;
     }
 
+    /**
+     * Gets e.
+     *
+     * @return the e
+     */
     public int getE()
     {
         return e;
     }
 
-    public int getPhi_n()
+    /**
+     * Sets e.
+     *
+     * @param e the e
+     */
+    public void setE(int e)
     {
-        return phi_n;
+        this.e = e;
+    }
+
+    /**
+     * Gets n.
+     *
+     * @return the n
+     */
+    public int getN()
+    {
+        return n;
+    }
+
+    /**
+     * Sets n.
+     *
+     * @param n the n
+     */
+    public void setN(int n)
+    {
+        this.n = n;
     }
 }
