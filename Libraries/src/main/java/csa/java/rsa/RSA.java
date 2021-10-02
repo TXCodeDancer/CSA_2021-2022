@@ -7,6 +7,9 @@ package csa.java.rsa;
 
 import java.nio.charset.StandardCharsets;
 
+/**
+ * The type Rsa.
+ */
 public class RSA
 {
     private int n;
@@ -14,6 +17,9 @@ public class RSA
     private int d;
     final private int asciiSize = 128;
 
+    /**
+     * Instantiates a new Rsa.
+     */
     RSA()
     {
         PublicKey publicKey = new PublicKey();
@@ -25,6 +31,24 @@ public class RSA
         d = privateKey.getD();
     }
 
+    /**
+     * Instantiates a new Rsa.
+     *
+     * @param publicKey the public key
+     */
+    RSA(PublicKey publicKey)
+    {
+        this.n = publicKey.getN();
+        this.e = publicKey.getE();
+    }
+
+    /**
+     * Instantiates a new Rsa.
+     *
+     * @param n the n
+     * @param e the e
+     * @param d the d
+     */
     RSA(int n, int e, int d)
     {
         this.n = n;
@@ -32,6 +56,12 @@ public class RSA
         this.d = d;
     }
 
+    /**
+     * Instantiates a new Rsa.
+     *
+     * @param p the p
+     * @param q the q
+     */
     RSA(int p, int q)
     {
         PublicKey publicKey = new PublicKey(p, q);
@@ -46,10 +76,9 @@ public class RSA
     @Override
     public String toString()
     {
-        return "RSA{" +
+        return "RSA Public Key{" +
                 "n=" + n +
                 ", e=" + e +
-                ", d=" + d +
                 '}';
     }
 
@@ -65,6 +94,12 @@ public class RSA
         return C;
     }
 
+    /**
+     * Encode string.
+     *
+     * @param plainText the plain text
+     * @return the string
+     */
     public String encode(String plainText)
     {
         byte[] M = plainText.getBytes(StandardCharsets.US_ASCII);
@@ -78,6 +113,12 @@ public class RSA
         return IntArrayToHexString(C);
     }
 
+    /**
+     * Encode hard string.
+     *
+     * @param plainText the plain text
+     * @return the string
+     */
     public String encodeHard(String plainText)
     {
         byte[] M = plainText.getBytes(StandardCharsets.US_ASCII);
@@ -126,32 +167,49 @@ public class RSA
 
     private String decodeHard(int[] cipherText)
     {
-        int[] splitCipherText = new int[cipherText.length * 2];
+        int[] D = new int[cipherText.length * 2];
         for (int i = 0, j = 0; i < cipherText.length; i++, j+=2)
         {
-            splitCipherText[j] = cipherText[i] / asciiSize;
-            splitCipherText[j + 1] = cipherText[i] % asciiSize;
+            D[j] = cipherText[i] / asciiSize;
+            D[j + 1] = cipherText[i] % asciiSize;
         }
 
-        int[] D = decodeToInt(splitCipherText);
-        char[] M = new char[D.length];
-        for(int i = 0; i < D.length; i++)
+        int mLength = D.length;
+        if(D[D.length - 1] == 0)
+        {
+            mLength--;
+        }
+        char[] M = new char[mLength];
+        for(int i = 0; i < mLength; i++)
         {
             M[i] = (char)D[i];
         }
         return new String(M);
     }
 
+    /**
+     * Decode string.
+     *
+     * @param cipherText the cipher text
+     * @return the string
+     */
     public String decode(String cipherText)
     {
         String str = decode(hexStringToIntArray(cipherText));
         return str;
     }
 
+    /**
+     * Decode hard string.
+     *
+     * @param cipherText the cipher text
+     * @return the string
+     */
     public String decodeHard(String cipherText)
     {
         int[] intArray = hexStringToIntArray(cipherText);
-        String str = decode(intArray);
+        int[] D = decodeToInt(intArray);
+        String str = decodeHard(D);
         return str;
     }
 
@@ -169,22 +227,6 @@ public class RSA
         return array;
     }
 
-//    private int[] hexStringPairToIntArray(String cipherText)
-//    {
-//        final int hexSize = 4;
-//        int arrayLength = (cipherText.length() * 2)/hexSize;
-//        int[] array = new int[arrayLength];
-//        for(int i = 0; i < arrayLength; i += 2)
-//        {
-//            String str = cipherText.substring(0, hexSize);
-//            cipherText = cipherText.substring(hexSize);
-//            int pair = Integer.parseInt(str, 16);
-//            array[i] = pair/asciiSize;
-//            array[i + 1] = pair % asciiSize;
-//        }
-//        return array;
-//    }
-
     private String IntArrayToHexString(int[] cipherText)
     {
         String output = "";
@@ -195,18 +237,23 @@ public class RSA
         return output;
     }
 
-//    private String IntArrayPairToHexString(int[] cipherText)
-//    {
-//        String output = "";
-//        for(int j = 0, i = cipherText.length - 1; i >= 0; j++, i -= 2)
-//        {
-//            int pair = cipherText[j] * asciiSize;
-//            if(i > 0)
-//            {
-//                pair += cipherText[j + 1];
-//            }
-//            output += String.format("%08X", pair);
-//        }
-//        return output;
-//    }
+    /**
+     * Gets n.
+     *
+     * @return the n
+     */
+    public int getN()
+    {
+        return n;
+    }
+
+    /**
+     * Gets e.
+     *
+     * @return the e
+     */
+    public int getE()
+    {
+        return e;
+    }
 }
