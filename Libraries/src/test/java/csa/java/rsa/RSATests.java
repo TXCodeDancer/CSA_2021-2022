@@ -65,7 +65,6 @@ public class RSATests
     @Test
     public void testTextEncodeHard()
     {
-//        RSA rsa = new RSA(127, 131);
         RSA rsa = new RSA(16637, 12143, 1067);
         String plainText = "This is a test!";
         String actual = rsa.encodeHard(plainText);
@@ -77,7 +76,6 @@ public class RSATests
     @Test
     public void testTextDecodeHard()
     {
-//        RSA rsa = new RSA(127, 131);
         RSA rsa = new RSA(16637, 12143, 1067);
 
         String cipherText = "179A3F2F23EB03E534373335304817AA";
