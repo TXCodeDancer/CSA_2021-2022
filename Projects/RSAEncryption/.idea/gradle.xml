@@ -11,6 +11,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/RSA Basics/Introduction" />
+            <option value="$PROJECT_DIR$/RSA Basics/Maths" />
+            <option value="$PROJECT_DIR$/RSA Basics/Public Key" />
             <option value="$PROJECT_DIR$/util" />
           </set>
         </option>
