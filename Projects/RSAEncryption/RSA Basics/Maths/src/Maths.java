@@ -88,45 +88,15 @@ public class Maths
 
         while (exponent > 0)
         {
-            // If exponent is odd, multiply base with result
+            // If exponent is odd, multiply base with result and take modulus
             if ((exponent % 2) != 0)
                 result = (result * base) % modulus;
 
             // exponent must be even now
-            exponent /= 2; // exponent = exponent/2
-            base = (base * base) % modulus;
+            exponent /= 2; // Divide exponent by 2
+            base = (base * base) % modulus; // Square base and take modulus
         }
-        return result;
+        return result; // return answer
     }
 
-    /**
-     * Power mod fast int.
-     *
-     * @param base     the base
-     * @param exponent the exponent
-     * @param modulus  the modulus
-     * @return the int
-     */
-    public static int powerModFast(int base, int exponent, int modulus)
-    {
-        // https://www.geeksforgeeks.org/modular-exponentiation-power-in-modular-arithmetic/
-        int result = 1; // Initialize result
-
-        base = base % modulus; // Update base if it is more than or equal to modulus
-
-        if (base == 0)
-            return 0; // In case base is divisible by modulus;
-
-        while (exponent > 0)
-        {
-            // If exponent is odd, multiply base with result
-            if ((exponent & 0x01) != 0)
-                result = (result * base) % modulus;
-
-            // exponent must be even now
-            exponent = exponent >> 1; // exponent = exponent/2
-            base = (base * base) % modulus;
-        }
-        return result;
-    }
 }

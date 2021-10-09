@@ -1,4 +1,46 @@
 type: edu
 files:
+- name: src/Maths.java
+  visible: true
+  placeholders:
+  - offset: 350
+    length: 44
+    placeholder_text: /* TODO Reject numbers less than 2 */
+  - offset: 449
+    length: 58
+    placeholder_text: /* TODO Reject numbers that are multiples of i */
+  - offset: 509
+    length: 16
+    placeholder_text: /* TODO Increment i */
+  - offset: 537
+    length: 20
+    placeholder_text: /* TODO Accept all other values */
+  - offset: 866
+    length: 27
+    placeholder_text: /* TODO If i is prime, add i to primes list */
+  - offset: 964
+    length: 22
+    placeholder_text: /* TODO Return list of primes */
+  - offset: 1148
+    length: 46
+    placeholder_text: /* TODO Implement method */
+  - offset: 1595
+    length: 14
+    placeholder_text: /* TODO Reduce base by taking modulus */
+  - offset: 1886
+    length: 19
+    placeholder_text: /* TODO */
+  - offset: 1932
+    length: 25
+    placeholder_text: /* TODO */
+  - offset: 2013
+    length: 14
+    placeholder_text: /* TODO */
+  - offset: 2071
+    length: 24
+    placeholder_text: /* TODO */
+  - offset: 2146
+    length: 14
+    placeholder_text: /* TODO */
 - name: test/MathsTests.java
   visible: false
