@@ -78,6 +78,20 @@ public class PublicKey
     {
         List<Integer> primes = Maths.getPrimes(1, phi_n);
 
+        for (int i : primes)
+        {
+            if((phi_n % i) != 0)
+            {
+                this.e = i;
+                return;
+            }
+        }
+    }
+
+    private void findERandom()
+    {
+        List<Integer> primes = Maths.getPrimes(1, phi_n);
+
         while(primes.size() > 0)
         {
             int i = getRandomPrime(primes);
