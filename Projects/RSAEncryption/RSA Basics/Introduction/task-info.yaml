@@ -1,0 +1,11 @@
+type: theory
+files:
+- name: src/Main.java
+  visible: true
+  placeholders:
+  - offset: 433
+    length: 24
+    placeholder_text: /* Enter the secret message  */
+  - offset: 1092
+    length: 24
+    placeholder_text: /* Enter the secret reply */

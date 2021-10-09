@@ -8,3 +8,5 @@ summary: |-
   - It contains hands-on examples of RSA Encryption code implementation and exercises to practice new skills.
   - The course is based on RSA information freely available on the Internet.
 programming_language: Java
+content:
+- RSA Basics

@@ -3,9 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/RSAEncryption.iml" filepath="$PROJECT_DIR$/.idea/modules/RSAEncryption.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson1/task1/RSAEncryption.lesson1-task1.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson1/task1/RSAEncryption.lesson1-task1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson1/task1/RSAEncryption.lesson1-task1.main.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson1/task1/RSAEncryption.lesson1-task1.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lesson1/task1/RSAEncryption.lesson1-task1.test.iml" filepath="$PROJECT_DIR$/.idea/modules/lesson1/task1/RSAEncryption.lesson1-task1.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RSA Basics/Introduction/RSAEncryption.RSA_Basics-Introduction.iml" filepath="$PROJECT_DIR$/.idea/modules/RSA Basics/Introduction/RSAEncryption.RSA_Basics-Introduction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RSA Basics/Introduction/RSAEncryption.RSA_Basics-Introduction.main.iml" filepath="$PROJECT_DIR$/.idea/modules/RSA Basics/Introduction/RSAEncryption.RSA_Basics-Introduction.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RSA Basics/Introduction/RSAEncryption.RSA_Basics-Introduction.test.iml" filepath="$PROJECT_DIR$/.idea/modules/RSA Basics/Introduction/RSAEncryption.RSA_Basics-Introduction.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/RSAEncryption.util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/RSAEncryption.util.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/RSAEncryption.util.main.iml" filepath="$PROJECT_DIR$/.idea/modules/util/RSAEncryption.util.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/RSAEncryption.util.test.iml" filepath="$PROJECT_DIR$/.idea/modules/util/RSAEncryption.util.test.iml" />
