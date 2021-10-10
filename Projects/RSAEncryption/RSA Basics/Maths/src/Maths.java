@@ -21,9 +21,13 @@ public class Maths
      */
     public static boolean isPrime(Integer n)
     {
+        // Reject any number less than the lowest prime number
         if(n <= 1)
             return false;
 
+        // Use a loop to increment control variable from the lowest prime number to one half of n (inclusive).
+        // If n is a multiple of the control variable, it cannot be prime so reject it.
+        // Otherwise, increment the control variable.
         int i = 2;
         while(i <= n/2)
         {
@@ -46,11 +50,15 @@ public class Maths
     public static List<Integer> getPrimes(Integer from, Integer to)
     {
         List<Integer> primes = new ArrayList<>();
-        for (Integer i = from; i < to; i++)
+
+        // Use a loop to check all numbers between 'from' and 'to' inclusive.
+        // If number is prime, add it to the primes list using primes.add(number)
+        // return the list of primes;
+        for (Integer i = from; i <= to; i++)
         {
             if (isPrime(i))
             {
-                primes.add(i);
+                primes.add(i); // Add i to primes list if
             }
         }
 

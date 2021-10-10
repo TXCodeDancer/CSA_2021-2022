@@ -50,6 +50,19 @@ public class MathsTests {
   }
 
   @Test
+  public void testGetPrimesBetweenInclusive() {
+    List<Integer> primeList = new ArrayList<Integer>(Arrays.asList(11, 13, 17, 19));
+    List<Integer> actual = Maths.getPrimes(11, 19);
+
+    assertEquals(primeList.size(), actual.size());
+
+    for (int i = 0; i < primeList.size(); i++)
+    {
+      assertEquals(primeList.get(i), actual.get(i));
+    }
+  }
+
+  @Test
   public void testPowerMod() {
     int expected = 15267;
     int actual = Maths.powerMod(4224, 11, 16637);
