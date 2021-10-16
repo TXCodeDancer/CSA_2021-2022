@@ -6,6 +6,14 @@ files:
   - offset: 413
     length: 44
     placeholder_text: /* TODO Reject numbers less than 2 */
+  - offset: 712
+    length: 139
+    placeholder_text: |-
+      /* TODO Follow directions in comments:
+      Use a loop to increment control variable from the lowest prime number to one half of n (inclusive).
+      If n is a multiple of the control variable, it cannot be prime so reject it.
+      Otherwise, increment the control variable.
+      */
   - offset: 853
     length: 20
     placeholder_text: /* TODO Accept all other values */
@@ -38,13 +46,7 @@ files:
   - offset: 2689
     length: 14
     placeholder_text: /* TODO */
-  - offset: 712
-    length: 139
-    placeholder_text: |-
-      /* TODO Follow directions in comments:
-      Use a loop to increment control variable from the lowest prime number to one half of n (inclusive).
-      If n is a multiple of the control variable, it cannot be prime so reject it.
-      Otherwise, increment the control variable.
-      */
 - name: test/MathsTests.java
   visible: false
+- name: src/Main.java
+  visible: true
