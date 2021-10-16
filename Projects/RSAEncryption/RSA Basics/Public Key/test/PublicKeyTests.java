@@ -33,7 +33,7 @@ public class PublicKeyTests
         int n = key.getN();
         int e = key.getE();
 
-        PublicKey key_1 = new PublicKey();
+        PublicKey key_1 = new PublicKey(key);
         int n_1 = key.getN();
         int e_1 = key.getE();
 
