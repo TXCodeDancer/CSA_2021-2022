@@ -1,8 +1,45 @@
 type: edu
 files:
-  - name: src/PublicKey.java
-    visible: true
-  - name: src/Maths.java
-    visible: false
-  - name: test/RSATests.java
-    visible: false
+- name: src/PublicKey.java
+  visible: true
+  placeholders:
+  - offset: 183
+    length: 158
+    placeholder_text: /* TODO Create class variables e, n, p, q and phi_n */
+  - offset: 472
+    length: 139
+    placeholder_text: /* TODO Get primes p and q from 127 to 200 */
+  - offset: 788
+    length: 69
+    placeholder_text: /* TODO Use getter methods to set class variables */
+  - offset: 1011
+    length: 39
+    placeholder_text: /* TODO Set class variables */
+  - offset: 1135
+    length: 23
+    placeholder_text: /* TODO Compute phi_n */
+  - offset: 1185
+    length: 39
+    placeholder_text: /* TODO Compute n */
+  - offset: 1327
+    length: 55
+    placeholder_text: /* TODO Get random int named index between 0 and primes.size()
+      */
+  - offset: 1458
+    length: 27
+    placeholder_text: /* TODO Return random prime number */
+  - offset: 1555
+    length: 26
+    placeholder_text: /* TODO Get  primes up to phi_n */
+  - offset: 1583
+    length: 161
+    placeholder_text: /* TODO Find e such that phi_n is not a multiple of e */
+  - offset: 1851
+    length: 290
+    placeholder_text: /* TODO */
+- name: src/Main.java
+  visible: true
+- name: src/Maths.java
+  visible: false
+- name: test/PublicKeyTests.java
+  visible: false

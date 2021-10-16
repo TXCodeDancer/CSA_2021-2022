@@ -23,7 +23,7 @@ public class PublicKey
      */
     public PublicKey()
     {
-        // Select primes p and q between 127 - 200
+        // Get primes p and q from 127 to 200
         List<Integer> primes = Maths.getPrimes(127, 200);
         this.p = getRandomPrime(primes);
         this.q = getRandomPrime(primes);
@@ -88,29 +88,20 @@ public class PublicKey
         }
     }
 
+    // Optional: Implement method to find e in a random order
     private void findERandom()
     {
-        List<Integer> primes = Maths.getPrimes(1, phi_n);
-
-        while(primes.size() > 0)
-        {
-            int i = getRandomPrime(primes);
-            if((phi_n % i) != 0)
-            {
-                this.e = i;
-                return;
-            }
-        }
-    }
-
-    /**
-     * Gets phi n.
-     *
-     * @return the phi n
-     */
-    public int getPhi_n()
-    {
-        return phi_n;
+//        List<Integer> primes = Maths.getPrimes(1, phi_n);
+//
+//        while(primes.size() > 0)
+//        {
+//            int i = getRandomPrime(primes);
+//            if((phi_n % i) != 0)
+//            {
+//                this.e = i;
+//                return;
+//            }
+//        }
     }
 
     /**
@@ -124,16 +115,6 @@ public class PublicKey
     }
 
     /**
-     * Sets e.
-     *
-     * @param e the e
-     */
-    public void setE(int e)
-    {
-        this.e = e;
-    }
-
-    /**
      * Gets n.
      *
      * @return the n
@@ -143,13 +124,4 @@ public class PublicKey
         return n;
     }
 
-    /**
-     * Sets n.
-     *
-     * @param n the n
-     */
-    public void setN(int n)
-    {
-        this.n = n;
-    }
 }
