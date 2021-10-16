@@ -1,0 +1,25 @@
+type: edu
+files:
+- name: test/PrivateKeyTests.java
+  visible: false
+- name: src/Main.java
+  visible: true
+- name: src/Maths.java
+  visible: false
+- name: src/PublicKey.java
+  visible: false
+- name: src/PrivateKey.java
+  visible: true
+  placeholders:
+  - offset: 161
+    length: 37
+    placeholder_text: /* TODO  Implement required class variables */
+  - offset: 397
+    length: 19
+    placeholder_text: /* TODO Initialize known class variable */
+  - offset: 474
+    length: 208
+    placeholder_text: /* TODO Find lowest k where (k * φ(n) + 1) mod e ≡ 0 */
+  - offset: 705
+    length: 30
+    placeholder_text: /* TODO Compute/assign d */
