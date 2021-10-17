@@ -8,12 +8,15 @@ public class Main
 {
    public static void main(String[] args)
    {
+      System.out.println();
+      RSA rsaBob = new RSA();
+      System.out.println("Bob's " + rsaBob);
+      RSA rsaAlice = new RSA();
+      System.out.println("Alice's " + rsaAlice);
+
       ////////////////////// Alice's question to Bob //////////////////////
       System.out.println();
       System.out.println("Alice's question to Bob:");
-      RSA rsaBob = new RSA();
-      System.out.println("Bob:" + rsaBob);
-
       String AliceMessageToBob = "Bob, what's the plan?";
       System.out.println(AliceMessageToBob);
 
@@ -28,8 +31,6 @@ public class Main
       ////////////////////// Bob's reply to Alice /////////////////////////
       System.out.println();
       System.out.println("Bob's reply to Alice:");
-      RSA rsaAlice = new RSA();
-      System.out.println("Alice: " + rsaAlice);
       String BobMessageToAlice = "Alice, attack at 7am.";
       System.out.println(BobMessageToAlice);
 

@@ -1,11 +1,19 @@
 type: theory
 files:
-- name: src/Main.java
-  visible: true
+  - name: src/Maths.java
+    visible: false
+  - name: src/PrivateKey.java
+    visible: false
+  - name: src/PublicKey.java
+    visible: false
+  - name: src/RSA.java
+    visible: false
+  - name: src/Main.java
+    visible: true
   placeholders:
-  - offset: 433
-    length: 24
-    placeholder_text: /* Enter the secret message  */
-  - offset: 1092
-    length: 24
-    placeholder_text: /* Enter the secret reply */
+  - offset: 545
+    length: 21
+    placeholder_text: /* TODO Enter a secret message */
+  - offset: 1124
+    length: 21
+    placeholder_text: /* TODO Enter a reply */
