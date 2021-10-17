@@ -1,14 +1,67 @@
 type: edu
 files:
-  - name: test/RSATests.java
-    visible: false
-  - name: src/Main.java
-    visible: true
-  - name: src/Maths.java
-    visible: false
-  - name: src/PublicKey.java
-    visible: false
-  - name: src/PrivateKey.java
-    visible: false
-  - name: src/RSA.java
-    visible: true
+- name: test/RSATests.java
+  visible: false
+- name: src/Main.java
+  visible: true
+- name: src/Maths.java
+  visible: false
+- name: src/PublicKey.java
+  visible: false
+- name: src/PrivateKey.java
+  visible: false
+- name: src/RSA.java
+  visible: true
+  placeholders:
+  - offset: 189
+    length: 56
+    placeholder_text: /* TODO Implement class variables for RSA encryption key components
+      n, e and d  */
+  - offset: 420
+    length: 246
+    placeholder_text: /* TODO Get and Initialize public/private key components from
+      associated class instances */
+  - offset: 802
+    length: 115
+    placeholder_text: /* TODO Initialize class variables */
+  - offset: 1080
+    length: 59
+    placeholder_text: /* TODO Initialize class variables */
+  - offset: 1273
+    length: 250
+    placeholder_text: /* Optional Implement constructor to initialize  n, e, and d
+      */
+  - offset: 1580
+    length: 143
+    placeholder_text: /* TODO Implement method (don't give away your secrets!) */
+  - offset: 2333
+    length: 155
+    placeholder_text: /* TODO Put each encoded value from M into C at the same index
+      */
+  - offset: 3118
+    length: 72
+    placeholder_text: /* Optional If cLength is odd, increment by 1 to make it even
+      */
+  - offset: 3227
+    length: 280
+    placeholder_text: /* Optional Follow "A slightly less simple example of the RSA
+      algorithm" to make your cipherText harder to crack */
+  - offset: 3687
+    length: 173
+    placeholder_text: /* TODO Decode each value in cipherText and put in M */
+  - offset: 4027
+    length: 92
+    placeholder_text: /* TODO Cast each value in D as a char and put in M */
+  - offset: 4492
+    length: 505
+    placeholder_text: /* Optional Follow "A slightly less simple example of the RSA
+      algorithm" to make your cipherText harder to crack */
+  - offset: 5808
+    length: 44
+    placeholder_text: /* TODO Loop through arrayLength times */
+  - offset: 5888
+    length: 33
+    placeholder_text: /* TODO Get hexSize characters of cipherText */
+  - offset: 5947
+    length: 30
+    placeholder_text: /* TODO Remove str from cipherText */

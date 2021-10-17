@@ -69,7 +69,7 @@ public class RSA
      */
     RSA(int p, int q)
     {
-        this.publicKey = new PublicKey();
+        this.publicKey = new PublicKey(p, q);
         this.n = publicKey.getN();
         this.e = publicKey.getE();
         int phi_n = publicKey.getPhi_n();
@@ -107,6 +107,8 @@ public class RSA
      */
     public String encode(String plainText)
     {
+        String cipherText = "";
+        // Convert characters to numbers as bytes
         byte[] M = plainText.getBytes(StandardCharsets.US_ASCII);
         int[] C = new int[M.length];
         for (int i = 0; i < M.length; i++)
@@ -115,7 +117,8 @@ public class RSA
             int c = Maths.powerMod(m, e, n);
             C[i] = c;
         }
-        return IntArrayToHexString(C);
+        cipherText = IntArrayToHexString(C);
+        return cipherText;
     }
 
     /**
@@ -126,6 +129,11 @@ public class RSA
      */
     public String encodeHard(String plainText)
     {
+        // This technique is harder to crack
+        // Combines two plainText characters together before encoding
+        // See "A slightly less simple example of the RSA algorithm"
+        // https://www.di-mgt.com.au/rsa_alg.html#practicalkeygen
+        String cipherText = "";
         byte[] M = plainText.getBytes(StandardCharsets.US_ASCII);
         int cLength = M.length/2;
         if(M.length % 2 != 0)
@@ -144,7 +152,8 @@ public class RSA
             int c = Maths.powerMod(m, e, n);
             C[j] = c;
         }
-        return IntArrayToHexString(C);
+        cipherText = IntArrayToHexString(C);
+        return cipherText;
     }
 
     private int[] decodeToInt(int[] cipherText)
@@ -172,6 +181,11 @@ public class RSA
 
     private String decodeHard(int[] cipherText)
     {
+        // This technique is harder to crack
+        // Combines two plainText characters together before encoding
+        // See "A slightly less simple example of the RSA algorithm"
+        // https://www.di-mgt.com.au/rsa_alg.html#practicalkeygen
+        String plainText = "";
         int[] D = new int[cipherText.length * 2];
         for (int i = 0, j = 0; i < cipherText.length; i++, j+=2)
         {
@@ -189,7 +203,8 @@ public class RSA
         {
             M[i] = (char)D[i];
         }
-        return new String(M);
+        plainText =  new String(M);
+        return plainText;
     }
 
     /**

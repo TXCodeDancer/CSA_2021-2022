@@ -62,47 +62,5 @@ public class RSATests
 
         assertTrue(expected.equals(actual));
     }
-
-    @Test
-    public void testTextEncodeHard()
-    {
-        RSA rsa = new RSA(16637, 12143, 1067);
-        String plainText = "This is a test!";
-        String actual = rsa.encodeHard(plainText);
-        String expected = "179A3F2F23EB03E534373335304817AA";
-
-        assertTrue(expected.equals(actual));
-    }
-
-    @Test
-    public void testTextDecodeHard()
-    {
-        RSA rsa = new RSA(16637, 12143, 1067);
-
-        String cipherText = "179A3F2F23EB03E534373335304817AA";
-        String actual = rsa.decodeHard(cipherText);
-        String expected = "This is a test!";
-
-        assertTrue(expected.equals(actual));
-    }
-
-    @Test
-    public void testPrintableAsciiEncodeDecodeHard()
-    {
-        RSA rsa = new RSA();
-
-        int size = '~' - ' ' + 1;
-        char[] printableAscii = new char[size];
-        for(char ch = ' ', i = 0; ch <= '~'; ch++, i++)
-        {
-            printableAscii[i] = ch;
-        }
-
-        String plainText = new String(printableAscii);
-        String cipherText = rsa.encodeHard(plainText);
-
-        String actual = rsa.decodeHard(cipherText);
-        assertTrue(plainText.equals(actual));
-    }
 }
 
