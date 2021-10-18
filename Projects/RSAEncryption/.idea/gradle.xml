@@ -11,10 +11,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/3.1 Boolean Expressions/Prime Numbers" />
-            <option value="$PROJECT_DIR$/3.1 Boolean Expressions/Testing Equality" />
-            <option value="$PROJECT_DIR$/3.1 Boolean Expressions/Testing with Modulus" />
-            <option value="$PROJECT_DIR$/Projects/RSA Encryption" />
+            <option value="$PROJECT_DIR$/RSA Basics/Introduction" />
+            <option value="$PROJECT_DIR$/RSA Basics/Maths" />
+            <option value="$PROJECT_DIR$/RSA Basics/Private Key" />
+            <option value="$PROJECT_DIR$/RSA Basics/Public Key" />
+            <option value="$PROJECT_DIR$/RSA Basics/RSA Encryption" />
             <option value="$PROJECT_DIR$/util" />
           </set>
         </option>

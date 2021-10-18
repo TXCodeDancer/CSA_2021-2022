@@ -1,0 +1,101 @@
+<html>
+<body style="font-size:1em;">
+<h2>RSA Encryption</h2>
+</p>
+
+RSA encryption allows coded messages to be sent without the sender (or any third-party)
+knowing how to decode the message. This encryption works using a public keys that is known to everyone
+and a private key that is known only by the receiver.
+
+</p><div style="
+            padding: .5em;
+            border: .05em solid lightgray;
+            margin: 1em auto 0em;">
+    Public Key &lt;n, e&gt;: Encode Message
+</div>
+
+<div style="
+            padding: .5em;
+            border: .05em solid lightgray;
+            margin: 0em auto 1em;">
+    <ol>
+        <li>Select two distinct primes, <em>p</em> and <em>q</em>. We'll use primes from 127 to 200.</li>
+        <li>Multiply <em>p</em> and <em>q</em> to get <em>n</em>, the encryption modulus.
+            <ul><em>n = p * q</em> </ul></li>
+        <li>Select prime <em>e</em> that is less than n and relatively prime to <em>(p-1) * (q-1).</em>
+            <em>
+                <ul>φ(n) = (p-1) * (q-1)</ul>
+                <ul> 1 &lt; e &lt; φ (n)</ul>
+                <ul>gcd(e, d (n)) = 1 &emsp; i.e. φ (n) % e != 0</ul>
+            </em></li>
+        <li>Convert message String to ASCII values <em>bytes</em> from plain text <em>P</em>.
+            <ul><code>byte[] M = P.getBytes(StandardCharsets.UTF_8);</code></ul></li>
+        <li>Encrypt plain text <em>m</em> byte into cipher text <em>C</em> using public key &lt;n, e&gt;.
+            <em>
+                <ul> For each byte in M: m = byte</ul>
+                <ul> C ≡ m<sup>e</sup> mod n</ul>
+            </em></li>
+    </ol>
+
+</div>
+
+<div style="
+            padding: .5em;
+            border: .05em solid lightgray;
+            margin: 1em auto 0em;">
+    Private Key&lt;n, d&gt;: Decode Message
+</div>
+
+<div style="
+            padding: .5em;
+            border: .05em solid lightgray;
+            margin: 0em auto 1em;">
+    <ol>
+        <li>Determine private key <em>d</em>.
+            <em>
+                <ul>(k*d) mod φ(n) ≡ 1</ul>
+                <ul>d = (k * φ(n) + 1)/e &emsp; [let k = 0, 1, 2, 3 ...]</ul>
+                <ul>&emsp; i.e. Find lowest k where (k * φ(n) + 1) mod e ≡ 0</ul>
+            </em></li>
+        <li>Decrypt cipher text <em>C</em> from into decoded byte text <em>m</em> using private key &lt;n, d&gt;.
+            <em>
+                <ul> For each byte in C: c = C</ul>
+                <ul> M ≡ c<sup>d</sup> mod n</ul>
+            </em></li>
+        <li>Convert decoded byte text from ASCII values <em>M</em> to plain text <em>P</em>.
+            <ul><code>String P = new String(M, StandardCharsets.UTF_8);</code></ul></li>
+
+    </ol>
+</div>
+
+<p>Enter the correct code in the placeholder boxes as instructed.</p>
+
+<div class="hint">
+    <ul>
+        <li>See <a href="https://txcodedancer.github.io/CSA_2021-2022/csa/java/rsa/Maths.html">RSA Maths API</a></li>
+        <li>See <a href="https://txcodedancer.github.io/CSA_2021-2022/csa/java/rsa/PublicKey.html">RSA Public Key API</a></li>
+        <li>See <a href="https://txcodedancer.github.io/CSA_2021-2022/csa/java/rsa/PrivateKey.html">RSA Private Key API</a></li>
+        <li>See <a href="https://txcodedancer.github.io/CSA_2021-2022/csa/java/rsa/RSA.html">RSA API</a></li>
+        <li>Optional: <a href="https://www.di-mgt.com.au/rsa_alg.html#practicalkeygen">A slightly less simple example of the RSA algorithm</a></li>
+    </ul>
+</div>
+
+References:
+<ul style="font-size:0.9em;">
+    <li><a href="https://txcodedancer.github.io/CSA_2021-2022/csa/java/rsa/RSA.html">RSA API</a></li>
+    <li><a href="https://txcodedancer.github.io/CSA_2021-2022/csa/java/rsa/PrivateKey.html">RSA Private Key API</a></li>
+    <li><a href="https://txcodedancer.github.io/CSA_2021-2022/csa/java/rsa/PublicKey.html">RSA Public Key API</a></li>
+    <li><a href="https://txcodedancer.github.io/CSA_2021-2022/csa/java/rsa/Maths.html">RSA Maths API</a></li>
+    <li><a href="https://www.di-mgt.com.au/rsa_alg.html#practicalkeygen">A slightly less simple example of the RSA algorithm</a></li>
+    <li><a href="https://csawesome.runestone.academy/runestone/books/published/csawesome/index.html">AP CS A Java Course</a></li>
+    <li><a href="https://www.javatpoint.com/rsa-encryption-algorithm">javaTpoint: RSA Encryption Algorithm</a></li>
+    <li><a href="https://www.thejavaprogrammer.com/rsa-algorithm-in-java/">The Java Programmer: RSA Algorithm in Java (Encryption and Decryption)</a></li>
+    <li><a href="https://www.asciitable.com/">ASCII Table</a></li>
+    <li><a href="https://mkyong.com/java/how-to-convert-character-to-ascii-in-java/">Mkyong.com: Java – Convert Character to ASCII</a></li>
+    <li><a href="https://www.youtube.com/embed/4zahvcJ9glg" target="_blank">The RSA Encryption Algorithm (1 of 2: Computing an Example)</a></li>
+    <li><a href="https://www.youtube.com/embed/oOcTVTpUsPQ" target="_blank">The RSA Encryption Algorithm (2 of 2: Generating the Keys)</a></li>
+    <li><a href="https://www.youtube.com/embed/sBO3gH1uGzQ?end=190" target="_blank">RSA encryption in 5 minutes</a></li>
+</ul>
+<p>Click <strong>'Check'</strong> verify your solution.</p>
+</body>
+</html>

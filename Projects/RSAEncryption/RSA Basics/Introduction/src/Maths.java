@@ -1,4 +1,4 @@
-package csa.java.rsa;
+
 /*
  ** @project RSA
  ** @author Rick Brunson, Team Brunson Software, LLC
@@ -46,7 +46,7 @@ public class Maths
     public static List<Integer> getPrimes(Integer from, Integer to)
     {
         List<Integer> primes = new ArrayList<>();
-        for (Integer i = from; i <= to; i++)
+        for (Integer i = from; i < to; i++)
         {
             if (isPrime(i))
             {

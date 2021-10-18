@@ -1,0 +1,52 @@
+type: edu
+files:
+- name: src/Maths.java
+  visible: true
+  placeholders:
+  - offset: 413
+    length: 44
+    placeholder_text: /* TODO Reject numbers less than 2 */
+  - offset: 712
+    length: 139
+    placeholder_text: |-
+      /* TODO Follow directions in comments:
+      Use a loop to increment control variable from the lowest prime number to one half of n (inclusive).
+      If n is a multiple of the control variable, it cannot be prime so reject it.
+      Otherwise, increment the control variable.
+      */
+  - offset: 853
+    length: 20
+    placeholder_text: /* TODO Accept all other values */
+  - offset: 1327
+    length: 202
+    placeholder_text: |-
+      /* TODO Complete method implementation:
+        Use a loop to check all numbers between 'from' and 'to' inclusive.
+        If number is prime, add it to the primes list using primes.add(number)
+        return the list of primes;
+      */
+  - offset: 1691
+    length: 46
+    placeholder_text: /* TODO Implement method */
+  - offset: 2138
+    length: 14
+    placeholder_text: /* TODO Reduce base by taking modulus */
+  - offset: 2429
+    length: 19
+    placeholder_text: /* TODO */
+  - offset: 2475
+    length: 25
+    placeholder_text: /* TODO */
+  - offset: 2556
+    length: 14
+    placeholder_text: /* TODO */
+  - offset: 2614
+    length: 24
+    placeholder_text: /* TODO */
+  - offset: 2689
+    length: 14
+    placeholder_text: /* TODO */
+- name: test/MathsTests.java
+  visible: false
+- name: src/Main.java
+  visible: true
