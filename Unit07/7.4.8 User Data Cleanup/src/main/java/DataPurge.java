@@ -28,31 +28,17 @@ public class DataPurge
         return true;
     }
 
-    public static void removeName(ArrayList<String> members, String fullName)
+    public static void removeName(ArrayList<String> members, String name)
     {
-        String[] names = fullName.split(" ");
-        String first = null;
-        String last = null;
-        first = names[0].toLowerCase();
-        if(names.length == 2)
-            last = names[1].toLowerCase();
-
-        for(String member : members)
+        for(int i = 0; i < members.size();)
         {
-            String memberName = member.toLowerCase();
-
-            if(memberName.contains(first))
+            String member = members.get(i);
+            if(member.contains(name))
             {
                 System.out.println(member + " was removed.");
-                members.remove(member);
-                return;
+                members.remove(i);
             }
-            else if(last != null && memberName.contains(last))
-            {
-                System.out.println(member + " was removed.");
-                members.remove(member);
-                return;
-            }
+            else i++;
         }
     }
 

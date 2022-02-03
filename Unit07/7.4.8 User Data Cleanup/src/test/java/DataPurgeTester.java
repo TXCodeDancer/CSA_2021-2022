@@ -11,7 +11,8 @@ public class DataPurgeTester
 //        DataPurge.removeName(members, "Araceli Garcia");
 //        DataPurge.removeName(members, "maya castaneda");
 //        DataPurge.removeName(members, "Araceli");
-        DataPurge.removeName(members, "castaneda");
+        DataPurge.removeName(members, "Braun");
+//        DataPurge.removeName(members, "josie");
         DataPurge.removeDuplicates(members);
         System.out.println(members);
     }
@@ -36,6 +37,7 @@ public class DataPurgeTester
         emails.add("Zaiden Harding");
         emails.add("Araceli Castaneda");
         emails.add("Jaime Wolf");
+        emails.add("London Braun");
         emails.add("London Braun");
 
     }
