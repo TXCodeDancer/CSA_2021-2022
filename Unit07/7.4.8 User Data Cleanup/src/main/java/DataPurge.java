@@ -39,25 +39,19 @@ public class DataPurge
 
         for(String member : members)
         {
-            String[] memberNames = member.split(" ");
+            String memberName = member.toLowerCase();
 
-            for(String memberName : memberNames)
+            if(memberName.contains(first))
             {
-                if(memberName.toLowerCase().equals(first))
-                {
-                    members.remove(member);
-                    System.out.println(member + " was removed.");
-                    return;
-                }
-                if(last != null)
-                {
-                    if(memberName.toLowerCase().equals(last))
-                    {
-                        members.remove(member);
-                        System.out.println(member + " was removed.");
-                        return;
-                    }
-                }
+                System.out.println(member + " was removed.");
+                members.remove(member);
+                return;
+            }
+            else if(last != null && memberName.contains(last))
+            {
+                System.out.println(member + " was removed.");
+                members.remove(member);
+                return;
             }
         }
     }

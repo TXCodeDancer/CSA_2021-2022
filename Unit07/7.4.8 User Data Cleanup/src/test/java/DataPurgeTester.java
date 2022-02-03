@@ -7,7 +7,11 @@ public class DataPurgeTester
         ArrayList<String> members = new ArrayList<String>();
         addMembers(members);
         System.out.println("All names formatted correctly? " + DataPurge.correctlyFormatted(members));
-        DataPurge.removeName(members, "Araceli Castaneda");
+//        DataPurge.removeName(members, "Araceli Castaneda");
+//        DataPurge.removeName(members, "Araceli Garcia");
+//        DataPurge.removeName(members, "maya castaneda");
+//        DataPurge.removeName(members, "Araceli");
+        DataPurge.removeName(members, "castaneda");
         DataPurge.removeDuplicates(members);
         System.out.println(members);
     }
