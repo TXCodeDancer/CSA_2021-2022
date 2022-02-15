@@ -15,27 +15,9 @@ public class Gradebook
                 {65, 56, 78, 31, 65},
                 {85, 56, 71, 80, 39}};
 
-        rowTraversal(gradeBook);
         rowMajorTraversal(gradeBook);
-        columnMajorTraversal1(gradeBook);
-        columnMajorTraversal2(gradeBook);
-    }
-
-    private static void rowTraversal(int[][] gradeBook)
-    {
-        System.out.println();
-        System.out.println("rowTraversal()");
-        //Iterate through each row in the gradebook
-        for(int row = 0; row < gradeBook.length; row++)
-        {
-            System.out.print("Week "+ (row +1)+ " Scores: ");
-            //Iterate through each score in a row
-            for(int grade: gradeBook[row])
-            {
-                System.out.print(grade + " ");
-            }
-            System.out.println();
-        }
+        columnMajorTraversal_CodeHS(gradeBook);
+        columnMajorTraversal_Fixed(gradeBook);
     }
 
     private static void rowMajorTraversal(int[][] gradeBook)
@@ -57,14 +39,15 @@ public class Gradebook
         }
     }
 
-    private static void columnMajorTraversal1(int[][] gradeBook)
+    private static void columnMajorTraversal_CodeHS(int[][] gradeBook)
     {
         System.out.println();
-        System.out.println("columnMajorTraversal1()");
+        System.out.println("columnMajorTraversal_CodeHS(): Original from Code HS Slides");
         //Iterate through each column in the gradebook
         for(int row = 0; row < gradeBook.length; row++)
         {
             System.out.print("Student "+ (row +1)+ " Scores: ");
+
             //Iterate through each score in a column
             for(int col = 0; col < gradeBook[row].length; col++)
             {
@@ -76,10 +59,10 @@ public class Gradebook
         }
     }
 
-    private static void columnMajorTraversal2(int[][] gradeBook)
+    private static void columnMajorTraversal_Fixed(int[][] gradeBook)
     {
         System.out.println();
-        System.out.println("columnMajorTraversal2()");
+        System.out.println("columnMajorTraversal_Fixed()");
         //Iterate through each column in the gradebook
         for(int col = 0; col < gradeBook[0].length; col++)
         {
