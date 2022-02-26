@@ -10,14 +10,14 @@ public class Gradebook
     {
         int[][] gradeBook =
                 {{90, 87, 86, 56, 96},
-                {65, 76, 87, 84, 93},
+//                {65, 76, 87, 84, 93},
                 {85, 56, 91, 90, 65},
                 {65, 56, 78, 31, 65},
                 {85, 56, 71, 80, 39}};
 
         rowMajorTraversal(gradeBook);
-        columnMajorTraversal_CodeHS(gradeBook);
         columnMajorTraversal_Fixed(gradeBook);
+        columnMajorTraversal_CodeHS(gradeBook);
     }
 
     private static void rowMajorTraversal(int[][] gradeBook)
