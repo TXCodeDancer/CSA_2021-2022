@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "WordleEngine/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/WordleEngine.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WordleEngine.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "WordleEngine/1.0.0": {
+      "type": "project",
+      "path": "../WordleEngine/WordleEngine.csproj",
+      "msbuildProject": "../WordleEngine/WordleEngine.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "WordleEngine >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\rickb\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\HackerSpace\\GitHub\\CSA_2021-2022\\Projects\\Wordle\\Wordle\\WordleEngine\\WordleEngine.csproj": {
+              "projectPath": "D:\\HackerSpace\\GitHub\\CSA_2021-2022\\Projects\\Wordle\\Wordle\\WordleEngine\\WordleEngine.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,4 +1,6 @@
-﻿namespace WordleConsoleUI;
+﻿using WordleEngine;
+
+namespace WordleConsoleUI;
 
 public class Program
 {
@@ -6,6 +8,8 @@ public class Program
 
     public static void Main()
     {
+        WordBank.Setup();
+
         Answer = GetAnswer();
         Console.WriteLine($"The secret word is {Answer};");
 

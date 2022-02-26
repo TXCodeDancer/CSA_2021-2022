@@ -13,3 +13,7 @@ D:\HackerSpace\GitHub\CSA_2021-2022\Projects\Wordle\Wordle\WordleConsoleUI\obj\D
 D:\HackerSpace\GitHub\CSA_2021-2022\Projects\Wordle\Wordle\WordleConsoleUI\obj\Debug\net6.0\ref\WordleConsoleUI.dll
 D:\HackerSpace\GitHub\CSA_2021-2022\Projects\Wordle\Wordle\WordleConsoleUI\obj\Debug\net6.0\WordleConsoleUI.pdb
 D:\HackerSpace\GitHub\CSA_2021-2022\Projects\Wordle\Wordle\WordleConsoleUI\obj\Debug\net6.0\WordleConsoleUI.genruntimeconfig.cache
+D:\HackerSpace\GitHub\CSA_2021-2022\Projects\Wordle\Wordle\WordleConsoleUI\bin\Debug\net6.0\AllWordBank.txt
+D:\HackerSpace\GitHub\CSA_2021-2022\Projects\Wordle\Wordle\WordleConsoleUI\bin\Debug\net6.0\WordleEngine.dll
+D:\HackerSpace\GitHub\CSA_2021-2022\Projects\Wordle\Wordle\WordleConsoleUI\bin\Debug\net6.0\WordleEngine.pdb
+D:\HackerSpace\GitHub\CSA_2021-2022\Projects\Wordle\Wordle\WordleConsoleUI\obj\Debug\net6.0\WordleConsoleUI.csproj.CopyComplete
