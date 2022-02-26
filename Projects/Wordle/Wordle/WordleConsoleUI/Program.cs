@@ -1,4 +1,6 @@
-﻿namespace WordleConsoleUI;
+﻿using WordleEngine;
+
+namespace WordleConsoleUI;
 
 public class Program
 {
@@ -6,7 +8,7 @@ public class Program
 
     public static void Main()
     {
-        //WordBank.Setup();
+        WordBank.Setup();
 
         Answer = GetAnswer();
         Console.WriteLine($"The secret word is {Answer};");
@@ -20,11 +22,13 @@ public class Program
         int attemptsRemaining = noOfAttempts;
         while (attemptsRemaining > 0)
         {
+            var guess = GetGuess(attemptsRemaining);
             attemptsRemaining--;
-            var guess = GetGuess();
+            Console.WriteLine($"{Grader.GetGrade(Answer, guess)}");
             if (GuessIsCorrect(guess))
             {
-                Console.WriteLine($"You won with {noOfAttempts - attemptsRemaining} attempt(s).");
+                Console.WriteLine($"Congratulations, you won in {noOfAttempts - attemptsRemaining} attempt(s).");
+                return;
             }
         }
 
@@ -46,21 +50,36 @@ public class Program
         {
             Console.WriteLine("What is the five-letter secret word? ");
             answer = Console.ReadLine();
-            if (answer != null)
+            if (answer == null)
+                continue;
+            if (WordBank.IsValid(answer))
                 break;
+            else
+                Console.WriteLine("That's not a valid word. ");
         }
         return answer.Trim().ToUpper();
     }
 
-    private static string GetGuess()
+    private static string GetGuess(int attemptsRemaining)
     {
         string? guess;
         while (true)
         {
-            Console.WriteLine("What is your guess? ");
+            Console.WriteLine(WordBank.GetAvailableLetters());
+            Console.WriteLine($"What is your guess? ({attemptsRemaining})");
             guess = Console.ReadLine();
-            if (guess != null)
+            if (guess == null)
+                continue;
+            if (WordBank.IsValid(guess))
+            {
+                WordBank.UpdateAvailableLetters(guess);
                 break;
+            }
+            else
+            {
+                Console.WriteLine("That's not a valid word. ");
+                break;
+            }
         }
         return guess.Trim().ToUpper();
     }
