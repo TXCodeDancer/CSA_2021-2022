@@ -3,7 +3,7 @@
 public class WordBank
 {
     private static List<string> ValidWords = new();
-    private static bool[] UsedLetters = new bool[26];
+    private static readonly bool[] UsedLetters = new bool[26];
 
     public static void CreateWordList()
     {
@@ -29,6 +29,11 @@ public class WordBank
 
     public static bool IsValid(string word)
     {
+        if (string.IsNullOrEmpty(word))
+        {
+            return false;
+        }
+
         return ValidWords.Contains(word.ToLower());
     }
 
@@ -54,6 +59,11 @@ public class WordBank
 
     public static void UpdateAvailableLetters(string guess)
     {
+        if (string.IsNullOrEmpty(guess))
+        {
+            throw new ArgumentException($"'{nameof(guess)}' cannot be null or empty.", nameof(guess));
+        }
+
         guess = guess.Trim().ToUpper();
         for (int i = 0; i < guess.Length; i++)
         {

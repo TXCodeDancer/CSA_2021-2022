@@ -24,11 +24,14 @@ public class Program
         {
             var guess = GetGuess(attemptsRemaining);
             attemptsRemaining--;
-            Console.WriteLine($"{Grader.GetGrade(Answer, guess)}");
-            if (GuessIsCorrect(guess))
+            if (guess != null)
             {
-                Console.WriteLine($"Congratulations, you won in {noOfAttempts - attemptsRemaining} attempt(s).");
-                return;
+                Console.WriteLine($"{Grader.GetGrade(Answer, guess)}");
+                if (GuessIsCorrect(guess))
+                {
+                    Console.WriteLine($"Congratulations, you won in {noOfAttempts - attemptsRemaining} attempt(s).");
+                    return;
+                }
             }
         }
 
@@ -60,7 +63,7 @@ public class Program
         return answer.Trim().ToUpper();
     }
 
-    private static string GetGuess(int attemptsRemaining)
+    private static string? GetGuess(int attemptsRemaining)
     {
         string? guess;
         while (true)
@@ -78,7 +81,7 @@ public class Program
             else
             {
                 Console.WriteLine("That's not a valid word. ");
-                break;
+                return null;
             }
         }
         return guess.Trim().ToUpper();
