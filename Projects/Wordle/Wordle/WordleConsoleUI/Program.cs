@@ -5,21 +5,21 @@ namespace WordleConsoleUI;
 public class Program
 {
     private static string Answer = "";
+    private static readonly int NoOfAttempts = 6;
 
     public static void Main()
     {
         WordBank.Setup();
-
         Answer = GetAnswer();
-        Console.WriteLine($"The secret word is {Answer};");
 
-        Console.WriteLine($"");
-        Console.WriteLine($"Press any key start game:");
-        Console.ReadLine();
+        //Console.WriteLine($"The secret word is {Answer};");
+        //Console.WriteLine($"");
+        //Console.WriteLine($"Press any key start game:");
+        //Console.ReadLine();
+
         Console.Clear();
 
-        const int noOfAttempts = 5;
-        int attemptsRemaining = noOfAttempts;
+        int attemptsRemaining = NoOfAttempts;
         while (attemptsRemaining > 0)
         {
             var guess = GetGuess(attemptsRemaining);
@@ -29,13 +29,13 @@ public class Program
                 Console.WriteLine($"{Grader.GetGrade(Answer, guess)}");
                 if (GuessIsCorrect(guess))
                 {
-                    Console.WriteLine($"Congratulations, you won in {noOfAttempts - attemptsRemaining} attempt(s).");
+                    Console.WriteLine($"Congratulations, you won in {NoOfAttempts - attemptsRemaining} attempt(s).");
                     return;
                 }
             }
         }
 
-        Console.WriteLine($"You lost!");
+        Console.WriteLine($"You lost! The correct answer was {Answer}");
     }
 
     private static bool GuessIsCorrect(string guess)
@@ -48,18 +48,18 @@ public class Program
 
     private static string GetAnswer()
     {
-        string? answer;
-        while (true)
-        {
-            Console.WriteLine("What is the five-letter secret word? ");
-            answer = Console.ReadLine();
-            if (answer == null)
-                continue;
-            if (WordBank.IsValid(answer))
-                break;
-            else
-                Console.WriteLine("That's not a valid word. ");
-        }
+        string? answer = WordBank.GetRandomWord();
+        //while (true)
+        //{
+        //    Console.WriteLine("What is the five-letter secret word? ");
+        //    answer = Console.ReadLine();
+        //    if (answer == null)
+        //        continue;
+        //    if (WordBank.IsValid(answer))
+        //        break;
+        //    else
+        //        Console.WriteLine("That's not a valid word. ");
+        //}
         return answer.Trim().ToUpper();
     }
 
