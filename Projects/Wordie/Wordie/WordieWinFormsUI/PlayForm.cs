@@ -255,6 +255,8 @@ public partial class PlayForm : Form
             textBox.BackColor = Color.Green;
         else if (grade == '@')
             textBox.BackColor = Color.Yellow;
+        else
+            textBox.BackColor = Color.DarkGray;
     }
 
     private void Input_KeyDown(object sender, KeyEventArgs e)
