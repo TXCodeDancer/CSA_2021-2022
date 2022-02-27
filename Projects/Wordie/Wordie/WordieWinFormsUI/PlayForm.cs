@@ -128,6 +128,7 @@ public partial class PlayForm : Form
         Answer = WordBank.GetRandomWord().ToUpper();
         ClearGuesses();
         GuessTextBox.Enabled = true;
+        AnswerLabel.Visible = false;
         Attempts = 0;
     }
 
@@ -169,6 +170,8 @@ public partial class PlayForm : Form
             if (GuessIsCorrect(guess) || Attempts >= MaxAttempts)
             {
                 GuessTextBox.Enabled = false;
+                AnswerLabel.Text = $"The word was {Answer}";
+                AnswerLabel.Visible = true;
             }
         }
         else

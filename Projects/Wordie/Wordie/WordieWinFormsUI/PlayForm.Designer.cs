@@ -38,6 +38,7 @@
             this.GuessTextBox = new System.Windows.Forms.TextBox();
             this.GuessBoxLabel = new System.Windows.Forms.Label();
             this.panel0 = new System.Windows.Forms.Panel();
+            this.AnswerLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1_5 = new System.Windows.Forms.TextBox();
             this.textBox1_4 = new System.Windows.Forms.TextBox();
@@ -74,7 +75,6 @@
             this.textBox2_3 = new System.Windows.Forms.TextBox();
             this.textBox2_2 = new System.Windows.Forms.TextBox();
             this.textBox2_1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.HeaderPanel.SuspendLayout();
             this.GuessPanel.SuspendLayout();
             this.panel0.SuspendLayout();
@@ -189,12 +189,22 @@
             // 
             // panel0
             // 
-            this.panel0.Controls.Add(this.label1);
+            this.panel0.Controls.Add(this.AnswerLabel);
             this.panel0.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel0.Location = new System.Drawing.Point(0, 104);
             this.panel0.Name = "panel0";
             this.panel0.Size = new System.Drawing.Size(800, 56);
             this.panel0.TabIndex = 2;
+            // 
+            // AnswerLabel
+            // 
+            this.AnswerLabel.AutoSize = true;
+            this.AnswerLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AnswerLabel.Location = new System.Drawing.Point(258, 21);
+            this.AnswerLabel.Name = "AnswerLabel";
+            this.AnswerLabel.Size = new System.Drawing.Size(0, 32);
+            this.AnswerLabel.TabIndex = 0;
+            this.AnswerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
@@ -545,15 +555,6 @@
             this.textBox2_1.TabIndex = 0;
             this.textBox2_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(142, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            // 
             // PlayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -641,6 +642,6 @@
         private TextBox textBox2_3;
         private TextBox textBox2_2;
         private TextBox textBox2_1;
-        private Label label1;
+        private Label AnswerLabel;
     }
 }
