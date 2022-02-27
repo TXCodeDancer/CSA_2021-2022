@@ -35,10 +35,10 @@
             this.RestartButton = new System.Windows.Forms.Button();
             this.LetterUsageLabel = new System.Windows.Forms.Label();
             this.UnusedLettersLabel = new System.Windows.Forms.Label();
-            this.SubmitButton = new System.Windows.Forms.Button();
             this.GuessTextBox = new System.Windows.Forms.TextBox();
             this.GuessBoxLabel = new System.Windows.Forms.Label();
             this.panel0 = new System.Windows.Forms.Panel();
+            this.AnswerLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1_5 = new System.Windows.Forms.TextBox();
             this.textBox1_4 = new System.Windows.Forms.TextBox();
@@ -77,6 +77,7 @@
             this.textBox2_1 = new System.Windows.Forms.TextBox();
             this.HeaderPanel.SuspendLayout();
             this.GuessPanel.SuspendLayout();
+            this.panel0.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -127,7 +128,6 @@
             this.GuessPanel.Controls.Add(this.RestartButton);
             this.GuessPanel.Controls.Add(this.LetterUsageLabel);
             this.GuessPanel.Controls.Add(this.UnusedLettersLabel);
-            this.GuessPanel.Controls.Add(this.SubmitButton);
             this.GuessPanel.Controls.Add(this.GuessTextBox);
             this.GuessPanel.Controls.Add(this.GuessBoxLabel);
             this.GuessPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -168,18 +168,6 @@
             this.UnusedLettersLabel.TabIndex = 3;
             this.UnusedLettersLabel.Text = "Unused Letters:";
             // 
-            // SubmitButton
-            // 
-            this.SubmitButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.SubmitButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SubmitButton.Location = new System.Drawing.Point(211, 13);
-            this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(75, 30);
-            this.SubmitButton.TabIndex = 2;
-            this.SubmitButton.Text = "Submit";
-            this.SubmitButton.UseVisualStyleBackColor = false;
-            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
-            // 
             // GuessTextBox
             // 
             this.GuessTextBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -201,11 +189,22 @@
             // 
             // panel0
             // 
+            this.panel0.Controls.Add(this.AnswerLabel);
             this.panel0.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel0.Location = new System.Drawing.Point(0, 104);
             this.panel0.Name = "panel0";
             this.panel0.Size = new System.Drawing.Size(800, 56);
             this.panel0.TabIndex = 2;
+            // 
+            // AnswerLabel
+            // 
+            this.AnswerLabel.AutoSize = true;
+            this.AnswerLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AnswerLabel.Location = new System.Drawing.Point(258, 21);
+            this.AnswerLabel.Name = "AnswerLabel";
+            this.AnswerLabel.Size = new System.Drawing.Size(0, 32);
+            this.AnswerLabel.TabIndex = 0;
+            this.AnswerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
@@ -577,6 +576,8 @@
             this.HeaderPanel.PerformLayout();
             this.GuessPanel.ResumeLayout(false);
             this.GuessPanel.PerformLayout();
+            this.panel0.ResumeLayout(false);
+            this.panel0.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -641,6 +642,6 @@
         private TextBox textBox2_3;
         private TextBox textBox2_2;
         private TextBox textBox2_1;
-        private Button SubmitButton;
+        private Label AnswerLabel;
     }
 }

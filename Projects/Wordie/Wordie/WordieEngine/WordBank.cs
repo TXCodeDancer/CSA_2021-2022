@@ -33,7 +33,7 @@ public class WordBank
         {
             ValidWords = File.ReadAllLines(wordBank).ToList();
         }
-        catch (IOException e)
+        catch (IOException)
         {
             CreateWordList();
             ValidWords = File.ReadAllLines(wordBank).ToList();
