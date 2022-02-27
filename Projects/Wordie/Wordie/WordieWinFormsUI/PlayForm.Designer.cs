@@ -1,6 +1,6 @@
 ﻿namespace WordieWinFormsUI
 {
-    partial class MainForm
+    partial class PlayForm
     {
         /// <summary>
         /// Required designer variable.

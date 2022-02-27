@@ -3,13 +3,13 @@ using WordieEngine;
 
 namespace WordieWinFormsUI;
 
-public partial class MainForm : Form
+public partial class PlayForm : Form
 {
     private static string Answer = "";
     private static readonly int MaxAttempts = 6;
     private static int Attempts = 0;
 
-    public MainForm()
+    public PlayForm()
     {
         InitializeComponent();
         StartGame();
