@@ -258,6 +258,7 @@
             // 
             // textBox1_1
             // 
+            this.textBox1_1.BackColor = System.Drawing.Color.White;
             this.textBox1_1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox1_1.Location = new System.Drawing.Point(258, 22);
             this.textBox1_1.Name = "textBox1_1";

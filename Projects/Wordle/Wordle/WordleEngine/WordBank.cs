@@ -32,7 +32,7 @@ public class WordBank
     public static string GetRandomWord()
     {
         Random random = new();
-        var idx = random.Next(AlphabetSize);
+        var idx = random.Next(ValidWords.Count);
         return ValidWords[idx];
     }
 

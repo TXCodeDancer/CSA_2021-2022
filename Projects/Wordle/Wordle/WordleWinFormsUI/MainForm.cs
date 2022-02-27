@@ -55,6 +55,71 @@ public partial class MainForm : Form
         textBox6_5.ReadOnly = true;
     }
 
+    private void ClearGuesses()
+    {
+        textBox1_1.Text = "";
+        textBox1_2.Text = "";
+        textBox1_3.Text = "";
+        textBox1_4.Text = "";
+        textBox1_5.Text = "";
+        textBox2_1.Text = "";
+        textBox2_2.Text = "";
+        textBox2_3.Text = "";
+        textBox2_4.Text = "";
+        textBox2_5.Text = "";
+        textBox3_1.Text = "";
+        textBox3_2.Text = "";
+        textBox3_3.Text = "";
+        textBox3_4.Text = "";
+        textBox3_5.Text = "";
+        textBox4_1.Text = "";
+        textBox4_2.Text = "";
+        textBox4_3.Text = "";
+        textBox4_4.Text = "";
+        textBox4_5.Text = "";
+        textBox5_1.Text = "";
+        textBox5_2.Text = "";
+        textBox5_3.Text = "";
+        textBox5_4.Text = "";
+        textBox5_5.Text = "";
+        textBox6_1.Text = "";
+        textBox6_2.Text = "";
+        textBox6_3.Text = "";
+        textBox6_4.Text = "";
+        textBox6_5.Text = "";
+
+        textBox1_1.BackColor = Color.WhiteSmoke;
+        textBox1_2.BackColor = Color.WhiteSmoke;
+        textBox1_3.BackColor = Color.WhiteSmoke;
+        textBox1_4.BackColor = Color.WhiteSmoke;
+        textBox1_5.BackColor = Color.WhiteSmoke;
+        textBox2_1.BackColor = Color.WhiteSmoke;
+        textBox2_2.BackColor = Color.WhiteSmoke;
+        textBox2_3.BackColor = Color.WhiteSmoke;
+        textBox2_4.BackColor = Color.WhiteSmoke;
+        textBox2_5.BackColor = Color.WhiteSmoke;
+        textBox3_1.BackColor = Color.WhiteSmoke;
+        textBox3_2.BackColor = Color.WhiteSmoke;
+        textBox3_3.BackColor = Color.WhiteSmoke;
+        textBox3_4.BackColor = Color.WhiteSmoke;
+        textBox3_5.BackColor = Color.WhiteSmoke;
+        textBox4_1.BackColor = Color.WhiteSmoke;
+        textBox4_2.BackColor = Color.WhiteSmoke;
+        textBox4_3.BackColor = Color.WhiteSmoke;
+        textBox4_4.BackColor = Color.WhiteSmoke;
+        textBox4_5.BackColor = Color.WhiteSmoke;
+        textBox5_1.BackColor = Color.WhiteSmoke;
+        textBox5_2.BackColor = Color.WhiteSmoke;
+        textBox5_3.BackColor = Color.WhiteSmoke;
+        textBox5_4.BackColor = Color.WhiteSmoke;
+        textBox5_5.BackColor = Color.WhiteSmoke;
+        textBox6_1.BackColor = Color.WhiteSmoke;
+        textBox6_2.BackColor = Color.WhiteSmoke;
+        textBox6_3.BackColor = Color.WhiteSmoke;
+        textBox6_4.BackColor = Color.WhiteSmoke;
+        textBox6_5.BackColor = Color.WhiteSmoke;
+    }
+
     private void StartGame()
     {
         WordBank.Setup();
@@ -62,6 +127,10 @@ public partial class MainForm : Form
         GuessTextBox.Text = "";
         Answer = WordBank.GetRandomWord().ToUpper();
         SubmitButton.Visible = false;
+        ClearGuesses();
+        SubmitButton.Enabled = true;
+        GuessTextBox.Enabled = true;
+        Attempts = 0;
     }
 
     public const int WM_NCLBUTTONDOWN = 0xA1;
