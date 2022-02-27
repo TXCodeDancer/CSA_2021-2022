@@ -126,9 +126,7 @@ public partial class PlayForm : Form
         LetterUsageLabel.Text = WordBank.GetAvailableLetters();
         GuessTextBox.Text = "";
         Answer = WordBank.GetRandomWord().ToUpper();
-        SubmitButton.Visible = false;
         ClearGuesses();
-        SubmitButton.Enabled = true;
         GuessTextBox.Enabled = true;
         Attempts = 0;
     }
@@ -170,7 +168,6 @@ public partial class PlayForm : Form
             GuessTextBox.Text = "";
             if (GuessIsCorrect(guess) || Attempts >= MaxAttempts)
             {
-                SubmitButton.Enabled = false;
                 GuessTextBox.Enabled = false;
             }
         }
