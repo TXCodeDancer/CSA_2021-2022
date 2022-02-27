@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <None Update="AllWordBank.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
     <None Update="FiveLetterWordBank.txt">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
