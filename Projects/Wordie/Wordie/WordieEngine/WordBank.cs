@@ -8,24 +8,36 @@ public class WordBank
 
     public static void CreateWordList()
     {
-        string allWordFile = "AllWordBank.txt";
+        //string allWordFile = "AllWordBank.txt";
+        string wordleWordFile = "WordleWordBank.txt";
         string fiveLetterWordFile = "FiveLetterWordBank.txt";
-        var words = File.ReadAllLines(allWordFile);
+        var lines = File.ReadAllLines(wordleWordFile);
         List<string> fiveLetterWords = new();
-        foreach (var word in words)
+        foreach (var line in lines)
         {
+            var tokens = line.Split(' ');
+            var word = tokens[5];
             if (word.Trim().Length == 5)
             {
                 fiveLetterWords.Add(word.Trim().ToLower());
             }
         }
-        File.WriteAllLines(fiveLetterWordFile, fiveLetterWords);
+        if (fiveLetterWords.Any())
+            File.WriteAllLines(fiveLetterWordFile, fiveLetterWords);
     }
 
     public static void Setup()
     {
         string wordBank = "FiveLetterWordBank.txt";
-        ValidWords = File.ReadAllLines(wordBank).ToList();
+        try
+        {
+            ValidWords = File.ReadAllLines(wordBank).ToList();
+        }
+        catch (IOException e)
+        {
+            CreateWordList();
+            ValidWords = File.ReadAllLines(wordBank).ToList();
+        }
         UsedLetters = new bool[AlphabetSize];
     }
 
