@@ -74,59 +74,70 @@ public partial class MainForm : Form
 
     private void UpdateGuessBoxes(string guess)
     {
+        var grade = Grader.GetGrade(Answer, guess);
+
         switch (Attempts)
         {
             case 1:
-                textBox1_1.Text = guess[0].ToString();
-                textBox1_2.Text = guess[1].ToString();
-                textBox1_3.Text = guess[2].ToString();
-                textBox1_4.Text = guess[3].ToString();
-                textBox1_5.Text = guess[4].ToString();
+                UpdateGuessBox(textBox1_1, guess[0], grade[0]);
+                UpdateGuessBox(textBox1_2, guess[1], grade[1]);
+                UpdateGuessBox(textBox1_3, guess[2], grade[2]);
+                UpdateGuessBox(textBox1_4, guess[3], grade[3]);
+                UpdateGuessBox(textBox1_5, guess[4], grade[4]);
                 break;
 
             case 2:
-                textBox2_1.Text = guess[0].ToString();
-                textBox2_2.Text = guess[1].ToString();
-                textBox2_3.Text = guess[2].ToString();
-                textBox2_4.Text = guess[3].ToString();
-                textBox2_5.Text = guess[4].ToString();
+                UpdateGuessBox(textBox2_1, guess[0], grade[0]);
+                UpdateGuessBox(textBox2_2, guess[1], grade[1]);
+                UpdateGuessBox(textBox2_3, guess[2], grade[2]);
+                UpdateGuessBox(textBox2_4, guess[3], grade[3]);
+                UpdateGuessBox(textBox2_5, guess[4], grade[4]);
                 break;
 
             case 3:
-                textBox3_1.Text = guess[0].ToString();
-                textBox3_2.Text = guess[1].ToString();
-                textBox3_3.Text = guess[2].ToString();
-                textBox3_4.Text = guess[3].ToString();
-                textBox3_5.Text = guess[4].ToString();
+                UpdateGuessBox(textBox3_1, guess[0], grade[0]);
+                UpdateGuessBox(textBox3_2, guess[1], grade[1]);
+                UpdateGuessBox(textBox3_3, guess[2], grade[2]);
+                UpdateGuessBox(textBox3_4, guess[3], grade[3]);
+                UpdateGuessBox(textBox3_5, guess[4], grade[4]);
                 break;
 
             case 4:
-                textBox4_1.Text = guess[0].ToString();
-                textBox4_2.Text = guess[1].ToString();
-                textBox4_3.Text = guess[2].ToString();
-                textBox4_4.Text = guess[3].ToString();
-                textBox4_5.Text = guess[4].ToString();
+                UpdateGuessBox(textBox4_1, guess[0], grade[0]);
+                UpdateGuessBox(textBox4_2, guess[1], grade[1]);
+                UpdateGuessBox(textBox4_3, guess[2], grade[2]);
+                UpdateGuessBox(textBox4_4, guess[3], grade[3]);
+                UpdateGuessBox(textBox4_5, guess[4], grade[4]);
                 break;
 
             case 5:
-                textBox5_1.Text = guess[0].ToString();
-                textBox5_2.Text = guess[1].ToString();
-                textBox5_3.Text = guess[2].ToString();
-                textBox5_4.Text = guess[3].ToString();
-                textBox5_5.Text = guess[4].ToString();
+                UpdateGuessBox(textBox5_1, guess[0], grade[0]);
+                UpdateGuessBox(textBox5_2, guess[1], grade[1]);
+                UpdateGuessBox(textBox5_3, guess[2], grade[2]);
+                UpdateGuessBox(textBox5_4, guess[3], grade[3]);
+                UpdateGuessBox(textBox5_5, guess[4], grade[4]);
                 break;
 
             case 6:
-                textBox6_1.Text = guess[0].ToString();
-                textBox6_2.Text = guess[1].ToString();
-                textBox6_3.Text = guess[2].ToString();
-                textBox6_4.Text = guess[3].ToString();
-                textBox6_5.Text = guess[4].ToString();
+                UpdateGuessBox(textBox6_1, guess[0], grade[0]);
+                UpdateGuessBox(textBox6_2, guess[1], grade[1]);
+                UpdateGuessBox(textBox6_3, guess[2], grade[2]);
+                UpdateGuessBox(textBox6_4, guess[3], grade[3]);
+                UpdateGuessBox(textBox6_5, guess[4], grade[4]);
                 break;
 
             default:
                 break;
         }
+    }
+
+    private static void UpdateGuessBox(TextBox textBox, char guess, char grade)
+    {
+        textBox.Text = guess.ToString();
+        if (grade == '*')
+            textBox.BackColor = Color.Green;
+        else if (grade == '@')
+            textBox.BackColor = Color.Yellow;
     }
 
     private void Input_KeyDown(object sender, KeyEventArgs e)
