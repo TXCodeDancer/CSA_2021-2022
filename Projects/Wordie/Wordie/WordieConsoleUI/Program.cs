@@ -1,6 +1,6 @@
-﻿using WordleEngine;
+﻿using WordieEngine;
 
-namespace WordleConsoleUI;
+namespace WordieConsoleUI;
 
 public class Program
 {

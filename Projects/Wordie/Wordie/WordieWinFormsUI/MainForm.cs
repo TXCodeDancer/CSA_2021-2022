@@ -1,5 +1,5 @@
 ﻿using System.Runtime.InteropServices;
-using WordleEngine;
+using WordieEngine;
 
 namespace WordleWinFormsUI;
 
