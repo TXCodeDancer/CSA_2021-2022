@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.HeaderPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.CloseButton = new System.Windows.Forms.Button();
             this.HeaderPanel.SuspendLayout();
             this.SuspendLayout();
@@ -36,6 +37,7 @@
             // HeaderPanel
             // 
             this.HeaderPanel.BackColor = System.Drawing.Color.LightGray;
+            this.HeaderPanel.Controls.Add(this.label1);
             this.HeaderPanel.Controls.Add(this.CloseButton);
             this.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.HeaderPanel.Location = new System.Drawing.Point(0, 0);
@@ -43,6 +45,16 @@
             this.HeaderPanel.Size = new System.Drawing.Size(800, 30);
             this.HeaderPanel.TabIndex = 0;
             this.HeaderPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HeaderPanel_MouseDown);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(350, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Wordle";
             // 
             // CloseButton
             // 
@@ -69,6 +81,7 @@
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.HeaderPanel.ResumeLayout(false);
+            this.HeaderPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -77,5 +90,6 @@
 
         private Panel HeaderPanel;
         private Button CloseButton;
+        private Label label1;
     }
 }
