@@ -4,7 +4,7 @@ public class WordBank
 {
     private static readonly int AlphabetSize = (int)('Z' - '@');
     private static List<string> ValidWords = new();
-    private static readonly bool[] UsedLetters = new bool[AlphabetSize];
+    private static bool[] UsedLetters = new bool[AlphabetSize];
 
     public static void CreateWordList()
     {
@@ -26,6 +26,7 @@ public class WordBank
     {
         string wordBank = "FiveLetterWordBank.txt";
         ValidWords = File.ReadAllLines(wordBank).ToList();
+        UsedLetters = new bool[AlphabetSize];
     }
 
     public static string GetRandomWord()

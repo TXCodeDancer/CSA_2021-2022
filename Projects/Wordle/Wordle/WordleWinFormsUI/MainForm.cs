@@ -5,12 +5,23 @@ namespace WordleWinFormsUI;
 
 public partial class MainForm : Form
 {
+    private static string Answer = "";
+    private static readonly int MaxAttempts = 6;
+    private static int Attempts = 0;
+
     public MainForm()
     {
         InitializeComponent();
+        StartGame();
+    }
+
+    private void StartGame()
+    {
         WordBank.Setup();
         LetterUsageLabel.Text = WordBank.GetAvailableLetters();
         GuessTextBox.Text = "";
+        Answer = WordBank.GetRandomWord();
+        SubmitButton.Visible = false;
     }
 
     public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -46,6 +57,12 @@ public partial class MainForm : Form
             WordBank.UpdateAvailableLetters(guess);
             LetterUsageLabel.Text = WordBank.GetAvailableLetters();
             GuessTextBox.Text = "";
+            Attempts++;
+            if (Attempts > MaxAttempts)
+            {
+                SubmitButton.Enabled = false;
+                GuessTextBox.Enabled = false;
+            }
         }
         else
         {
@@ -62,5 +79,8 @@ public partial class MainForm : Form
         }
     }
 
-
+    private void RestartButton_Click(object sender, EventArgs e)
+    {
+        StartGame();
+    }
 }
