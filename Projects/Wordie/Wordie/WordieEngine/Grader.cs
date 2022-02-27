@@ -1,4 +1,4 @@
-﻿namespace WordleEngine
+﻿namespace WordieEngine
 {
     public class Grader
     {

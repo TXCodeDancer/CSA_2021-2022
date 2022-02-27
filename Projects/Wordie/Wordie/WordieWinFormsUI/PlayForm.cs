@@ -1,15 +1,15 @@
 ﻿using System.Runtime.InteropServices;
-using WordleEngine;
+using WordieEngine;
 
-namespace WordleWinFormsUI;
+namespace WordieWinFormsUI;
 
-public partial class MainForm : Form
+public partial class PlayForm : Form
 {
     private static string Answer = "";
     private static readonly int MaxAttempts = 6;
     private static int Attempts = 0;
 
-    public MainForm()
+    public PlayForm()
     {
         InitializeComponent();
         StartGame();
@@ -255,6 +255,8 @@ public partial class MainForm : Form
             textBox.BackColor = Color.Green;
         else if (grade == '@')
             textBox.BackColor = Color.Yellow;
+        else
+            textBox.BackColor = Color.DarkGray;
     }
 
     private void Input_KeyDown(object sender, KeyEventArgs e)

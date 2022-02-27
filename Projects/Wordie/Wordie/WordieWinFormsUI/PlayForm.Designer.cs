@@ -1,6 +1,6 @@
-﻿namespace WordleWinFormsUI
+﻿namespace WordieWinFormsUI
 {
-    partial class MainForm
+    partial class PlayForm
     {
         /// <summary>
         /// Required designer variable.
@@ -105,7 +105,7 @@
             this.HeaderLabel.Name = "HeaderLabel";
             this.HeaderLabel.Size = new System.Drawing.Size(77, 25);
             this.HeaderLabel.TabIndex = 1;
-            this.HeaderLabel.Text = "Wordle";
+            this.HeaderLabel.Text = "Wordie";
             // 
             // CloseButton
             // 
@@ -556,7 +556,7 @@
             this.textBox2_1.TabIndex = 0;
             this.textBox2_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // MainForm
+            // PlayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -571,7 +571,7 @@
             this.Controls.Add(this.GuessPanel);
             this.Controls.Add(this.HeaderPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "MainForm";
+            this.Name = "PlayForm";
             this.Text = "MainForm";
             this.HeaderPanel.ResumeLayout(false);
             this.HeaderPanel.PerformLayout();
@@ -600,7 +600,6 @@
         private Label HeaderLabel;
         private Panel GuessPanel;
         private Label GuessBoxLabel;
-        private Button SubmitButton;
         private TextBox GuessTextBox;
         private Label LetterUsageLabel;
         private Label UnusedLettersLabel;
@@ -642,5 +641,6 @@
         private TextBox textBox2_3;
         private TextBox textBox2_2;
         private TextBox textBox2_1;
+        private Button SubmitButton;
     }
 }
