@@ -68,7 +68,7 @@ public class Program
         string? guess;
         while (true)
         {
-            Console.WriteLine(WordBank.GetAvailableLetters());
+            Console.WriteLine($"Available Letters: { WordBank.GetAvailableLetters()}");
             Console.WriteLine($"What is your guess? ({attemptsRemaining})");
             guess = Console.ReadLine();
             if (guess == null)

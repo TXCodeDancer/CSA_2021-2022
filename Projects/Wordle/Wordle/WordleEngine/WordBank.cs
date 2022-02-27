@@ -2,7 +2,7 @@
 
 public class WordBank
 {
-    private static readonly int AlphabetSize = (int)('Z' - 'A');
+    private static readonly int AlphabetSize = (int)('Z' - '@');
     private static List<string> ValidWords = new();
     private static readonly bool[] UsedLetters = new bool[AlphabetSize];
 
@@ -47,7 +47,7 @@ public class WordBank
 
     public static string GetAvailableLetters()
     {
-        string available = "Available Letters: ";
+        string available = "";
         for (int i = 0; i < UsedLetters.Length; i++)
         {
             var used = UsedLetters[i];
