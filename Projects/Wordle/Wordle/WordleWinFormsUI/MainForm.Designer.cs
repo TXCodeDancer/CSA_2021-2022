@@ -38,8 +38,51 @@
             this.SubmitButton = new System.Windows.Forms.Button();
             this.GuessTextBox = new System.Windows.Forms.TextBox();
             this.GuessBoxLabel = new System.Windows.Forms.Label();
+            this.panel0 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1_5 = new System.Windows.Forms.TextBox();
+            this.textBox1_4 = new System.Windows.Forms.TextBox();
+            this.textBox1_3 = new System.Windows.Forms.TextBox();
+            this.textBox1_2 = new System.Windows.Forms.TextBox();
+            this.textBox1_1 = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox6_5 = new System.Windows.Forms.TextBox();
+            this.textBox6_4 = new System.Windows.Forms.TextBox();
+            this.textBox6_3 = new System.Windows.Forms.TextBox();
+            this.textBox6_2 = new System.Windows.Forms.TextBox();
+            this.textBox6_1 = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox5_5 = new System.Windows.Forms.TextBox();
+            this.textBox5_4 = new System.Windows.Forms.TextBox();
+            this.textBox5_3 = new System.Windows.Forms.TextBox();
+            this.textBox5_2 = new System.Windows.Forms.TextBox();
+            this.textBox5_1 = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.textBox4_5 = new System.Windows.Forms.TextBox();
+            this.textBox4_4 = new System.Windows.Forms.TextBox();
+            this.textBox4_3 = new System.Windows.Forms.TextBox();
+            this.textBox4_2 = new System.Windows.Forms.TextBox();
+            this.textBox4_1 = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.textBox3_5 = new System.Windows.Forms.TextBox();
+            this.textBox3_4 = new System.Windows.Forms.TextBox();
+            this.textBox3_3 = new System.Windows.Forms.TextBox();
+            this.textBox3_2 = new System.Windows.Forms.TextBox();
+            this.textBox3_1 = new System.Windows.Forms.TextBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.textBox2_5 = new System.Windows.Forms.TextBox();
+            this.textBox2_4 = new System.Windows.Forms.TextBox();
+            this.textBox2_3 = new System.Windows.Forms.TextBox();
+            this.textBox2_2 = new System.Windows.Forms.TextBox();
+            this.textBox2_1 = new System.Windows.Forms.TextBox();
             this.HeaderPanel.SuspendLayout();
             this.GuessPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // HeaderPanel
@@ -156,11 +199,374 @@
             this.GuessBoxLabel.TabIndex = 0;
             this.GuessBoxLabel.Text = "Your Guess:";
             // 
+            // panel0
+            // 
+            this.panel0.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel0.Location = new System.Drawing.Point(0, 104);
+            this.panel0.Name = "panel0";
+            this.panel0.Size = new System.Drawing.Size(800, 56);
+            this.panel0.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.textBox1_5);
+            this.panel1.Controls.Add(this.textBox1_4);
+            this.panel1.Controls.Add(this.textBox1_3);
+            this.panel1.Controls.Add(this.textBox1_2);
+            this.panel1.Controls.Add(this.textBox1_1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 160);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 68);
+            this.panel1.TabIndex = 3;
+            // 
+            // textBox1_5
+            // 
+            this.textBox1_5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1_5.Location = new System.Drawing.Point(450, 22);
+            this.textBox1_5.Name = "textBox1_5";
+            this.textBox1_5.Size = new System.Drawing.Size(42, 43);
+            this.textBox1_5.TabIndex = 4;
+            this.textBox1_5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox1_4
+            // 
+            this.textBox1_4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1_4.Location = new System.Drawing.Point(402, 22);
+            this.textBox1_4.Name = "textBox1_4";
+            this.textBox1_4.Size = new System.Drawing.Size(42, 43);
+            this.textBox1_4.TabIndex = 3;
+            this.textBox1_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox1_3
+            // 
+            this.textBox1_3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1_3.Location = new System.Drawing.Point(354, 22);
+            this.textBox1_3.Name = "textBox1_3";
+            this.textBox1_3.Size = new System.Drawing.Size(42, 43);
+            this.textBox1_3.TabIndex = 2;
+            this.textBox1_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox1_2
+            // 
+            this.textBox1_2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1_2.Location = new System.Drawing.Point(306, 22);
+            this.textBox1_2.Name = "textBox1_2";
+            this.textBox1_2.Size = new System.Drawing.Size(42, 43);
+            this.textBox1_2.TabIndex = 1;
+            this.textBox1_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox1_1
+            // 
+            this.textBox1_1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1_1.Location = new System.Drawing.Point(258, 22);
+            this.textBox1_1.Name = "textBox1_1";
+            this.textBox1_1.Size = new System.Drawing.Size(42, 43);
+            this.textBox1_1.TabIndex = 0;
+            this.textBox1_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.textBox6_5);
+            this.panel2.Controls.Add(this.textBox6_4);
+            this.panel2.Controls.Add(this.textBox6_3);
+            this.panel2.Controls.Add(this.textBox6_2);
+            this.panel2.Controls.Add(this.textBox6_1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 500);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 68);
+            this.panel2.TabIndex = 5;
+            // 
+            // textBox6_5
+            // 
+            this.textBox6_5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox6_5.Location = new System.Drawing.Point(450, 22);
+            this.textBox6_5.Name = "textBox6_5";
+            this.textBox6_5.Size = new System.Drawing.Size(42, 43);
+            this.textBox6_5.TabIndex = 4;
+            this.textBox6_5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox6_4
+            // 
+            this.textBox6_4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox6_4.Location = new System.Drawing.Point(402, 22);
+            this.textBox6_4.Name = "textBox6_4";
+            this.textBox6_4.Size = new System.Drawing.Size(42, 43);
+            this.textBox6_4.TabIndex = 3;
+            this.textBox6_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox6_3
+            // 
+            this.textBox6_3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox6_3.Location = new System.Drawing.Point(354, 22);
+            this.textBox6_3.Name = "textBox6_3";
+            this.textBox6_3.Size = new System.Drawing.Size(42, 43);
+            this.textBox6_3.TabIndex = 2;
+            this.textBox6_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox6_2
+            // 
+            this.textBox6_2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox6_2.Location = new System.Drawing.Point(306, 22);
+            this.textBox6_2.Name = "textBox6_2";
+            this.textBox6_2.Size = new System.Drawing.Size(42, 43);
+            this.textBox6_2.TabIndex = 1;
+            this.textBox6_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox6_1
+            // 
+            this.textBox6_1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox6_1.Location = new System.Drawing.Point(258, 22);
+            this.textBox6_1.Name = "textBox6_1";
+            this.textBox6_1.Size = new System.Drawing.Size(42, 43);
+            this.textBox6_1.TabIndex = 0;
+            this.textBox6_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.textBox5_5);
+            this.panel3.Controls.Add(this.textBox5_4);
+            this.panel3.Controls.Add(this.textBox5_3);
+            this.panel3.Controls.Add(this.textBox5_2);
+            this.panel3.Controls.Add(this.textBox5_1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 432);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(800, 68);
+            this.panel3.TabIndex = 5;
+            // 
+            // textBox5_5
+            // 
+            this.textBox5_5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox5_5.Location = new System.Drawing.Point(450, 22);
+            this.textBox5_5.Name = "textBox5_5";
+            this.textBox5_5.Size = new System.Drawing.Size(42, 43);
+            this.textBox5_5.TabIndex = 4;
+            this.textBox5_5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox5_4
+            // 
+            this.textBox5_4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox5_4.Location = new System.Drawing.Point(402, 22);
+            this.textBox5_4.Name = "textBox5_4";
+            this.textBox5_4.Size = new System.Drawing.Size(42, 43);
+            this.textBox5_4.TabIndex = 3;
+            this.textBox5_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox5_3
+            // 
+            this.textBox5_3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox5_3.Location = new System.Drawing.Point(354, 22);
+            this.textBox5_3.Name = "textBox5_3";
+            this.textBox5_3.Size = new System.Drawing.Size(42, 43);
+            this.textBox5_3.TabIndex = 2;
+            this.textBox5_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox5_2
+            // 
+            this.textBox5_2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox5_2.Location = new System.Drawing.Point(306, 22);
+            this.textBox5_2.Name = "textBox5_2";
+            this.textBox5_2.Size = new System.Drawing.Size(42, 43);
+            this.textBox5_2.TabIndex = 1;
+            this.textBox5_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox5_1
+            // 
+            this.textBox5_1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox5_1.Location = new System.Drawing.Point(258, 22);
+            this.textBox5_1.Name = "textBox5_1";
+            this.textBox5_1.Size = new System.Drawing.Size(42, 43);
+            this.textBox5_1.TabIndex = 0;
+            this.textBox5_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.textBox4_5);
+            this.panel4.Controls.Add(this.textBox4_4);
+            this.panel4.Controls.Add(this.textBox4_3);
+            this.panel4.Controls.Add(this.textBox4_2);
+            this.panel4.Controls.Add(this.textBox4_1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 364);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(800, 68);
+            this.panel4.TabIndex = 5;
+            // 
+            // textBox4_5
+            // 
+            this.textBox4_5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox4_5.Location = new System.Drawing.Point(450, 22);
+            this.textBox4_5.Name = "textBox4_5";
+            this.textBox4_5.Size = new System.Drawing.Size(42, 43);
+            this.textBox4_5.TabIndex = 4;
+            this.textBox4_5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox4_4
+            // 
+            this.textBox4_4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox4_4.Location = new System.Drawing.Point(402, 22);
+            this.textBox4_4.Name = "textBox4_4";
+            this.textBox4_4.Size = new System.Drawing.Size(42, 43);
+            this.textBox4_4.TabIndex = 3;
+            this.textBox4_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox4_3
+            // 
+            this.textBox4_3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox4_3.Location = new System.Drawing.Point(354, 22);
+            this.textBox4_3.Name = "textBox4_3";
+            this.textBox4_3.Size = new System.Drawing.Size(42, 43);
+            this.textBox4_3.TabIndex = 2;
+            this.textBox4_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox4_2
+            // 
+            this.textBox4_2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox4_2.Location = new System.Drawing.Point(306, 22);
+            this.textBox4_2.Name = "textBox4_2";
+            this.textBox4_2.Size = new System.Drawing.Size(42, 43);
+            this.textBox4_2.TabIndex = 1;
+            this.textBox4_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox4_1
+            // 
+            this.textBox4_1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox4_1.Location = new System.Drawing.Point(258, 22);
+            this.textBox4_1.Name = "textBox4_1";
+            this.textBox4_1.Size = new System.Drawing.Size(42, 43);
+            this.textBox4_1.TabIndex = 0;
+            this.textBox4_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.textBox3_5);
+            this.panel5.Controls.Add(this.textBox3_4);
+            this.panel5.Controls.Add(this.textBox3_3);
+            this.panel5.Controls.Add(this.textBox3_2);
+            this.panel5.Controls.Add(this.textBox3_1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 296);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(800, 68);
+            this.panel5.TabIndex = 5;
+            // 
+            // textBox3_5
+            // 
+            this.textBox3_5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox3_5.Location = new System.Drawing.Point(450, 22);
+            this.textBox3_5.Name = "textBox3_5";
+            this.textBox3_5.Size = new System.Drawing.Size(42, 43);
+            this.textBox3_5.TabIndex = 4;
+            this.textBox3_5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox3_4
+            // 
+            this.textBox3_4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox3_4.Location = new System.Drawing.Point(402, 22);
+            this.textBox3_4.Name = "textBox3_4";
+            this.textBox3_4.Size = new System.Drawing.Size(42, 43);
+            this.textBox3_4.TabIndex = 3;
+            this.textBox3_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox3_3
+            // 
+            this.textBox3_3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox3_3.Location = new System.Drawing.Point(354, 22);
+            this.textBox3_3.Name = "textBox3_3";
+            this.textBox3_3.Size = new System.Drawing.Size(42, 43);
+            this.textBox3_3.TabIndex = 2;
+            this.textBox3_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox3_2
+            // 
+            this.textBox3_2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox3_2.Location = new System.Drawing.Point(306, 22);
+            this.textBox3_2.Name = "textBox3_2";
+            this.textBox3_2.Size = new System.Drawing.Size(42, 43);
+            this.textBox3_2.TabIndex = 1;
+            this.textBox3_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox3_1
+            // 
+            this.textBox3_1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox3_1.Location = new System.Drawing.Point(258, 22);
+            this.textBox3_1.Name = "textBox3_1";
+            this.textBox3_1.Size = new System.Drawing.Size(42, 43);
+            this.textBox3_1.TabIndex = 0;
+            this.textBox3_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.textBox2_5);
+            this.panel6.Controls.Add(this.textBox2_4);
+            this.panel6.Controls.Add(this.textBox2_3);
+            this.panel6.Controls.Add(this.textBox2_2);
+            this.panel6.Controls.Add(this.textBox2_1);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 228);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(800, 68);
+            this.panel6.TabIndex = 5;
+            // 
+            // textBox2_5
+            // 
+            this.textBox2_5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox2_5.Location = new System.Drawing.Point(450, 22);
+            this.textBox2_5.Name = "textBox2_5";
+            this.textBox2_5.Size = new System.Drawing.Size(42, 43);
+            this.textBox2_5.TabIndex = 4;
+            this.textBox2_5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox2_4
+            // 
+            this.textBox2_4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox2_4.Location = new System.Drawing.Point(402, 22);
+            this.textBox2_4.Name = "textBox2_4";
+            this.textBox2_4.Size = new System.Drawing.Size(42, 43);
+            this.textBox2_4.TabIndex = 3;
+            this.textBox2_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox2_3
+            // 
+            this.textBox2_3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox2_3.Location = new System.Drawing.Point(354, 22);
+            this.textBox2_3.Name = "textBox2_3";
+            this.textBox2_3.Size = new System.Drawing.Size(42, 43);
+            this.textBox2_3.TabIndex = 2;
+            this.textBox2_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox2_2
+            // 
+            this.textBox2_2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox2_2.Location = new System.Drawing.Point(306, 22);
+            this.textBox2_2.Name = "textBox2_2";
+            this.textBox2_2.Size = new System.Drawing.Size(42, 43);
+            this.textBox2_2.TabIndex = 1;
+            this.textBox2_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox2_1
+            // 
+            this.textBox2_1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox2_1.Location = new System.Drawing.Point(258, 22);
+            this.textBox2_1.Name = "textBox2_1";
+            this.textBox2_1.Size = new System.Drawing.Size(42, 43);
+            this.textBox2_1.TabIndex = 0;
+            this.textBox2_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 629);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel0);
             this.Controls.Add(this.GuessPanel);
             this.Controls.Add(this.HeaderPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -170,6 +576,18 @@
             this.HeaderPanel.PerformLayout();
             this.GuessPanel.ResumeLayout(false);
             this.GuessPanel.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -186,5 +604,42 @@
         private Label LetterUsageLabel;
         private Label UnusedLettersLabel;
         private Button RestartButton;
+        private Panel panel0;
+        private Panel panel1;
+        private TextBox textBox1_5;
+        private TextBox textBox1_4;
+        private TextBox textBox1_3;
+        private TextBox textBox1_2;
+        private TextBox textBox1_1;
+        private Panel panel2;
+        private TextBox textBox6_5;
+        private TextBox textBox6_4;
+        private TextBox textBox6_3;
+        private TextBox textBox6_2;
+        private TextBox textBox6_1;
+        private Panel panel3;
+        private TextBox textBox5_5;
+        private TextBox textBox5_4;
+        private TextBox textBox5_3;
+        private TextBox textBox5_2;
+        private TextBox textBox5_1;
+        private Panel panel4;
+        private TextBox textBox4_5;
+        private TextBox textBox4_4;
+        private TextBox textBox4_3;
+        private TextBox textBox4_2;
+        private TextBox textBox4_1;
+        private Panel panel5;
+        private TextBox textBox3_5;
+        private TextBox textBox3_4;
+        private TextBox textBox3_3;
+        private TextBox textBox3_2;
+        private TextBox textBox3_1;
+        private Panel panel6;
+        private TextBox textBox2_5;
+        private TextBox textBox2_4;
+        private TextBox textBox2_3;
+        private TextBox textBox2_2;
+        private TextBox textBox2_1;
     }
 }

@@ -54,11 +54,12 @@ public partial class MainForm : Form
         guess = guess.Trim().ToUpper();
         if (WordBank.IsValid(guess))
         {
+            Attempts++;
+            UpdateGuessBoxes(guess);
             WordBank.UpdateAvailableLetters(guess);
             LetterUsageLabel.Text = WordBank.GetAvailableLetters();
             GuessTextBox.Text = "";
-            Attempts++;
-            if (Attempts > MaxAttempts)
+            if (Attempts >= MaxAttempts)
             {
                 SubmitButton.Enabled = false;
                 GuessTextBox.Enabled = false;
@@ -68,6 +69,63 @@ public partial class MainForm : Form
         {
             GuessTextBox.Text = "Invalid";
             GuessTextBox.SelectAll();
+        }
+    }
+
+    private void UpdateGuessBoxes(string guess)
+    {
+        switch (Attempts)
+        {
+            case 1:
+                textBox1_1.Text = guess[0].ToString();
+                textBox1_2.Text = guess[1].ToString();
+                textBox1_3.Text = guess[2].ToString();
+                textBox1_4.Text = guess[3].ToString();
+                textBox1_5.Text = guess[4].ToString();
+                break;
+
+            case 2:
+                textBox2_1.Text = guess[0].ToString();
+                textBox2_2.Text = guess[1].ToString();
+                textBox2_3.Text = guess[2].ToString();
+                textBox2_4.Text = guess[3].ToString();
+                textBox2_5.Text = guess[4].ToString();
+                break;
+
+            case 3:
+                textBox3_1.Text = guess[0].ToString();
+                textBox3_2.Text = guess[1].ToString();
+                textBox3_3.Text = guess[2].ToString();
+                textBox3_4.Text = guess[3].ToString();
+                textBox3_5.Text = guess[4].ToString();
+                break;
+
+            case 4:
+                textBox4_1.Text = guess[0].ToString();
+                textBox4_2.Text = guess[1].ToString();
+                textBox4_3.Text = guess[2].ToString();
+                textBox4_4.Text = guess[3].ToString();
+                textBox4_5.Text = guess[4].ToString();
+                break;
+
+            case 5:
+                textBox5_1.Text = guess[0].ToString();
+                textBox5_2.Text = guess[1].ToString();
+                textBox5_3.Text = guess[2].ToString();
+                textBox5_4.Text = guess[3].ToString();
+                textBox5_5.Text = guess[4].ToString();
+                break;
+
+            case 6:
+                textBox6_1.Text = guess[0].ToString();
+                textBox6_2.Text = guess[1].ToString();
+                textBox6_3.Text = guess[2].ToString();
+                textBox6_4.Text = guess[3].ToString();
+                textBox6_5.Text = guess[4].ToString();
+                break;
+
+            default:
+                break;
         }
     }
 
