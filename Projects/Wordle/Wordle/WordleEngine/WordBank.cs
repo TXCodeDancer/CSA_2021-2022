@@ -2,9 +2,9 @@
 
 public class WordBank
 {
-    private static readonly int AlphabetSize = (int)('Z' - 'A');
+    private static readonly int AlphabetSize = (int)('Z' - '@');
     private static List<string> ValidWords = new();
-    private static readonly bool[] UsedLetters = new bool[AlphabetSize];
+    private static bool[] UsedLetters = new bool[AlphabetSize];
 
     public static void CreateWordList()
     {
@@ -26,12 +26,13 @@ public class WordBank
     {
         string wordBank = "FiveLetterWordBank.txt";
         ValidWords = File.ReadAllLines(wordBank).ToList();
+        UsedLetters = new bool[AlphabetSize];
     }
 
     public static string GetRandomWord()
     {
         Random random = new();
-        var idx = random.Next(AlphabetSize);
+        var idx = random.Next(ValidWords.Count);
         return ValidWords[idx];
     }
 
@@ -47,7 +48,7 @@ public class WordBank
 
     public static string GetAvailableLetters()
     {
-        string available = "Available Letters: ";
+        string available = "";
         for (int i = 0; i < UsedLetters.Length; i++)
         {
             var used = UsedLetters[i];

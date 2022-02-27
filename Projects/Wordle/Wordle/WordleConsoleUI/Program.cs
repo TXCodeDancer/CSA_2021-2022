@@ -5,7 +5,7 @@ namespace WordleConsoleUI;
 public class Program
 {
     private static string Answer = "";
-    private static readonly int NoOfAttempts = 6;
+    private static readonly int MaxAttempts = 6;
 
     public static void Main()
     {
@@ -19,7 +19,7 @@ public class Program
 
         Console.Clear();
 
-        int attemptsRemaining = NoOfAttempts;
+        int attemptsRemaining = MaxAttempts;
         while (attemptsRemaining > 0)
         {
             var guess = GetGuess(attemptsRemaining);
@@ -29,7 +29,7 @@ public class Program
                 Console.WriteLine($"{Grader.GetGrade(Answer, guess)}");
                 if (GuessIsCorrect(guess))
                 {
-                    Console.WriteLine($"Congratulations, you won in {NoOfAttempts - attemptsRemaining} attempt(s).");
+                    Console.WriteLine($"Congratulations, you won in {MaxAttempts - attemptsRemaining} attempt(s).");
                     return;
                 }
             }
@@ -40,6 +40,7 @@ public class Program
 
     private static bool GuessIsCorrect(string guess)
     {
+        guess = guess.ToUpper();
         if (guess == Answer)
             return true;
         else
@@ -68,7 +69,7 @@ public class Program
         string? guess;
         while (true)
         {
-            Console.WriteLine(WordBank.GetAvailableLetters());
+            Console.WriteLine($"Available Letters: { WordBank.GetAvailableLetters()}");
             Console.WriteLine($"What is your guess? ({attemptsRemaining})");
             guess = Console.ReadLine();
             if (guess == null)
