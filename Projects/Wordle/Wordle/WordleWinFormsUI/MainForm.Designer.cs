@@ -107,9 +107,9 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(350, 5);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 21);
+            this.label2.Size = new System.Drawing.Size(117, 21);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Letter Usage:";
+            this.label2.Text = "Unused Letters:";
             // 
             // SubmitButton
             // 
