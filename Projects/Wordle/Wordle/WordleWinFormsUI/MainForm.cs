@@ -20,7 +20,7 @@ public partial class MainForm : Form
         WordBank.Setup();
         LetterUsageLabel.Text = WordBank.GetAvailableLetters();
         GuessTextBox.Text = "";
-        Answer = WordBank.GetRandomWord();
+        Answer = WordBank.GetRandomWord().ToUpper();
         SubmitButton.Visible = false;
     }
 
@@ -59,7 +59,7 @@ public partial class MainForm : Form
             WordBank.UpdateAvailableLetters(guess);
             LetterUsageLabel.Text = WordBank.GetAvailableLetters();
             GuessTextBox.Text = "";
-            if (Attempts >= MaxAttempts)
+            if (GuessIsCorrect(guess) || Attempts >= MaxAttempts)
             {
                 SubmitButton.Enabled = false;
                 GuessTextBox.Enabled = false;
@@ -70,6 +70,14 @@ public partial class MainForm : Form
             GuessTextBox.Text = "Invalid";
             GuessTextBox.SelectAll();
         }
+    }
+
+    private static bool GuessIsCorrect(string guess)
+    {
+        if (guess == Answer)
+            return true;
+        else
+            return false;
     }
 
     private void UpdateGuessBoxes(string guess)

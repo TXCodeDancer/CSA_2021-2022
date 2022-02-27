@@ -40,6 +40,7 @@ public class Program
 
     private static bool GuessIsCorrect(string guess)
     {
+        guess = guess.ToUpper();
         if (guess == Answer)
             return true;
         else
