@@ -35,7 +35,6 @@
             this.RestartButton = new System.Windows.Forms.Button();
             this.LetterUsageLabel = new System.Windows.Forms.Label();
             this.UnusedLettersLabel = new System.Windows.Forms.Label();
-            this.SubmitButton = new System.Windows.Forms.Button();
             this.GuessTextBox = new System.Windows.Forms.TextBox();
             this.GuessBoxLabel = new System.Windows.Forms.Label();
             this.panel0 = new System.Windows.Forms.Panel();
@@ -75,6 +74,7 @@
             this.textBox2_3 = new System.Windows.Forms.TextBox();
             this.textBox2_2 = new System.Windows.Forms.TextBox();
             this.textBox2_1 = new System.Windows.Forms.TextBox();
+            this.SubmitButton = new System.Windows.Forms.Button();
             this.HeaderPanel.SuspendLayout();
             this.GuessPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -105,7 +105,7 @@
             this.HeaderLabel.Name = "HeaderLabel";
             this.HeaderLabel.Size = new System.Drawing.Size(77, 25);
             this.HeaderLabel.TabIndex = 1;
-            this.HeaderLabel.Text = "Wordle";
+            this.HeaderLabel.Text = "Wordie";
             // 
             // CloseButton
             // 
@@ -167,18 +167,6 @@
             this.UnusedLettersLabel.Size = new System.Drawing.Size(117, 21);
             this.UnusedLettersLabel.TabIndex = 3;
             this.UnusedLettersLabel.Text = "Unused Letters:";
-            // 
-            // SubmitButton
-            // 
-            this.SubmitButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.SubmitButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SubmitButton.Location = new System.Drawing.Point(211, 13);
-            this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(75, 30);
-            this.SubmitButton.TabIndex = 2;
-            this.SubmitButton.Text = "Submit";
-            this.SubmitButton.UseVisualStyleBackColor = false;
-            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // GuessTextBox
             // 
@@ -556,6 +544,18 @@
             this.textBox2_1.TabIndex = 0;
             this.textBox2_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // SubmitButton
+            // 
+            this.SubmitButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.SubmitButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SubmitButton.Location = new System.Drawing.Point(211, 13);
+            this.SubmitButton.Name = "SubmitButton";
+            this.SubmitButton.Size = new System.Drawing.Size(75, 30);
+            this.SubmitButton.TabIndex = 2;
+            this.SubmitButton.Text = "Submit";
+            this.SubmitButton.UseVisualStyleBackColor = false;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -600,7 +600,6 @@
         private Label HeaderLabel;
         private Panel GuessPanel;
         private Label GuessBoxLabel;
-        private Button SubmitButton;
         private TextBox GuessTextBox;
         private Label LetterUsageLabel;
         private Label UnusedLettersLabel;
@@ -642,5 +641,6 @@
         private TextBox textBox2_3;
         private TextBox textBox2_2;
         private TextBox textBox2_1;
+        private Button SubmitButton;
     }
 }

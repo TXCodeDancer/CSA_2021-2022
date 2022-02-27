@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WordleEngine\WordieEngine.csproj" />
+    <ProjectReference Include="..\WordieEngine\WordieEngine.csproj" />
   </ItemGroup>
 
 </Project>

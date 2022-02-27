@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordieConsoleUI", "WordleConsoleUI\WordieConsoleUI.csproj", "{B6A5DD45-D955-47B4-A4A7-72AE8C429119}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordieConsoleUI", "WordieConsoleUI\WordieConsoleUI.csproj", "{B6A5DD45-D955-47B4-A4A7-72AE8C429119}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordieEngine", "WordleEngine\WordieEngine.csproj", "{1F775105-68FA-4454-B0FD-14C6EBF764BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordieEngine", "WordieEngine\WordieEngine.csproj", "{1F775105-68FA-4454-B0FD-14C6EBF764BB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordieWinFormsUI", "WordleWinFormsUI\WordieWinFormsUI.csproj", "{34BF0227-76C6-4DCB-A6BF-4AD814599AA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordieWinFormsUI", "WordieWinFormsUI\WordieWinFormsUI.csproj", "{34BF0227-76C6-4DCB-A6BF-4AD814599AA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
