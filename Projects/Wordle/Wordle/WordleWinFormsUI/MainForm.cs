@@ -13,6 +13,46 @@ public partial class MainForm : Form
     {
         InitializeComponent();
         StartGame();
+        SetReadOnly();
+    }
+
+    private void SetReadOnly()
+    {
+        textBox1_1.ReadOnly = true;
+        textBox1_2.ReadOnly = true;
+        textBox1_3.ReadOnly = true;
+        textBox1_4.ReadOnly = true;
+        textBox1_5.ReadOnly = true;
+
+        textBox2_1.ReadOnly = true;
+        textBox2_2.ReadOnly = true;
+        textBox2_3.ReadOnly = true;
+        textBox2_4.ReadOnly = true;
+        textBox2_5.ReadOnly = true;
+
+        textBox3_1.ReadOnly = true;
+        textBox3_2.ReadOnly = true;
+        textBox3_3.ReadOnly = true;
+        textBox3_4.ReadOnly = true;
+        textBox3_5.ReadOnly = true;
+
+        textBox4_1.ReadOnly = true;
+        textBox4_2.ReadOnly = true;
+        textBox4_3.ReadOnly = true;
+        textBox4_4.ReadOnly = true;
+        textBox4_5.ReadOnly = true;
+
+        textBox5_1.ReadOnly = true;
+        textBox5_2.ReadOnly = true;
+        textBox5_3.ReadOnly = true;
+        textBox5_4.ReadOnly = true;
+        textBox5_5.ReadOnly = true;
+
+        textBox6_1.ReadOnly = true;
+        textBox6_2.ReadOnly = true;
+        textBox6_3.ReadOnly = true;
+        textBox6_4.ReadOnly = true;
+        textBox6_5.ReadOnly = true;
     }
 
     private void StartGame()
