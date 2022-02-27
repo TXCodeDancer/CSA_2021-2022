@@ -1,7 +1,7 @@
 ﻿using System.Runtime.InteropServices;
 using WordieEngine;
 
-namespace WordleWinFormsUI;
+namespace WordieWinFormsUI;
 
 public partial class MainForm : Form
 {

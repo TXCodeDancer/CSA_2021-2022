@@ -1,4 +1,4 @@
-namespace WordleWinFormsUI
+namespace WordieWinFormsUI
 {
     internal static class Program
     {

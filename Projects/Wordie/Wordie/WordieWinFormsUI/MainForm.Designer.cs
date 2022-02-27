@@ -1,4 +1,4 @@
-﻿namespace WordleWinFormsUI
+﻿namespace WordieWinFormsUI
 {
     partial class MainForm
     {
